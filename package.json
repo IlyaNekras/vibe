@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "concat": "^1.0.3",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "imagemin": "^8.0.1",
+    "sass": "^1.45.1",
+    "uglify-es": "^3.3.9"
+  }
+}
