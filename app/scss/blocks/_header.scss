@@ -1,0 +1,165 @@
+.header {
+    padding: 15px 0;
+    min-height: 1000px;
+    position: relative;
+    background: url('../img/bg-header.png') center (center/cover) no-repeat;
+    background-color: $bg-color;
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        height: 75px;
+    }
+
+    &__top-box {
+        display: flex;
+        align-items: center;
+    }
+
+    &__top-text {
+        font-size: 12px;
+        padding-left: 51px;
+        font-weight: 400;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 25px;
+            width: 1px;
+            height: 56px;
+            background-color: rgba(255, 255, 255, .1);
+        }
+    }
+    nav{
+        z-index: 1;
+    }
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 385px;
+        font-size: 16px;
+        font-weight: 500;
+        z-index: 1;
+
+        &__item {
+            position: relative;
+            cursor: pointer;
+
+            &:hover {
+                &::before {
+
+                    content: '';
+                    position: absolute;
+                    bottom: -10px;
+                    left: 50%;
+                    transform: translate(-50%);
+                    width: 50%;
+                    height: 1px;
+                    background-color: $color;
+                }
+            }
+        }
+
+
+        &__item+.menu__item {
+            margin-left: 32px;
+        }
+    }
+
+    &__top-call {
+        display: flex;
+        align-items: center;
+        z-index: 1;
+    }
+
+    &__top-phone {
+        font-weight: 700;
+        color: #fff;
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+
+    &__top-btn {
+        display: inline-block;
+        color: $color;
+        font-size: 14px;
+        font-weight: 400;
+        position: relative;
+        padding-left: 42px;
+        cursor: pointer;
+        margin-left: 30px;
+        padding-bottom: 2px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            color: #b98766;
+            bottom: 0px;
+            left: 43px;
+            width: 113px;
+            border-bottom: 1px dashed;
+        }
+
+        &::before {
+            content: url('../icons/phone.svg');
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__content {
+        padding: 158px 0 178px 125px;
+        z-index: 0;
+    }
+
+    &__content-box {
+        max-width: 581px;
+    }
+
+    .title {
+        margin-bottom: 27px;
+    }
+
+    &__content-text {
+        margin-bottom: 70px;
+        font-size: 18px;
+        line-height: 26px;
+        color: #FFFFFF;
+        font-weight: 400;
+
+        span {
+            color: #C5988F;
+            font-weight: 700;
+        }
+    }
+
+    &__content-img {
+        position: absolute;
+        top: -18px;
+        left: 230px;
+    }
+
+
+
+}

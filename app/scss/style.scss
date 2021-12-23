@@ -1,0 +1,30 @@
+@import'base/variables';
+
+@import'libs/fonts';
+
+*{
+    font-family: 'TTNorms', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul, li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.container{
+    max-width: 1500px;
+    padding: 0 15px;
+    margin: 0 auto;
+    position: relative;
+}
+
+@import'blocks/header';
+@import'blocks/title';
+@import'blocks/form';

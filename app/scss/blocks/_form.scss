@@ -1,0 +1,77 @@
+.form {
+    max-width: 333px;
+    position: relative;
+
+    span {
+        display: inline-block;
+        background: linear-gradient(131.39deg, #EBBE9D 13.55%, #DFAB86 80.5%);
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        z-index: 1;
+        border-radius: 50%;
+        text-align: center;
+        align-items: center;
+        top: 19px;
+        left: 19px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 1px solid #F0F0F0;
+            left: 44px;
+            height: 25px;
+        }
+
+        &::before {
+            content: url('../icons/phone-icon.svg');
+            top: 8px;
+            left: 9px;
+            color: #fff;
+            position: absolute;
+
+        }
+
+    }
+
+    input {
+        width: 100%;
+        height: 70px;
+        border: none;
+        border-radius: 7px;
+        padding: 26px 15px 26px 88px;
+        margin: 0 auto;
+        margin-bottom: 14px;
+        color: #9D9DB0;
+    }
+
+    &__btn {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        background: linear-gradient(314deg, #C88C61 25%, #EBBE9C 88%);
+        box-shadow: inset 0px 0px 12px #E5B79A;
+        width: 100%;
+        height: 99px;
+        border: none;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 1px;
+        color: #FFFFFF;
+        border-bottom: 7px solid #B98766;
+        border-radius: 12px;
+        padding-right: 45px;
+        cursor: pointer;
+
+        &::after {
+            content: url('../icons/tap.svg');
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 53px;
+        }
+
+    }
+}
