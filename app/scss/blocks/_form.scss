@@ -60,7 +60,7 @@
         line-height: 16px;
         letter-spacing: 1px;
         color: #FFFFFF;
-        border-bottom: 7px solid #B98766;
+        border-bottom: 5px solid #B98766;
         border-radius: 12px;
         padding-right: 45px;
         cursor: pointer;
@@ -71,6 +71,9 @@
             top: 50%;
             transform: translateY(-50%);
             right: 53px;
+        }
+        &:active{
+            border-bottom: none;
         }
 
     }
