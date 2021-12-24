@@ -10,8 +10,19 @@
 </head>
 
 <body>
+    <div class="popup">
+        <div class="popup__content"><div class="popup__close"></div>
+            <iframe src="https://www.youtube.com/embed/dl16e_mG6hg" title="YouTube video player" frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </video>
+        </div>
+    </div>
     <header class="header">
         <div class="container">
+            <div class="header__bg">
+                <img src="img/bg-header.png" alt="">
+            </div>
             <div class="header__top">
                 <div class="header__top-box">
                     <a class="logo" href="#"><img src="icons/logo.svg" alt="logo"></a>
@@ -49,40 +60,91 @@
                     <form class="form" action="#">
                         <span></span>
                         <input class="form__input" type="tel" name="tel" placeholder="+7 (___) ___-__-__">
-                        <button class="form__btn">ЗАБРОНИРОВАТЬ ВРЕМЯ</button>
+                        <button class="button">ЗАБРОНИРОВАТЬ ВРЕМЯ</button>
                     </form>
                 </div>
             </div>
             <div class="header__bottom">
                 <div class="header__item">
-                    <div class="header__item-star"></div>
-                    <img class="header__item-img" src="icons/sofa.svg" alt="">
-                    <p class="header__item-num">01</p>
-                    <p class="header__item-descr">Регулируемые кушетки и стулья
+                    <div class="header__item-box">
+                        <div class="header__item-star">
+                            <img class="header__item-img" src="icons/sofa.svg" alt="">
+                        </div>
+                        <p class="header__item-num">01</p>
+                    </div>
+                    <p class="header__item-descr">Регулируемые <br>
+                        кушетки и стулья
                     </p>
                 </div>
                 <div class="header__item">
-                    <div class="header__item-star"></div>
-                    <img class="header__item-img" src="icons/closet.svg" alt="">
-                    <p class="header__item-num">02</p>
-                    <p class="header__item-descr">Сухожаровой шкаф</p>
+                    <div class="header__item-box">
+                        <div class="header__item-star">
+                            <img class="header__item-img" src="icons/closet.svg" alt="">
+                        </div>
+                        <p class="header__item-num">02</p>
+                    </div>
+                    <p class="header__item-descr">Сухожаровой <br>
+                        шкаф</p>
                 </div>
                 <div class="header__item">
-                    <div class="header__item-star"></div>
-                    <img class="header__item-img" src="icons/brush.svg" alt="">
-                    <p class="header__item-num">03</p>
-                    <p class="header__item-descr">Расходники по себестоимости</p>
+                    <div class="header__item-box">
+                        <div class="header__item-star">
+                            <img class="header__item-img" src="icons/brush.svg" alt="">
+                        </div>
+                        <p class="header__item-num">03</p>
+                    </div>
+                    <p class="header__item-descr">Расходники <br>
+                        по себестоимости</p>
                 </div>
                 <div class="header__item">
-                    <div class="header__item-star"></div>
-                    <img class="header__item-img dresser" src="icons/dresser.svg" alt="">
-                    <p class="header__item-num">04</p>
-                    <p class="header__item-descr">Интерьер, производящий wow-эффект</p>
+                    <div class="header__item-box">
+                        <div class="header__item-star">
+                            <img class="header__item-img dresser" src="icons/dresser.svg" alt="">
+                        </div>
+                        <p class="header__item-num">04</p>
+                    </div>
+                    <p class="header__item-descr">Интерьер, производящий <br>
+                        wow-эффект</p>
                 </div>
             </div>
         </div>
-        </headercons <script src="js/main.js">
-        </script>
+    </header>
+    <section class="time">
+        <div class="container">
+            <div class="time__bg">
+                <img src="img/bg-time.png" alt="">
+            </div>
+            <h2 class="title">
+                ВРЕМЯ ОТКРЫТЬ НОВОЕ ДЕЛО <br> В <span>НОВОМ ПРОСТРАНСТВЕ</span>
+            </h2>
+            <div class="time__wrap">
+                <div class="time__box">
+                    <div class="time__btn"><span></span>
+                    </div>
+                    
+                    <p class="time__btn-text">видеообзор <br>
+                        помещений</p>
+                    <div class="time__img">
+                        <img src="img/chair.png" alt="">
+                    </div>
+                </div>
+                <div class="time__info">
+                    <div class="time__text-top">Нам обидно слышать истории, где талантливая фея сферы красоты отдает
+                        салону примерно 60% выручки. Искренне считаем, что бьюти-предприниматели достойны большего.
+                        Поэтому создали место, помогающее работать и тратить прибыль только на себя.
+                    </div>
+                    <div class="time__text-bottom">
+                        Сдаем кабинеты для косметологов, массажистов, бровистов, лэшмейкеров <span>от 500
+                            руб./час.</span> Без переплат, в оборудованном всем необходимым помещении.
+                        Арендуйте на любой срок и уже завтра принимайте клиентов в современном коворкинге.
+                    </div>
+                    <button class="button">ЗАБРОНИРОВАТЬ</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/main.js">
+    </script>
 </body>
 
 </html>

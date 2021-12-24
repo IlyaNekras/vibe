@@ -1,0 +1,122 @@
+.time {
+    margin-top: -1px;
+    position: relative;
+    padding: 140px 0 100px;
+    min-height: 1300px;
+    // background: url('../img/bg-time.png') no-repeat;
+    background-color: $bg-color;
+
+    &__bg {
+        width: 100%;
+        position: absolute;
+        top: -40%;
+        left: 0;
+
+        img {
+            width: inherit;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        padding-top: 85px;
+    }
+
+    &__box {
+        width: 50%;
+        position: relative;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 140px;
+        right: 84px;
+        width: 125px;
+        height: 125px;
+        border-radius: 50%;
+        // background-color: $color;
+        background: linear-gradient(137.66deg, #F8E6E2 19%, #E4BEB5 76.3%);
+        border-bottom: 3px solid #B47F74;
+        cursor: pointer;
+
+        &::before {
+            content: url('../icons/play.svg');
+            position: absolute;
+            top: 8px;
+            right: 9px;
+            z-index: 1;
+            padding: 45px;
+        }
+
+        &::after {
+            content: url('../img/circles.png');
+            position: absolute;
+            top: -300px;
+            left: -360px;
+        }
+
+        span {
+            position: absolute;
+            top: -79px;
+            right: -78px;
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            border-right: 1px solid #fff;
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent;
+            transform: rotate(69deg);
+        }
+    }
+
+
+
+
+    &__btn-text {
+        position: absolute;
+        top: 154px;
+        right: -30px;
+        font-size: 13px;
+        line-height: 14px;
+        color: #FFFFFF;
+        font-style: italic;
+        font-family: 'TT Norms', sans-serif;
+    }
+
+
+
+    &__img {
+        position: absolute;
+        top: -20%;
+        left: -15px;
+    }
+
+    &__info {
+        margin-left: 190px;
+        max-width: 379px;
+        z-index: 1;
+        color: #FFF;
+    }
+
+    &__text-top {
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 400;
+        margin-bottom: 25px;
+    }
+
+    &__text-bottom {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        margin-bottom: 50px;
+
+        span {
+            color: #EAB1B4
+        }
+    }
+
+    .button {
+        width: 303px;
+    }
+}

@@ -1,20 +1,20 @@
 .header {
-    padding: 15px 0;
-    min-height: 985px;
+    min-height: 1215px;
     position: relative;
-    background: url('../img/bg-header.png') center (center/cover) no-repeat;
+    // background: url('../img/bg-header.png') no-repeat;
     background-color: $bg-color;
 
-    &__img {
+    &__bg {
         position: absolute;
         top: 0;
         left: 0;
-
+        width: 100%;
         img {
-            width: 100%;
+            width: inherit;
             height: auto;
         }
     }
+
 
     &__top {
         display: flex;
@@ -27,6 +27,7 @@
     &__top-box {
         display: flex;
         align-items: center;
+        z-index: 1;
     }
 
     &__top-text {
@@ -141,6 +142,7 @@
 
     .title {
         margin-bottom: 27px;
+        text-align: left;
     }
 
     &__content-text {
@@ -165,7 +167,7 @@
 
     &__scroll {
         position: absolute;
-        left: -90px;
+        left: -50px;
         top: 45%;
         font-weight: 400;
         font-size: 12px;
@@ -200,36 +202,61 @@
         justify-content: space-evenly;
         align-items: center;
         text-align: center;
-        padding: 0 70px;
-
+        padding-right: 100px;
     }
 
     &__item {
         position: relative;
-        width: 258px;
         height: 171px;
-        &:nth-child(2n){
-            width: 100px;
-        }
+        width: 258px;
 
+        &:nth-child(2n){
+            padding-top: 100px;
+
+            &::before,
+            &::after {
+                content: "";
+                width: 215px;
+                height: 108px;
+                position: absolute;
+                top: 38px;
+                transform: rotate(-33deg);
+                left: -178px;
+                border-right: 2px solid #b98766;
+                border-radius: 50%/100% 100% 0 0;
+
+            }
+            &:nth-child(2)::after {
+                transform: rotate3d(1, 0.4, 0, -180deg);
+                left: 139px;
+                top: 118px;
+
+            }
+        }
+    }
+
+    &__item-box {
+        position: relative;
+        width: 140px;
+        margin: 0 auto;
     }
 
     &__item-img {
         position: absolute;
-        top: 25px;
-        left: 25px;
+        top: 13px;
+        left: 13px;
         z-index: 1;
-
+        transform: rotate(-45deg);
 
     }
 
     .dresser {
-        top: 17px;
-        left: 17px;
+        top: 4px;
+        left: 6px;
     }
 
     &__item-star {
-        position: relative;
+        position: absolute;
         top: 13px;
         left: 13px;
         width: 60px;
@@ -264,16 +291,14 @@
         left: 61px;
         font-family: 'Tenor Sans', sans-serif;
         font-size: 80px;
-        line-height: 94px;
-        text-align: center;
-        text-transform: uppercase;
         color: #696975;
         z-index: 0;
+
     }
 
     &__item-descr {
         color: #fff;
-
+        margin-top: 110px;
         font-family: 'Tenor Sans', sans-serif;
         font-size: 18px;
         font-weight: 400;

@@ -3,29 +3,45 @@
 @import'libs/fonts';
 @import'libs/animate';
 
-*{
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    
+}
+
+* {
     font-family: 'TTNorms', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-ul, li{
+ul,
+li {
     list-style-type: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: #000;
 }
 
-.container{
+.container {
     max-width: 1500px;
     padding: 0 15px;
     margin: 0 auto;
     position: relative;
 }
 
+.active {
+    overflow: hidden;
+    padding-right: 17px;
+}
+
 @import'blocks/header';
 @import'blocks/title';
+@import'blocks/button';
 @import'blocks/form';
+@import'blocks/time';
+@import'blocks/popup';
