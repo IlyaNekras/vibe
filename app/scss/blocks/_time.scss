@@ -11,7 +11,6 @@
         position: absolute;
         top: -40%;
         left: 0;
-
         img {
             width: inherit;
         }
@@ -34,17 +33,20 @@
         width: 125px;
         height: 125px;
         border-radius: 50%;
-        // background-color: $color;
         background: linear-gradient(137.66deg, #F8E6E2 19%, #E4BEB5 76.3%);
-        border-bottom: 3px solid #B47F74;
+        border-bottom: 4px solid #B47F74;
         cursor: pointer;
+
+        &:hover {
+            background: linear-gradient(137.66deg, #F8E6E2 19%, #fc9d8a 76.3%);
+        }
 
         &::before {
             content: url('../icons/play.svg');
             position: absolute;
             top: 8px;
             right: 9px;
-            z-index: 1;
+            z-index: 2;
             padding: 45px;
         }
 
@@ -88,13 +90,14 @@
     &__img {
         position: absolute;
         top: -20%;
-        left: -15px;
+        left: -195px;
+        z-index: 1;
     }
 
     &__info {
         margin-left: 190px;
         max-width: 379px;
-        z-index: 1;
+        z-index: 2;
         color: #FFF;
     }
 

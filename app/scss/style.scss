@@ -28,15 +28,15 @@ a {
 }
 
 .container {
-    max-width: 1500px;
-    padding: 0 15px;
+    max-width: 1920px;
+    padding: 0 195px;
     margin: 0 auto;
     position: relative;
 }
 
 .active {
     overflow: hidden;
-    padding-right: 17px;
+    padding-right: 16px;
 }
 
 @import'blocks/header';
@@ -45,3 +45,4 @@ a {
 @import'blocks/form';
 @import'blocks/time';
 @import'blocks/popup';
+@import'blocks/location';
