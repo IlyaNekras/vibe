@@ -3,13 +3,12 @@
     position: relative;
     padding: 140px 0 100px;
     min-height: 1300px;
-    // background: url('../img/bg-time.png') no-repeat;
     background-color: $bg-color;
 
     &__bg {
         width: 100%;
         position: absolute;
-        top: -40%;
+        top: -50%;
         left: 0;
         img {
             width: inherit;
@@ -49,14 +48,6 @@
             z-index: 2;
             padding: 45px;
         }
-
-        &::after {
-            content: url('../img/circles.png');
-            position: absolute;
-            top: -300px;
-            left: -360px;
-        }
-
         span {
             position: absolute;
             top: -79px;
@@ -71,9 +62,6 @@
         }
     }
 
-
-
-
     &__btn-text {
         position: absolute;
         top: 154px;
@@ -84,8 +72,6 @@
         font-style: italic;
         font-family: 'TT Norms', sans-serif;
     }
-
-
 
     &__img {
         position: absolute;
