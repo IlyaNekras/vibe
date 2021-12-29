@@ -1,0 +1,62 @@
+.plan {
+    background-color: $bg-color;
+    min-height: 1500px;
+    padding: 100px 0;
+
+    &__bg {
+        width: 100%;
+        position: absolute;
+        top: -39%;
+        left: 0;
+
+        img {
+            width: inherit;
+        }
+    }
+
+    .title {
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-bottom: 92px;
+    }
+
+    &__wrap {
+        display: flex;
+        max-width: 1100px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    &__box {
+        max-width: 419px;
+        z-index: 1;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 31px;
+        color: #FFFFFF;
+        margin-bottom: 45px;
+
+        span {
+            color: #EAB1B4;
+        }
+    }
+
+    .button {
+        max-width: 409px;
+        height: 107px;
+    }
+
+    &__phone {
+        z-index: 1;
+        position: relative;
+
+        &-img {
+            position: absolute;
+            top: 149px;
+            left: 93px;
+        }
+    }
+}

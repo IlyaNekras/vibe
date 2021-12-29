@@ -45,12 +45,11 @@ document.addEventListener('DOMContentLoaded', function () {
         let currentSlide = $('.location__slider').slick('slickCurrentSlide');
         if (currentSlide == 0) {
             $('.prev').hide();
-        } else if (currentSlide == 2) {
-            $('.next').hide();
-        }
-        if (currentSlide > 0 && currentSlide < 2) {
-            $('.prev').show();
             $('.next').show();
+        } 
+        else if (currentSlide == 1) {
+            $('.next').hide();
+            $('.prev').show();
         }
     });
     $(document).ready(function () {
