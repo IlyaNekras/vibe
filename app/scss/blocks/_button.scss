@@ -3,7 +3,7 @@
     display: block;
     background: linear-gradient(314deg, #C88C61 25%, #EBBE9C 88%);
     box-shadow: 0px 0px 12px #E5B79A;
-    width: 100%;
+    width: 340px;
     height: 99px;
     border: none;
     font-size: 14px;
@@ -11,14 +11,15 @@
     letter-spacing: 1px;
     color: #FFFFFF;
     border-bottom: 5px solid #B98766;
-    border-radius: 12px;
+    border-radius: 3% / 50%;
     padding-right: 45px;
     cursor: pointer;
     text-transform: uppercase;
-    &:hover{
-    background: linear-gradient(314deg, #f3a66e 25%, #EBBE9C 88%);
 
+    &:hover {
+        background: linear-gradient(314deg, #f3a66e 25%, #EBBE9C 88%);
     }
+
     &::after {
         content: url('../icons/tap.svg');
         position: absolute;

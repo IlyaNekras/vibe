@@ -9,3 +9,27 @@
         left: -69px
     }
 }
+
+@keyframes marker1 {
+    from {
+        top: 64px
+    }
+    50%{
+        top: 73px
+    }
+    to {
+        top: 64px
+    }
+}
+
+@keyframes marker2 {
+    from {
+        top: 43px
+    }
+    50%{
+        top: 52px
+    }
+    to {
+        top: 43px
+    }
+}

@@ -1,5 +1,5 @@
 .form {
-    max-width: 333px;
+    max-width: 340px;
     position: relative;
 
     span {
@@ -37,7 +37,8 @@
     }
 
     input {
-        width: 100%;
+        width: 330px;
+        display: block;
         height: 70px;
         border: none;
         border-radius: 7px;
