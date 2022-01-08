@@ -1,7 +1,8 @@
 @import'base/variables';
 
 @import'libs/fonts';
-@import'libs/animate';
+@import'libs/animate.min';
+@import'base/animations';
 
 body {
     margin: 0;
@@ -36,7 +37,7 @@ a {
 
 .active {
     overflow: hidden;
-    padding-right: 16px;
+    padding-right: 22px;
 }
 
 @import'blocks/header';
@@ -47,3 +48,4 @@ a {
 @import'blocks/popup';
 @import'blocks/location';
 @import'blocks/plan';
+@import'blocks/atmosphere';

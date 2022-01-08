@@ -2,13 +2,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let playBtn = document.querySelector('.time__btn'),
         popup = document.querySelector('.popup'),
-        closePopup = document.querySelector('.popup__close'),
+        closePopup = document.querySelectorAll('.popup__close'),
+        video = document.querySelector('.popup__video'),
+        map = document.querySelector('.popup__map'),
+        mapBtn = document.querySelector('.plan__phone-map'),
+        mapDots = document.querySelectorAll('.plan__phone-dot'),
+        // plan = document.querySelector('.plan'),
         body = document.querySelector('body');
 
     document.addEventListener('click', hide);
 
     function hide(event) {
-        if (event.target.closest('.popup') && !event.target.closest('.popup__content')) {
+        if (event.target.closest('.popup') && !event.target.closest('.popup__video') && !event.target.closest('.popup__map')) {
             hidePopup();
         }
     }
@@ -16,16 +21,31 @@ document.addEventListener('DOMContentLoaded', function () {
     function hidePopup() {
         popup.classList.remove('popup--active');
         body.classList.remove('active');
+        map.classList.remove('popup__map--active');
+        video.classList.remove('popup__video--active');
         document.querySelector('iframe').src = '';
     }
 
+    closePopup.forEach(function (i) {
+        i.addEventListener('click', hidePopup);
+    });
+
+    //воспроизведение видео в POPUP
     playBtn.addEventListener('click', function () {
         popup.classList.add('popup--active');
+        video.classList.add('popup__video--active');
         body.classList.add('active');
         document.querySelector('iframe').src = 'https://www.youtube.com/embed/dl16e_mG6hg';
     });
 
-    closePopup.addEventListener('click', hidePopup);
+    //открытие карты в POPUP
+    mapBtn.addEventListener('click', function () {
+        popup.classList.add('popup--active');
+        map.classList.add('popup__map--active');
+        body.classList.add('active');
+    });
+
+    new WOW().init();
 
     $('.location__slider').slick({
         infinite: false,
@@ -46,8 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (currentSlide == 0) {
             $('.prev').hide();
             $('.next').show();
-        } 
-        else if (currentSlide == 1) {
+        } else if (currentSlide == 1) {
             $('.next').hide();
             $('.prev').show();
         }
@@ -80,7 +99,6 @@ document.addEventListener('DOMContentLoaded', function () {
         asNavFor: '.location__slider-bottom'
     });
     $('.location__slider-bottom').slick({
-        // infinite: false,
         prevArrow: '<button type="button" class="prev-arrow"><img src="icons/prev-arrow.svg"></button>',
         nextArrow: '<button type="button" class="next-arrow"><img src="icons/next-arrow.svg"></button>',
         slidesToShow: 1,
@@ -112,5 +130,4 @@ document.addEventListener('DOMContentLoaded', function () {
     // });
 
 
-   
 });

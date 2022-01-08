@@ -12,12 +12,19 @@
 
 <body>
     <div class="popup">
-        <div class="popup__content">
+        <div class="popup__video">
             <div class="popup__close"></div>
             <iframe src="https://www.youtube.com/embed/dl16e_mG6hg" title="YouTube video player" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         </div>
+        <div class="popup__map">
+            <div class="popup__close"></div>
+            <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A68f1dda4c35d37c8ee648fce94fe91662416dfca252ba1350454c7d5f5d33313&amp;width=1000&amp;height=500&amp;lang=ru_RU&amp;scroll=false">
+            </script>
+        </div>
+
     </div>
     <header class="header">
         <div class="container">
@@ -122,10 +129,11 @@
                 <div class="time__box">
                     <div class="time__btn">
                         <span></span>
+                        <p class="time__btn-text">видеообзор <br>
+                            помещений</p>
                     </div>
 
-                    <p class="time__btn-text">видеообзор <br>
-                        помещений</p>
+
                 </div>
                 <div class="time__info">
                     <div class="time__text-top">Нам обидно слышать истории, где талантливая фея сферы красоты отдает
@@ -713,31 +721,78 @@
                 <div class="plan__phone">
                     <div class="plan__phone-img">
                         <img src="img/phone.png" alt="">
-                        <span>
-                            <div class="callout">скоро откроется еще 10 новых коворкингов</div>
-                        </span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span class="plan__phone-dotmarker"></span>
+                        <span class="plan__phone-dotmarker"></span>
+                        <div class="plan__phone-dots fadeIn wow" data-wow-duration="2s" data-wow-delay="1s">
+                            <span class="plan__phone-dot">
+                                <div class="callout">скоро откроется еще 10 новых коворкингов</div>
+                            </span>
+                            <span class="plan__phone-dot"></span>
+                            <span class="plan__phone-dot"></span>
+                            <span class="plan__phone-dot"></span>
+                            <span class="plan__phone-dot"></span>
+                            <span class="plan__phone-dot"></span>
+                            <span class="plan__phone-dot"></span>
+                            <span class="plan__phone-dot"></span>
+                            <span class="plan__phone-dot"></span>
+                            <span class="plan__phone-dot"></span>
+
+                        </div>
                     </div>
                     <div class="plan__phone-map">
-
+                        <span></span>
+                        <img src="img/map.png" alt="">
+                        <p class="plan__phone-maptext">посмотрите адреса наших коворкингов на карте</p>
                     </div>
                 </div>
+            </div>
+            <h2 class="title title__bottom">ПЛАНИРУЙТЕ ЖИЗНЬ И <span> РАБОТАЙТЕ В УДОВОЛЬСТВИЕ</span>
+            </h2>
+            <div class="plan__bottom">
+                <div class="plan__bottom-item">
+                    <div class="plan__bottom-img"><img src="icons/clock.svg" alt=""></div>
+                    <p class="plan__bottom-descr">Сэкономите время на поиске собственного помещения.</p>
+                </div>
+                <div class="plan__bottom-item">
+                    <div class="plan__bottom-img"><img src="icons/money-box.svg" alt=""></div>
+                    <p class="plan__bottom-descr">Сбережете деньги — платите за аренду только в рабочие часы.</p>
+                </div>
+                <div class="plan__bottom-item">
+                    <div class="plan__bottom-img"><img src="icons/shout.svg" alt=""></div>
+                    <p class="plan__bottom-descr">Получите дополнительную рекламу — пиарим мастеров у себя в аккаунте
+                    </p>
+                </div>
+                <div class="plan__bottom-item">
+                    <div class="plan__bottom-img"><img src="icons/like.svg" alt=""></div>
+                    <p class="plan__bottom-descr">Повысите лояльность клиентов — им понравится пространство и его
+                        атмосфера.
+                    </p>
+                </div>
+                <div class="plan__bottom-item">
+                    <div class="plan__bottom-img"><img src="icons/crown.svg" alt=""></div>
+                    <p class="plan__bottom-descr">Построите график под себя, начальник — это вы.
+                    </p>
+                </div>
+            </div>
+            <p class="plan__bottom-text">Те, кто уже стал нашим партнером, уверены в рентабельности своих решений.
+            </p>
+        </div>
+    </section>
+    <section class="atmosphere">
+        <div class="container">
+            <h2 class="title">
+                <span>ВООДУШЕВЛЯЙТЕ</span> КЛИЕНТОВ АТМОСФЕРОЙ
+            </h2>
+            <p class="subtitle">Есть такая наука — о впечатлениях. Основываясь на ней, создали наши пространства. Каждый уголок <span>продуман с большой любовью</span> и служит для того…</p>
+            <div class="atmosphere__bg">
+                <img src="img/bg-atmosphere.png" alt="">
             </div>
         </div>
     </section>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="//code.jquery.com/jquery-3.6.0.slim.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/main.js">
     </script>
 </body>

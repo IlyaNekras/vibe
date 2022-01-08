@@ -1,0 +1,19 @@
+.atmosphere {
+    background-color: $bg-color;
+    margin-top: -1px;
+    padding: 106px 0;
+    min-height: 1000px;
+    &__bg {
+        width: 100%;
+
+        img {
+            width: inherit;
+        }
+    }
+    .title{
+        width: 838px;
+        margin: 0 auto;
+        margin-bottom: 45px;
+
+    }
+}
