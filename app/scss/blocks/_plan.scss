@@ -1,5 +1,4 @@
 .plan {
-    background-color: $bg-color;
     min-height: 1500px;
     padding: 100px 0;
     position: relative;
@@ -88,6 +87,8 @@
             }
         }
 
+
+
         &-dot {
             position: absolute;
             width: 11px;
@@ -96,7 +97,7 @@
             box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.39);
             border-radius: 50%;
 
-            .callout {
+            .info {
                 position: absolute;
                 bottom: 119px;
                 left: 4px;
@@ -113,66 +114,66 @@
                 border: 4px solid rgba(198, 139, 97, .5);
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             }
+        }
 
-            &:nth-child(1) {
-                top: 80px;
-                right: 270px;
+        .dot-1 {
+            top: 80px;
+            right: 270px;
 
-                &::before {
-                    content: '';
-                    position: absolute;
-                    bottom: 3px;
-                    right: 5px;
-                    border-left: 1px dashed #E7B895;
-                    height: 185px;
-                }
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 3px;
+                right: 5px;
+                border-left: 1px dashed #E7B895;
+                height: 185px;
             }
+        }
 
-            &:nth-child(2) {
-                top: 123px;
-                right: 95px;
-            }
+        .dot-2 {
+            top: 123px;
+            right: 95px;
+        }
 
-            &:nth-child(3) {
-                bottom: 104px;
-                left: 181px;
-            }
+        .dot-3 {
+            bottom: 104px;
+            left: 181px;
+        }
 
-            &:nth-child(4) {
-                bottom: 211px;
-                right: 227px;
-            }
+        .dot-4 {
+            bottom: 211px;
+            right: 227px;
+        }
 
-            &:nth-child(5) {
-                bottom: 129px;
-                right: 383px;
-            }
+        .dot-5 {
+            bottom: 129px;
+            right: 383px;
+        }
 
-            &:nth-child(6) {
-                bottom: 239px;
-                right: 306px;
-            }
+        .dot-6 {
+            bottom: 239px;
+            right: 306px;
+        }
 
-            &:nth-child(7) {
-                bottom: 183px;
-                right: 345px;
-            }
+        .dot-7 {
+            bottom: 183px;
+            right: 345px;
+        }
 
-            &:nth-child(8) {
-                bottom: 201px;
-                right: 376px;
-            }
+        .dot-8 {
+            bottom: 201px;
+            right: 376px;
+        }
 
-            &:nth-child(9) {
-                left: 150px;
-                bottom: 175px;
-            }
+        .dot-9 {
+            left: 150px;
+            bottom: 175px;
+        }
 
-            &:last-child {
-                left: 187px;
-                top: 164px;
-                right: auto;
-            }
+        .dot-10 {
+            left: 187px;
+            top: 164px;
+            right: auto;
         }
 
         &-dotmarker {
@@ -183,19 +184,20 @@
             box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.39);
             border-radius: 50%;
 
-            &:nth-child(2) {
-                right: 162px;
-                bottom: 247px;
-                left: auto;
-                background: transparent;
-            }
+        }
 
-            &:nth-child(3) {
-                left: 241px;
-                bottom: 227px;
-                right: auto;
-                background: transparent;
-            }
+        .dotmarker-1 {
+            right: 162px;
+            bottom: 247px;
+            left: auto;
+            background: transparent;
+        }
+
+        .dotmarker-2 {
+            left: 241px;
+            bottom: 227px;
+            right: auto;
+            background: transparent;
         }
 
         &-map {
@@ -205,7 +207,6 @@
             top: 140px;
             left: 124px;
             position: absolute;
-            cursor: pointer;
 
             span {
                 position: absolute;
@@ -217,7 +218,8 @@
                 border-left: 1px solid #fff;
                 border-bottom: 1px solid transparent;
                 border-top: 1px solid transparent;
-                transform: rotate(-45deg)
+                transform: rotate(-45deg);
+                z-index: -1;
             }
 
             img {
@@ -225,6 +227,7 @@
                 height: auto;
                 border-radius: 50%;
                 border: 4px solid rgba(178, 123, 111, 1);
+                cursor: pointer;
             }
         }
 

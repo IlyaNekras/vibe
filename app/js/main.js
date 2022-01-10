@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
         map = document.querySelector('.popup__map'),
         mapBtn = document.querySelector('.plan__phone-map'),
         mapDots = document.querySelectorAll('.plan__phone-dot'),
-        // plan = document.querySelector('.plan'),
         body = document.querySelector('body');
 
     document.addEventListener('click', hide);
@@ -45,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
         body.classList.add('active');
     });
 
+    //библиотека для анимации
     new WOW().init();
 
     $('.location__slider').slick({

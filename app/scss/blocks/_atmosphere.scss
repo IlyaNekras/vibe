@@ -1,19 +1,204 @@
 .atmosphere {
-    background-color: $bg-color;
     margin-top: -1px;
     padding: 106px 0;
     min-height: 1000px;
+
     &__bg {
         width: 100%;
+        position: absolute;
+        left: 0;
+        top: 8%;
+        z-index: -1;
 
         img {
             width: inherit;
         }
     }
-    .title{
-        width: 838px;
+
+    .title {
+        max-width: 920px;
         margin: 0 auto;
         margin-bottom: 45px;
 
+        &__bottom {
+            margin-top: -5%;
+        }
+    }
+
+    &__text {
+        max-width: 838px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .subtitle {
+        font-size: 20px;
+        line-height: 32px;
+        color: #fff;
+        text-align: center;
+
+        span {
+            color: #EAB1B4;
+        }
+
+        &-bottom {
+            position: absolute;
+            top: 50px;
+            left: 37%;
+            font-family: 'Tenor Sans', sans-serif;
+            font-size: 120px;
+            line-height: 80px;
+            color: rgba(#fff, .06);
+            text-align: left;
+        }
+    }
+
+    &__item {
+        position: relative;
+        min-height: 767px;
+        display: flex;
+    }
+
+    &__img {
+        position: relative;
+        width: 100%;
+        min-width: 1000px;
+        z-index: 0;
+
+        &-1 {
+            position: absolute;
+            width: 90%;
+            left: -13%;
+            top: -28%;
+        }
+
+        &-2 {
+            position: absolute;
+            width: 90%;
+            right: -13%;
+            top: -50%;
+        }
+
+        &-3 {
+            position: absolute;
+            width: 80%;
+            left: -15%;
+            top: -28%;
+        }
+
+        &-4 {
+            position: absolute;
+            width: 80%;
+            right: -13%;
+            top: -44%
+        }
+    }
+
+    &__box {
+        z-index: 1;
+    }
+
+    &__num {
+        position: absolute;
+        font-family: 'Tenor Sans', sans-serif;
+        font-size: 300px;
+        line-height: 352px;
+        text-transform: uppercase;
+        opacity: 0.32;
+        color: rgba(176, 119, 107, 1);
+        background: linear-gradient(rgba(248, 230, 226, 1), rgba(176, 119, 107, 1));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .num-1 {
+        right: 40%;
+        top: 34%;
+    }
+
+    .num-2 {
+        left: 16%;
+        bottom: 35%;
+    }
+
+    .num-3 {
+        top: 19%;
+        right: 23%;
+    }
+
+    .num-4 {
+        top: 3%;
+        left: 22%;
+    }
+
+    &__descr {
+        font-family: 'Tenor Sans', sans-serif;
+        font-size: 30px;
+        line-height: 40px;
+        color: #FFFFFF;
+        position: absolute;
+    }
+
+    .descr-1 {
+        max-width: 414px;
+        left: 50%;
+        top: 68%;
+    }
+
+    .descr-2 {
+        max-width: 485px;
+        top: 53%;
+        left: 21%;
+    }
+
+    .descr-3 {
+        max-width: 470px;
+        right: 12%;
+        top: 54%;
+    }
+
+    .descr-4 {
+        max-width: 380px;
+        left: 26%;
+        top: 37%;
+    }
+
+    &__form {
+        margin-left: 65px;
+        margin-top: -12%;
+    }
+
+    &__form-bg {
+        max-width: 1290px;
+        margin: 0 auto;
+        margin-top: 35px;
+        position: relative;
+    }
+
+    &__bottom {
+        position: absolute;
+        top: 7px;
+        left: 40px;
+    }
+
+    &__bottom-box {
+        display: flex;
+        align-items: center;
+    }
+
+    &__form-title {
+        font-size: 30px;
+        line-height: 32px;
+        width: 320px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    &__form-subtitle {
+        width: 322px;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        margin-bottom: 61px;
     }
 }

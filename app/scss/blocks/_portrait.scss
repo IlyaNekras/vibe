@@ -1,0 +1,148 @@
+.portrait {
+    padding-bottom: 100px;
+
+    &__bg {
+        width: 100%;
+        position: absolute;
+        top: -150px;
+        left: 0;
+        z-index: -1;
+
+        img {
+            width: inherit;
+        }
+    }
+
+    .title {
+        color: #34343F;
+        max-width: 986px;
+        margin: 0 auto;
+        margin-bottom: 38px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+        line-height: 32px;
+        text-align: center;
+        color: #34343F;
+        margin: 0 auto;
+        max-width: 920px;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    &__items {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__item {
+        margin: 0 10px;
+        width: 281px;
+        min-height: 426px;
+        text-align: center;
+        margin-top: 58px;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__name {
+        font-family: 'Tenor Sans', sans-serif;
+        font-size: 25px;
+        line-height: 23px;
+        color: #34343F;
+        margin-bottom: 25px;
+        font-weight: 400;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 39px;
+            height: 1px;
+            background-color: #EAB1B4;
+        }
+    }
+
+    &__descr {
+        font-size: 16px;
+        line-height: 21px;
+        color: #34343F;
+        width: 194px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        font-weight: 300;
+    }
+
+    &__btn {
+        width: 269px;
+        height: 75px;
+        margin: 0 auto;
+    }
+
+    .mathematik {
+        padding: 100px 0;
+
+        &__wrap {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .subtitle {
+            max-width: 1050px;
+        }
+
+        &__left,
+        &__right {
+            position: relative;
+            min-height: 620px;
+            font-size: 16px;
+            line-height: 21px;
+            color: #34343F;
+            font-style: italic;
+        }
+
+        .img-1 {
+            position: absolute;
+            top: -290px;
+            right: -440px;
+            z-index: -1;
+        }
+
+        .img-2 {
+            position: absolute;
+            top: -200px;
+            left: -538px;
+            z-index: -1;
+        }
+
+        &__right-text,
+        &__left-text {
+            max-width: 143px;
+            position: absolute;
+        }
+
+        &__left-text {
+            left: -244px;
+            top: 191px;
+        }
+
+        &__right-text {
+            right: -232px;
+            top: 57px;
+
+        }
+    }
+
+
+}
