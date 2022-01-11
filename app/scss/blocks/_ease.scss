@@ -1,0 +1,60 @@
+.ease {
+    position: relative;
+    min-height: 900px;
+
+    &__bg {
+        position: absolute;
+        width: 100%;
+        top: -16%;
+        left: 0;
+        z-index: -1;
+
+        img {
+            width: inherit;
+        }
+    }
+
+    &__wrap {
+        margin-top: 73px;
+        position: relative;
+        padding-left: 190px;
+    }
+
+    &__left-img {
+        position: relative;
+    }
+
+    &__right-img {
+        position: absolute;
+        top: -28%;
+        right: -12%;
+        z-index: 1;
+    }
+
+    &__form {
+        position: absolute;
+        top: 19%;
+        left: 21%;
+
+        &-title {
+            font-size: 30px;
+            line-height: 32px;
+            text-align: center;
+            color: #34343F;
+            margin: 0 auto;
+            margin-bottom: 21px;
+            max-width: 303px;
+        }
+
+        &-subtitle {
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            color: #34343F;
+            max-width: 272px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+    }
+
+}

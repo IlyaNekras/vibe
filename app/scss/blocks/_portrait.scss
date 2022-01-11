@@ -1,5 +1,6 @@
 .portrait {
     padding-bottom: 100px;
+    min-height: 3372px;
 
     &__bg {
         width: 100%;
@@ -90,7 +91,21 @@
     }
 
     .mathematik {
-        padding: 100px 0;
+        padding: 200px 0;
+
+        &__img {
+            width: 100%;
+            min-height: 620px;
+            min-width: 320px;
+            position: relative;
+            z-index: -1;
+
+            img {
+                position: absolute;
+                top: -35%;
+                width: inherit;
+            }
+        }
 
         &__wrap {
             display: flex;
@@ -102,45 +117,161 @@
             max-width: 1050px;
         }
 
-        &__left,
-        &__right {
+        // &__left,
+        // &__right {
+        //     position: relative;
+        //     min-height: 620px;
+        //     font-size: 16px;
+        //     line-height: 21px;
+        //     color: #34343F;
+        //     font-style: italic;
+        // }
+
+        // &__left::after {
+        //     content: '';
+        //     position: absolute;
+        //     top: 42px;
+        //     left: 315px;
+        //     width: 100%;
+        //     height: 100%;
+        //     background-image: url('../icons/vs-icon.svg');
+        //     background-repeat: no-repeat;
+        // }
+
+        // .img-1 {
+        //     position: absolute;
+        //     top: -290px;
+        //     right: -440px;
+        //     z-index: -1;
+        // }
+
+        // .img-2 {
+        //     position: absolute;
+        //     top: -200px;
+        //     left: -538px;
+        //     z-index: -1;
+        // }
+
+        // &__right-text,
+        // &__left-text {
+        //     max-width: 143px;
+        //     position: absolute;
+        // }
+
+        // &__left-text {
+        //     left: -244px;
+        //     top: 191px;
+        // }
+
+        // &__right-text {
+        //     right: -232px;
+        //     top: 57px;
+        // }
+
+        // &__box {
+        //     text-align: center;
+        //     position: relative;
+        //     font-style: normal;
+        // }
+
+        // .box-left {
+        //     position: absolute;
+        //     transform: rotate(-10deg);
+        //     top: 83px;
+        //     left: 184px;
+        // }
+
+        // .box-right {
+        //     position: absolute;
+        //     transform: rotate(10deg);
+        //     top: 89px;
+        //     right: 200px;
+        // }
+
+        // &__name {
+        //     font-size: 40px;
+        //     line-height: 30px;
+        //     color: #34343F;
+        //     text-shadow: 0px 2px 14px #FFFFFF;
+        // }
+
+        // &__subname {
+        //     font-size: 12px;
+        //     line-height: 23px;
+        //     color: #CE946B;
+        // }
+
+        &__bottom-text {
+            max-width: 997px;
+            margin: 0 auto;
+            font-size: 16px;
+            line-height: 26px;
+            text-align: center;
+            color: #34343F;
+            margin-top: -40px;
+        }
+    }
+
+    .advantages {
+
+        &__items {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 70px;
+        }
+
+        &__item {
+            max-width: 277px;
+            margin: 0 53px 98px;
             position: relative;
-            min-height: 620px;
+
+            &:nth-child(3n+3) {
+                &::after {
+                    display: none;
+                }
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                width: 250px;
+                height: 250px;
+                border-radius: 50%;
+                top: -17%;
+                left: 79%;
+                border: 1px solid rgba(206, 148, 107, 1);
+                border-top: none;
+                border-left: 1px solid transparent;
+                border-right: 1px solid transparent;
+
+            }
+        }
+
+        &__img {
+            width: 105px;
+            height: 105px;
+            border-radius: 50%;
+            text-align: center;
+            padding: 27px;
+            background-color: rgba(240, 217, 212, 1);
+            margin-bottom: 19px;
+        }
+
+        &__text {
+            font-family: 'Tenor Sans', sans-serif;
+            font-size: 22px;
+            line-height: 23px;
+            color: #34343F;
+            margin-bottom: 19px;
+        }
+
+        &__subtext {
             font-size: 16px;
             line-height: 21px;
             color: #34343F;
-            font-style: italic;
-        }
-
-        .img-1 {
-            position: absolute;
-            top: -290px;
-            right: -440px;
-            z-index: -1;
-        }
-
-        .img-2 {
-            position: absolute;
-            top: -200px;
-            left: -538px;
-            z-index: -1;
-        }
-
-        &__right-text,
-        &__left-text {
-            max-width: 143px;
-            position: absolute;
-        }
-
-        &__left-text {
-            left: -244px;
-            top: 191px;
-        }
-
-        &__right-text {
-            right: -232px;
-            top: 57px;
-
+            max-width: 194px;
         }
     }
 

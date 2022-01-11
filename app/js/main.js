@@ -108,6 +108,9 @@ document.addEventListener('DOMContentLoaded', function () {
         fade: true,
         cssEase: 'linear',
     });
+    
+    //слайдер блока рассказы
+    $('.stories__slider').slick();
 
     //  //изменение состояния стрелок слайдера раюочих мест
     //  $('.location__slider-bottom').on('afterChange', function () {
