@@ -1,3 +1,4 @@
+"use strict"
 document.addEventListener('DOMContentLoaded', function () {
 
     let playBtn = document.querySelector('.time__btn'),
@@ -6,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
         video = document.querySelector('.popup__video'),
         map = document.querySelector('.popup__map'),
         mapBtn = document.querySelector('.plan__phone-map'),
-        mapDots = document.querySelectorAll('.plan__phone-dot'),
         body = document.querySelector('body');
 
     document.addEventListener('click', hide);
@@ -44,9 +44,21 @@ document.addEventListener('DOMContentLoaded', function () {
         body.classList.add('active');
     });
 
+    //блок ответ-вопрос
+    let itemBox = document.querySelectorAll('.conditions__item');
+
+    function showAnswer() {
+        this.classList.toggle('active');
+    }
+
+    itemBox.forEach(function (e) {
+        e.addEventListener('click', showAnswer);
+    });
+
     //библиотека для анимации
     new WOW().init();
 
+    //слайдер блока 'location'
     $('.location__slider').slick({
         infinite: false,
         slidesToShow: 1,
@@ -60,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 
-    //изменение состояния стрелок основной слайдер
+    //изменение состояния стрелок слайдера location
     $('.location__slider').on('afterChange', function () {
         let currentSlide = $('.location__slider').slick('slickCurrentSlide');
         if (currentSlide == 0) {
@@ -108,29 +120,38 @@ document.addEventListener('DOMContentLoaded', function () {
         fade: true,
         cssEase: 'linear',
     });
-    
-    //слайдер блока рассказы
-    $('.stories__slider').slick();
 
-    //  //изменение состояния стрелок слайдера раюочих мест
-    //  $('.location__slider-bottom').on('afterChange', function () {
-    //     let currentSlide = $('.location__slider-bottom').slick('slickCurrentSlide');
-    //     if (currentSlide == 0) {
-    //         $('.prev-arrow').hide();
-    //     } else if (currentSlide == 6) {
-    //         $('.next-arrow').hide();
-    //     }
-    //     if (currentSlide > 0 && currentSlide < 6) {
-    //         $('.prev-arrow').show();
-    //         $('.next-arrow').show();
-    //     }
-    // });
-    // $(document).ready(function () {
-    //     let currentSlide = $('.location__slider-bottom').slick('slickCurrentSlide');
-    //     if (currentSlide == 0) {
-    //         $('.prev-arrow').hide();
-    //     }
-    // });
+    //слайдер блока 'stories'
+    $('.stories__slider').slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        prevArrow: '<button type="button" class="prev-stories"><img src="icons/arrow-left.svg"></button>',
+        nextArrow: '<button type="button" class="next-stories"><img src="icons/arrow-right.svg"></button>',
+        speed: 300,
+        fade: true,
+        cssEase: 'linear',
+    });
 
+    //изменение состояния стрелок слайдера в блоке "stories"
+    $('.stories__slider').on('afterChange', function () {
+        let currentSlide = $('.stories__slider').slick('slickCurrentSlide');
+        if (currentSlide == 0) {
+            $('.prev-stories').hide();
+            $('.next-stories').show();
+        } else if (currentSlide == 1 && currentSlide < 2) {
+            $('.next-stories').show();
+            $('.prev-stories').show();
+        } else if (currentSlide == 2) {
+            $('.next-stories').hide();
+        }
+    });
+    $(document).ready(function () {
+        let currentSlide = $('.stories__slider').slick('slickCurrentSlide');
+        if (currentSlide == 0) {
+            $('.prev-stories').hide();
+        }
+    });
 
 });
