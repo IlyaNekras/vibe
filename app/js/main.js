@@ -1,6 +1,7 @@
 "use strict"
 document.addEventListener('DOMContentLoaded', function () {
 
+    //POPUP
     let playBtn = document.querySelector('.time__btn'),
         popup = document.querySelector('.popup'),
         closePopup = document.querySelectorAll('.popup__close'),
@@ -55,6 +56,27 @@ document.addEventListener('DOMContentLoaded', function () {
         e.addEventListener('click', showAnswer);
     });
 
+    //tabs
+    let tenant = document.getElementById('tenant'),
+        customer = document.getElementById('customer'),
+        reviewItem = document.querySelectorAll('.reviews__item'),
+        tab1 = document.getElementById('tab-1'),
+        tab2 = document.getElementById('tab-2');
+
+    function activeTab(e) {
+        e.preventDefault();
+        tab1.classList.toggle('reviews__item--active');
+        tab2.classList.toggle('reviews__item--active');
+        tenant.classList.toggle('active');
+        customer.classList.toggle('active');
+    }
+
+    reviewItem.forEach(function (e) {
+        e.addEventListener('click', activeTab);
+    });
+
+
+
     //библиотека для анимации
     new WOW().init();
 
@@ -64,8 +86,8 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: false,
-        prevArrow: '<button type="button" class="prev"><img src="icons/arrow-left.svg"></button>',
-        nextArrow: '<button type="button" class="next"><img src="icons/arrow-right.svg"></button>',
+        prevArrow: '<button type="button" class="prev"></button>',
+        nextArrow: '<button type="button" class="next"></button>',
         speed: 300,
         fade: true,
         cssEase: 'linear',
@@ -76,19 +98,45 @@ document.addEventListener('DOMContentLoaded', function () {
     $('.location__slider').on('afterChange', function () {
         let currentSlide = $('.location__slider').slick('slickCurrentSlide');
         if (currentSlide == 0) {
-            $('.prev').hide();
-            $('.next').show();
+            $('.prev').css({
+                'backgroundImage': 'url("../icons/arrow-left.svg")',
+                'transform': 'rotate(0deg)'
+            });
+            $('.next').css('backgroundImage', 'url("../icons/arrow-right.svg")');
         } else if (currentSlide == 1) {
-            $('.next').hide();
-            $('.prev').show();
+            $('.next').css('backgroundImage', 'url("../icons/arrow-rightgray.svg")');
+            $('.prev').empty('<img src="icons/arrow-left.svg">');
+            $('.prev').css({
+                'backgroundImage': 'url("../icons/arrow-right.svg")',
+                'transform': 'rotate(180deg)'
+            });
         }
     });
     $(document).ready(function () {
         let currentSlide = $('.location__slider').slick('slickCurrentSlide');
         if (currentSlide == 0) {
-            $('.prev').hide();
+            $('.prev').css('backgroundImage', 'url("../icons/arrow-left.svg")');
+            $('.next').css('backgroundImage', 'url("../icons/arrow-right.svg")');
         }
     });
+
+
+    // $('.location__slider').on('afterChange', function () {
+    //     let currentSlide = $('.location__slider').slick('slickCurrentSlide');
+    //     if (currentSlide == 0) {
+    //         $('.prev').hide();
+    //         $('.next').show();
+    //     } else if (currentSlide == 1) {
+    //         $('.next').hide();
+    //         $('.prev').show();
+    //     }
+    // });
+    // $(document).ready(function () {
+    //     let currentSlide = $('.location__slider').slick('slickCurrentSlide');
+    //     if (currentSlide == 0) {
+    //         $('.prev').hide();
+    //     }
+    // });
 
     //слайдер картинок на рабочем месте
     $('.location__slider-img').slick({
@@ -127,8 +175,8 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: false,
-        prevArrow: '<button type="button" class="prev-stories"><img src="icons/arrow-left.svg"></button>',
-        nextArrow: '<button type="button" class="next-stories"><img src="icons/arrow-right.svg"></button>',
+        prevArrow: '<button type="button" class="prev-stories"></button>',
+        nextArrow: '<button type="button" class="next-stories"></button>',
         speed: 300,
         fade: true,
         cssEase: 'linear',
@@ -138,20 +186,89 @@ document.addEventListener('DOMContentLoaded', function () {
     $('.stories__slider').on('afterChange', function () {
         let currentSlide = $('.stories__slider').slick('slickCurrentSlide');
         if (currentSlide == 0) {
-            $('.prev-stories').hide();
-            $('.next-stories').show();
-        } else if (currentSlide == 1 && currentSlide < 2) {
-            $('.next-stories').show();
-            $('.prev-stories').show();
+            $('.prev-stories').css({
+                'backgroundImage': 'url("../icons/arrow-left.svg")',
+                'transform': 'rotate(0deg)'
+            });
+        } else
+        if (currentSlide == 1 && currentSlide < 2) {
+            $('.next-stories').css('backgroundImage', 'url("../icons/arrow-right.svg")');
+            $('.prev-stories').empty('<img src="icons/arrow-left.svg">');
+            $('.prev-stories').css({
+                'backgroundImage': 'url("../icons/arrow-right.svg")',
+                'transform': 'rotate(180deg)'
+            });
         } else if (currentSlide == 2) {
-            $('.next-stories').hide();
+            $('.next-stories').css('backgroundImage', 'url("../icons/arrow-rightgray.svg")');
         }
+
     });
     $(document).ready(function () {
         let currentSlide = $('.stories__slider').slick('slickCurrentSlide');
         if (currentSlide == 0) {
-            $('.prev-stories').hide();
+            $('.prev-stories').css('backgroundImage', 'url("../icons/arrow-left.svg")');
+            $('.next-stories').css('backgroundImage', 'url("../icons/arrow-right.svg")');
         }
+    });
+    // $(document).ready(function () {
+    //     let currentSlide = $('.stories__slider').slick('slickCurrentSlide');
+    //     if (currentSlide == 0) {
+    //         $('.prev-stories').hide();
+    //     }
+    // });
+    // $('.stories__slider').on('afterChange', function () {
+    //     let currentSlide = $('.stories__slider').slick('slickCurrentSlide');
+    //     if (currentSlide == 0) {
+    //         $('.prev-stories').hide();
+    //         $('.next-stories').show();
+    //     } else if (currentSlide == 1 && currentSlide < 2) {
+    //         $('.next-stories').show();
+    //         $('.prev-stories').show();
+    //     } else if (currentSlide == 2) {
+    //         $('.next-stories').hide();
+    //     }
+    // });
+    // $(document).ready(function () {
+    //     let currentSlide = $('.stories__slider').slick('slickCurrentSlide');
+    //     if (currentSlide == 0) {
+    //         $('.prev-stories').hide();
+    //     }
+    // });
+
+    //slider reviews
+    $('.reviews__slider').slick({
+        prevArrow: '<button type="button" class="prev-reviews"></button>',
+        nextArrow: '<button type="button" class="next-reviews"></button>',
+        slidesToShow: 1,
+        slideToScroll: 1,
+        variableWidth: true,
+        mobileFirst: true,
+        variableWidth: true,
+        infinite: false,
+        speed: 900,
+    });
+
+    //изменение состояния стрелок слайдера в блоке "reviews"
+    $(document).ready(function () {
+        let currentSlide = $('.reviews__slider').slick('slickCurrentSlide');
+        if (currentSlide == 0) {
+            $('.prev-reviews').css('backgroundImage', 'url("../icons/prev-arrowgray.svg")');
+            $('.next-reviews').css('backgroundImage', 'url("../icons/next-arrowgold.svg")');
+        }
+    });
+
+    $('.reviews__slider').on('afterChange', function () {
+        let currentSlide = $('.reviews__slider').slick('slickCurrentSlide');
+        if (currentSlide == 0) {
+            $('.prev-reviews').css('backgroundImage', 'url("../icons/prev-arrowgray.svg")');
+        } else if (currentSlide == 3) {
+            $('.next-reviews').css('backgroundImage', 'url("../icons/next-arrowgray.svg")');
+        } else if (currentSlide == 1 && currentSlide < 3) {
+            $('.prev-reviews').css('backgroundImage', 'url("../icons/prev-arrow.svg")');
+            $('.next-reviews').css('backgroundImage', 'url("../icons/next-arrowgold.svg")');
+        }
+
+
     });
 
 });
