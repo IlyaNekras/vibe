@@ -1,0 +1,94 @@
+.footer {
+    padding: 120px 0 30px 0;
+    background-color: #fff;
+    margin-top: -1px;
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        padding-bottom: 100px;
+        border-bottom: 1px solid rgba(222, 222, 229, .5);
+    }
+
+    &__left {
+        margin-right: 150px;
+    }
+
+    &__left-box {
+        margin-top: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__social {
+        border-radius: 50%;
+        width: 65px;
+        height: 65px;
+        background: linear-gradient(138deg, #F8E6E2 19%, #E9C9C2 81.84%);
+        box-shadow: 0px 2px 4px #F0D8D3;
+        padding: 20px;
+
+        img {
+            width: 26px;
+            height: 26px;
+        }
+    }
+
+    &__social+.footer__social {
+        margin-left: 18px;
+        margin-right: 46px;
+    }
+
+    &__num {
+        font-size: 27px;
+        line-height: 26px;
+        color: #34343F;
+        margin-bottom: 7px;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 26px;
+        color: #CE946B;
+        padding-left: 23px;
+        position: relative;
+
+        &::before {
+            content: url('../icons/footer-phoneicon.svg');
+            position: absolute;
+            left: 0;
+            top: 4px;
+
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__list+.footer__list {
+        margin-left: 195px;
+    }
+
+    &__li {
+        font-size: 16px;
+        line-height: 40px;
+        text-transform: uppercase;
+        color: #34343F;
+        font-weight: 500;
+    }
+    &__confid {
+        display: block;
+        margin: 0 auto;
+        width: 202px;
+        font-size: 14px;
+        text-align: center;
+        color: #A5A5B3;
+
+    }
+}

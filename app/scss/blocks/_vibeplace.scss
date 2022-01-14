@@ -2,6 +2,7 @@
     position: relative;
     z-index: 1;
     padding-top: 200px;
+    min-height: 4560px;
 
     &__bg {
         width: 100%;
@@ -407,6 +408,18 @@
         &__wrap {
             display: flex;
             align-items: center;
+            position: relative;
+        }
+
+        &__text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 13px;
+            line-height: 14px;
+            font-style: italic;
+            color: #34343F;
+            max-width: 120px;
         }
 
         &__video {
@@ -418,23 +431,31 @@
             iframe {
                 width: inherit;
                 height: inherit;
+                z-index: 1;
             }
 
-            &-sheet {
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
 
-            &-btn {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                cursor: pointer;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all .2s;
+
+            &--active {
+                opacity: 0;
+                visibility: hidden;
             }
         }
 
+        .video-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
 
         &__audio {
             display: flex;

@@ -174,6 +174,10 @@
                             рабочим местом.</span>
                     </div>
                     <div class="location__video">
+                        <div class="video-overlay">
+                            <div class="video-bg"></div>
+                            <div class="video-btn"><img src="img/play-btn.png" alt=""></div>
+                        </div>
                         <iframe src="https://www.youtube.com/embed/dl16e_mG6hg" title="YouTube video player"
                             frameborder="0"
                             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -1326,13 +1330,13 @@
                     </div>
                     <div class="reviews__wrap active" id="tenant">
                         <div class="reviews__media">
+                            <p class="reviews__text">Посмотрите видеоотзыв о нас</p>
                             <div class="reviews__video">
-                                <div class="reviews__video-sheet">
-                                    <img class="reviews__video-img" src="img/video-reviewimg.png" alt="">
-                                    <div class="reviews__video-btn"><img src="icons/review-btn.svg" alt=""></div>
+                                <div class="video-overlay">
+                                    <img class="video-bg" src="img/video-reviewimg.png" alt="">
+                                    <div class="video-btn"><img src="img/play-btn.png" alt=""></div>
                                 </div>
-                                <iframe src="https://www.youtube.com/embed/dl16e_mG6hg" title="YouTube video player"
-                                    frameborder="0"
+                                <iframe class="reviews__video-data" title="YouTube video player" frameborder="0"
                                     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
                             </div>
@@ -1373,6 +1377,69 @@
         </div>
 
     </section>
+    <section class="popular">
+        <div class="container">
+            <div class="title"><span>СТАНЬТЕ ПОПУЛЯРНЫМ</span> БЬЮТИ-МАСТЕРОМ</div>
+            <div class="popular__bg"><img src="img/bg-popular.png" alt=""></div>
+            <div class="popular__wrap">
+                <div class="popular__img-form"><img src="img/popular-form.png" alt=""></div>
+                <div class="popular__form">
+                    <div class="popular__form-title">Бронируйте помещение</div>
+                    <div class="popular__form-subtitle">Начните с правильного выбора помещения для работы
+                    </div>
+                    <form class="form" action="#">
+                        <span></span>
+                        <input class="form__input" type="tel" name="tel" placeholder="+7 (___) ___-__-__">
+                        <button class="button">ВЫБРАТЬ ПОМЕЩЕНИЕ</button>
+                        <div class="form__box">
+                            <input class="form__checkbox" type="checkbox">
+                            <p class="form__text">
+                                Я согласна на обработку моих персональных данных
+                                в соответствии с <a class="form__link" href="#">условиями</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+                <div class="popular__img"><img src="img/popular-img.png" alt=""></div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrap">
+                <div class="footer__left">
+                    <a class="footer__logo" href="#"><img src="icons/logo-footer.svg" alt=""></a>
+                    <div class="footer__left-box">
+                        <div class="footer__social">
+                            <a href="#"> <img class="footer__inst" src="icons/inst-icon.svg" alt="">
+                            </a> </div>
+                        <div class="footer__social">
+                            <a href="#"><img class="footer__viber" src="icons/viber-icon.svg" alt=""></a>
+                        </div>
+                        <div class="footer__phone">
+                            <a class="footer__num" href="tel:+79806879898">+7 (980) 687-98-98</a>
+                            <p class="footer__text">Звонок бесплатный</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__right">
+                    <ul class="footer__list">
+                        <li class="footer__li"><a href="#">О НАС</a></li>
+                        <li class="footer__li"><a href="#">ЦЕНЫ</a></li>
+                        <li class="footer__li"><a href="#">ЗАБРОНИРОВАТЬ</a></li>
+                        <li class="footer__li"><a href="#">КОНТАКТЫ</a></li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__li"><a href="#">СТАТЬИ</a></li>
+                        <li class="footer__li"><a href="#">ФРАНШИЗА</a></li>
+                        <li class="footer__li"><a href="#">ВАКАНСИИ</a></li>
+                        <li class="footer__li"><a href="#">ПРАВОВАЯ ИНФОРМАЦИЯ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a class="footer__confid" href="#">Политика конфидециальности</a>
+        </div>
+    </footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="//code.jquery.com/jquery-3.6.0.slim.min.js"></script>
     <script src="js/slick.min.js"></script>

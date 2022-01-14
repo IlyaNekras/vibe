@@ -75,6 +75,26 @@ document.addEventListener('DOMContentLoaded', function () {
         e.addEventListener('click', activeTab);
     });
 
+    //воспроизведение видео в блоке в "overlay"
+
+
+    let videoBtn = document.querySelectorAll('.video-btn');
+    // overlay = document.querySelectorAll('.video-overlay');
+
+    function hideOverlay() {
+        this.classList.add('video-overlay--active');
+    }
+
+    videoBtn.forEach(function (e) {
+        e.addEventListener('click', function () {
+            document.querySelector('.reviews__video-data').src = 'https://www.youtube.com/embed/dl16e_mG6hg?autoplay=1&mute=1;&mute=0';
+        });
+
+    });
+
+    // reviewBtn.addEventListener('click', function () {
+    //     overlay.classList.add('reviews__video-overlay--active');
+    // });
 
 
     //библиотека для анимации
@@ -91,7 +111,6 @@ document.addEventListener('DOMContentLoaded', function () {
         speed: 300,
         fade: true,
         cssEase: 'linear',
-
     });
 
     //изменение состояния стрелок слайдера location
