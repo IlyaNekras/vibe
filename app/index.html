@@ -208,11 +208,11 @@
                             рабочим местом.</span>
                     </div>
                     <div class="location__video">
-                        <div class="video-overlay">
+                        <div class="video-overlay" id="overlay-loc1">
                             <div class="video-bg"></div>
-                            <div class="video-btn" id="location-btn"><img src="img/play-btn.png" alt=""></div>
+                            <div class="video-btn" id="location-btn1"><img src="img/play-btn.png" alt=""></div>
                         </div>
-                        <iframe src="https://www.youtube.com/embed/dl16e_mG6hg" title="YouTube video player"
+                        <iframe class="location__video-1" title="YouTube video player"
                             frameborder="0"
                             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
@@ -400,11 +400,11 @@
                             рабочим местом.</span>
                     </div>
                     <div class="location__video">
-                        <div class="video-overlay">
+                        <div class="video-overlay" id="overlay-loc2">
                             <div class="video-bg"></div>
-                            <div class="video-btn" id="location-btn"><img src="img/play-btn.png" alt=""></div>
+                            <div class="video-btn" id="location-btn2"><img src="img/play-btn.png" alt=""></div>
                         </div>
-                        <iframe src="https://www.youtube.com/embed/dl16e_mG6hg" title="YouTube video player"
+                        <iframe class="location__video-2" title="YouTube video player"
                             frameborder="0"
                             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
@@ -1370,9 +1370,9 @@
                         <div class="reviews__media">
                             <p class="reviews__text">Посмотрите видеоотзыв о нас</p>
                             <div class="reviews__video">
-                                <div class="video-overlay">
+                                <div class="video-overlay" id="overlay-revtenant">
                                     <img class="video-bg" src="img/video-reviewimg.png" alt="">
-                                    <div class="video-btn" id="reviews-btn"><img src="img/play-btn.png" alt=""></div>
+                                    <div class="video-btn" id="reviews-btntenant"><img src="img/play-btn.png" alt=""></div>
                                 </div>
                                 <iframe class="reviews__video-tenant" title="YouTube video player" frameborder="0"
                                     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -1384,17 +1384,20 @@
                                     <div class="reviews__info">
                                         <div class="reviews__name">Екатерина</div>
                                         <div class="reviews__profession">бровист</div>
+                                        <audio class="reviews__audio-player" controls="controls">
+                                            <source src="audio/demo-audio.mp3" type="audio/mp3">
+                                        </audio>
                                     </div>
-                                    <audio class="reviews__audio-player" controls="controls">
-                                        <source src="audio/demo-audio.mp3" type="audio/mp3">
-                                    </audio>
                                 </div>
                                 <div class="reviews__audio-item">
                                     <img src="img/audio-review2.png" alt="">
-                                    <div class="reviews__name">София</div>
-                                    <div class="reviews__profession">лэшмейкер</div>
-                                    <audio controls="controls">
-                                        <source src="audio/demo-audio.mp3" type="audio/mp3"></audio>
+                                    <div class="reviews__info">
+                                        <div class="reviews__name">София</div>
+                                        <div class="reviews__profession">лэшмейкер</div>
+                                        <audio class="reviews__audio-player" controls="">
+                                            <source src="audio/demo-audio.mp3" type="audio/mp3">
+                                        </audio>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1487,17 +1490,7 @@
 
 
 
-    <!-- player -->
-    <div class="audioplayer" itemprop="track" itemscope itemtype="http://schema.org/MusicRecording">
-        <div class="playback" id="playback"></div>
-        <audio controls src="audio/demo-audio.mp3" class="audiotrack" id="audiotrack" preload="auto" itemprop="audio"></audio>
-    </div>
 
-
-    <div class="audioplayer" itemprop="track" itemscope itemtype="http://schema.org/MusicRecording">
-        <div class="playback" id="playback"></div>
-        <audio controls src="audio/demo-audio.mp3" id="audiotrack" preload="auto" itemprop="audio"></audio>
-    </div>
 
 
 

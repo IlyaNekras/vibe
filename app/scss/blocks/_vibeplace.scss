@@ -446,8 +446,15 @@
             &--active {
                 opacity: 0;
                 visibility: hidden;
-            }
+            } // #overlay-revtenant {
+        //     .active {
+        //         opacity: 0;
+        //         visibility: hidden;
+        //     }
+        // }
         }
+
+       
 
         .video-btn {
             position: absolute;
@@ -458,13 +465,38 @@
         }
 
         &__audio {
-            display: flex;
-            align-items: center;
+
+            &-item {
+                display: flex;
+                align-items: center;
+            }
+
+            &-item+.reviews__audio-item {
+                margin-top: 20px;
+            }
+        }
+
+        &__info {
+            margin-left: 18px;
         }
 
         &__audio-player {
-            width: 221px;
-            height: 46px;
+            width: 350px;
+            height: 20px;
+        }
+
+        &__name {
+            font-family: 'Tenor Sans', sans-serif;
+            font-size: 20px;
+            line-height: 23px;
+            color: #34343F;
+        }
+
+        &__profession {
+            font-size: 14px;
+            line-height: 16px;
+            color: #CE946B;
+            margin-bottom: 20px;
         }
 
         &__right-content {

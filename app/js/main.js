@@ -89,32 +89,35 @@ document.addEventListener('DOMContentLoaded', function () {
         customer.classList.toggle('active');
     }
 
+    if(customer){
+        
+    }
     reviewItem.forEach(function (e) {
         e.addEventListener('click', activeTab);
     });
 
-    //воспроизведение видео в блоке "reviews"
-    let revBtn = document.getElementById('reviews-btn'),
-        locBtn = document.querySelectorAll('#location-btn'),
-        overlay = document.querySelector('.video-overlay');
+    //автовспроизведение видео 
+    let btnTenant = document.getElementById('reviews-btntenant'),
+        locBtn1 = document.getElementById('location-btn1'),
+        locBtn2 = document.getElementById('location-btn2'),
+        overlayLoc1 = document.getElementById('overlay-loc1'),
+        overlayLoc2 = document.getElementById('overlay-loc2'),
+        overlayReviewsTenant = document.getElementById('overlay-revtenant');
 
-    //скрытие обложки
-    function hideOverlay(e) {
-        // overlay.forEach(function (e) {
-        overlay.classList.add('video-overlay--active');
-        // });
-    }
-
-
-    locBtn.forEach(function (i) {
-        i.addEventListener('click', hideOverlay);
+    locBtn1.addEventListener('click', function () {
+        document.querySelector('.location__video-1').src = "https://www.youtube.com/embed/dl16e_mG6hg?autoplay=1&mute=1";
+        overlayLoc1.classList.add('video-overlay--active');
+    });
+    locBtn2.addEventListener('click', function () {
+        document.querySelector('.location__video-2').src = "https://www.youtube.com/embed/dl16e_mG6hg?autoplay=1&mute=1";
+        overlayLoc2.classList.add('video-overlay--active');
     });
 
-    revBtn.addEventListener('click', function () {
+    btnTenant.addEventListener('click', function () {
         document.querySelector('.reviews__video-tenant').src = "https://www.youtube.com/embed/dl16e_mG6hg?autoplay=1&mute=1";
+        overlayReviewsTenant.classList.add('video-overlay--active');
     });
 
-    revBtn.addEventListener('click', hideOverlay);
 
     //библиотека для анимации
     new WOW().init();
@@ -132,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
         cssEase: 'linear',
     });
 
-    //изменение состояния стрелок слайдера location
+    //контент при прокрутке слайдера в location
     $('.location__slider').on('afterChange', function () {
         let currentSlide = $('.location__slider').slick('slickCurrentSlide');
         if (currentSlide == 0) {
@@ -141,6 +144,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 'transform': 'rotate(0deg)'
             });
             $('.next').css('backgroundImage', 'url("../icons/arrow-right.svg")');
+            $('.location__video-2, #overlay-loc2').removeClass('video-overlay--active').removeAttr('src');
+
         } else if (currentSlide == 1) {
             $('.next').css('backgroundImage', 'url("../icons/arrow-rightgray.svg")');
             $('.prev').empty('<img src="icons/arrow-left.svg">');
@@ -148,6 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 'backgroundImage': 'url("../icons/arrow-right.svg")',
                 'transform': 'rotate(180deg)'
             });
+            $('.location__video-1, #overlay-loc1').removeClass('video-overlay--active').removeAttr('src');
         }
     });
     $(document).ready(function () {
@@ -275,64 +281,59 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-    //player
-    function player() {
-        if (audioTrack.paused) {
-            setText(this, "Pause");
-            audioTrack.play();
-        } else {
-            setText(this, "Play");
-            audioTrack.pause();
-        }
-    }
+    //     //player
+    //     function player() {
+    //         if (audioTrack.paused) {
+    //             audioTrack.play();
+    //         } else {
+    //             audioTrack.pause();
+    //         }
+    //     }
 
-    function setText(el, text) {
-        el.innerHTML = text;
-    }
+    //     function setText(el, text) {
+    //         el.innerHTML = text;
+    //     }
 
-    function finish() {
-        audioTrack.currentTime = 0;
-        setText(playButton, "Play");
-    }
+    //     function finish() {
+    //         audioTrack.currentTime = 0;
+    //     }
 
-    function updatePlayhead() {
-        playhead.value = audioTrack.currentTime;
-    }
+    //     function updatePlayhead() {
+    //         playhead.value = audioTrack.currentTime;
+    //     }
 
-    function setAttributes(el, attrs) {
-        for (let key in attrs) {
-            el.setAttribute(key, attrs[key]);
-        }
-    }
+    //     function setAttributes(el, attrs) {
+    //         for (let key in attrs) {
+    //             el.setAttribute(key, attrs[key]);
+    //         }
+    //     }
 
-    let
-        playback = document.querySelector(".playback"),
-        audioTrack = document.querySelector(".audiotrack"),
-        playButton = document.createElement("button"),
-        playhead = document.createElement("progress");
-    setText(playButton, "Play");
-    setAttributes(playButton, {
-        "type": "button",
-    });
-    playback.appendChild(playButton);
-    playback.appendChild(playhead);
-    // playback.forEach(function (e) {
-    //     e.appendChild(playButton);
-    //     e.appendChild(playhead);
-    // });
-    audioTrack.removeAttribute("controls");
-    playButton.addEventListener("click", player, false);
-    // audioTrack.forEach(function (i) {
-    //     i.removeAttribute("controls");
-    //     i.addEventListener('timeupdate', updatePlayhead, false);
-    //     i.addEventListener('ended', finish, false);
-    //     i.addEventListener('playing', function () {
+    //     let
+    //         playback = document.querySelector("#playback"),
+    //         audioTrack = document.querySelector("#audiotrack"),
+    //         playButton = document.createElement("button"),
+    //         playhead = document.createElement("progress");
+
+    //     setAttributes(playButton, {
+    //         "type": "button",
+    //         "class": "button-audio",
+
+    //     });
+    //     setAttributes(playhead, {
+    //         "class": "progress",
+
+    //     });
+
+    //     playback.appendChild(playButton);
+    //     playback.appendChild(playhead);
+
+    //     audioTrack.removeAttribute("controls");
+    //     playButton.addEventListener("click", player, false);
+
+    //     audioTrack.addEventListener('playing', function () {
     //         playhead.max = audioTrack.duration;
     //     }, false);
-    // });
-    audioTrack.addEventListener('playing', function () {
-        playhead.max = audioTrack.duration;
-    }, false);
-    audioTrack.addEventListener('timeupdate', updatePlayhead, false);
-    audioTrack.addEventListener('ended', finish, false);
+    //     audioTrack.addEventListener('timeupdate', updatePlayhead, false);
+    //     audioTrack.addEventListener('ended', finish, false);
+
 });
