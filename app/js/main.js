@@ -1,10 +1,11 @@
 "use strict"
+
 document.addEventListener('DOMContentLoaded', function () {
 
     //POPUP
     let playBtn = document.querySelector('.time__btn'),
         popup = document.querySelector('.popup'),
-        closePopup = document.querySelectorAll('.popup__close'),
+        closePopup = document.querySelectorAll('.close'),
         video = document.querySelector('.popup__video'),
         map = document.querySelector('.popup__map'),
         mapBtn = document.querySelector('.plan__phone-map'),
@@ -13,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('click', hide);
 
     function hide(event) {
-        if (event.target.closest('.popup') && !event.target.closest('.popup__video') && !event.target.closest('.popup__map')) {
+        if (event.target.closest('.popup') && !event.target.closest('.popup__video') && !event.target.closest('.popup__map') && !event.target.closest('.popup__application') && !event.target.closest('.popup__thanks')) {
             hidePopup();
         }
     }
@@ -23,7 +24,10 @@ document.addEventListener('DOMContentLoaded', function () {
         body.classList.remove('active');
         map.classList.remove('popup__map--active');
         video.classList.remove('popup__video--active');
+        popupApplication.classList.remove('popup__application--active');
+        popupThanks.classList.remove('popup__thanks--active');
         document.querySelector('iframe').src = '';
+        popup.style.backgroundColor = 'rgba(0,0,0, .8)';
     }
 
     closePopup.forEach(function (i) {
@@ -43,6 +47,20 @@ document.addEventListener('DOMContentLoaded', function () {
         popup.classList.add('popup--active');
         map.classList.add('popup__map--active');
         body.classList.add('active');
+    });
+
+    //открытие формы при нажатии на кнопку
+    let btn = document.querySelectorAll('.btn-form'),
+        popupApplication = document.querySelector('.popup__application');
+
+    function showForm() {
+        popupApplication.classList.add('popup__application--active');
+        popup.classList.add('popup--active');
+        body.classList.add('active');
+    }
+
+    btn.forEach(function (e) {
+        e.addEventListener('click', showForm);
     });
 
     //блок ответ-вопрос
@@ -75,27 +93,28 @@ document.addEventListener('DOMContentLoaded', function () {
         e.addEventListener('click', activeTab);
     });
 
-    //воспроизведение видео в блоке в "overlay"
+    //воспроизведение видео в блоке "reviews"
+    let revBtn = document.getElementById('reviews-btn'),
+        locBtn = document.querySelectorAll('#location-btn'),
+        overlay = document.querySelector('.video-overlay');
 
-
-    let videoBtn = document.querySelectorAll('.video-btn');
-    // overlay = document.querySelectorAll('.video-overlay');
-
-    function hideOverlay() {
-        this.classList.add('video-overlay--active');
+    //скрытие обложки
+    function hideOverlay(e) {
+        // overlay.forEach(function (e) {
+           overlay.classList.add('video-overlay--active');
+        // });
     }
 
-    videoBtn.forEach(function (e) {
-        e.addEventListener('click', function () {
-            document.querySelector('.reviews__video-data').src = 'https://www.youtube.com/embed/dl16e_mG6hg?autoplay=1&mute=1;&mute=0';
-        });
 
+    locBtn.forEach(function (i) {
+        i.addEventListener('click', hideOverlay);
     });
 
-    // reviewBtn.addEventListener('click', function () {
-    //     overlay.classList.add('reviews__video-overlay--active');
-    // });
+    revBtn.addEventListener('click', function () {
+        document.querySelector('.reviews__video-tenant').src = "https://www.youtube.com/embed/dl16e_mG6hg?autoplay=1&mute=1";
+    });
 
+    revBtn.addEventListener('click', hideOverlay);
 
     //библиотека для анимации
     new WOW().init();
@@ -138,24 +157,6 @@ document.addEventListener('DOMContentLoaded', function () {
             $('.next').css('backgroundImage', 'url("../icons/arrow-right.svg")');
         }
     });
-
-
-    // $('.location__slider').on('afterChange', function () {
-    //     let currentSlide = $('.location__slider').slick('slickCurrentSlide');
-    //     if (currentSlide == 0) {
-    //         $('.prev').hide();
-    //         $('.next').show();
-    //     } else if (currentSlide == 1) {
-    //         $('.next').hide();
-    //         $('.prev').show();
-    //     }
-    // });
-    // $(document).ready(function () {
-    //     let currentSlide = $('.location__slider').slick('slickCurrentSlide');
-    //     if (currentSlide == 0) {
-    //         $('.prev').hide();
-    //     }
-    // });
 
     //слайдер картинок на рабочем месте
     $('.location__slider-img').slick({
@@ -229,30 +230,6 @@ document.addEventListener('DOMContentLoaded', function () {
             $('.next-stories').css('backgroundImage', 'url("../icons/arrow-right.svg")');
         }
     });
-    // $(document).ready(function () {
-    //     let currentSlide = $('.stories__slider').slick('slickCurrentSlide');
-    //     if (currentSlide == 0) {
-    //         $('.prev-stories').hide();
-    //     }
-    // });
-    // $('.stories__slider').on('afterChange', function () {
-    //     let currentSlide = $('.stories__slider').slick('slickCurrentSlide');
-    //     if (currentSlide == 0) {
-    //         $('.prev-stories').hide();
-    //         $('.next-stories').show();
-    //     } else if (currentSlide == 1 && currentSlide < 2) {
-    //         $('.next-stories').show();
-    //         $('.prev-stories').show();
-    //     } else if (currentSlide == 2) {
-    //         $('.next-stories').hide();
-    //     }
-    // });
-    // $(document).ready(function () {
-    //     let currentSlide = $('.stories__slider').slick('slickCurrentSlide');
-    //     if (currentSlide == 0) {
-    //         $('.prev-stories').hide();
-    //     }
-    // });
 
     //slider reviews
     $('.reviews__slider').slick({
@@ -272,7 +249,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let currentSlide = $('.reviews__slider').slick('slickCurrentSlide');
         if (currentSlide == 0) {
             $('.prev-reviews').css('backgroundImage', 'url("../icons/prev-arrowgray.svg")');
-            $('.next-reviews').css('backgroundImage', 'url("../icons/next-arrowgold.svg")');
+            $('.next-reviews').css('backgroundImage', 'url("../icons/next-arrow.svg")');
         }
     });
 
@@ -282,12 +259,10 @@ document.addEventListener('DOMContentLoaded', function () {
             $('.prev-reviews').css('backgroundImage', 'url("../icons/prev-arrowgray.svg")');
         } else if (currentSlide == 3) {
             $('.next-reviews').css('backgroundImage', 'url("../icons/next-arrowgray.svg")');
-        } else if (currentSlide == 1 && currentSlide < 3) {
+        } else if (currentSlide == 1 || currentSlide < 3) {
             $('.prev-reviews').css('backgroundImage', 'url("../icons/prev-arrow.svg")');
-            $('.next-reviews').css('backgroundImage', 'url("../icons/next-arrowgold.svg")');
+            $('.next-reviews').css('backgroundImage', 'url("../icons/next-arrow.svg")');
         }
-
-
     });
 
 });
