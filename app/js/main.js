@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //скрытие обложки
     function hideOverlay(e) {
         // overlay.forEach(function (e) {
-           overlay.classList.add('video-overlay--active');
+        overlay.classList.add('video-overlay--active');
         // });
     }
 
@@ -265,4 +265,74 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+
+
+
+
+
+
+
+
+
+
+    //player
+    function player() {
+        if (audioTrack.paused) {
+            setText(this, "Pause");
+            audioTrack.play();
+        } else {
+            setText(this, "Play");
+            audioTrack.pause();
+        }
+    }
+
+    function setText(el, text) {
+        el.innerHTML = text;
+    }
+
+    function finish() {
+        audioTrack.currentTime = 0;
+        setText(playButton, "Play");
+    }
+
+    function updatePlayhead() {
+        playhead.value = audioTrack.currentTime;
+    }
+
+    function setAttributes(el, attrs) {
+        for (let key in attrs) {
+            el.setAttribute(key, attrs[key]);
+        }
+    }
+
+    let
+        playback = document.querySelector(".playback"),
+        audioTrack = document.querySelector(".audiotrack"),
+        playButton = document.createElement("button"),
+        playhead = document.createElement("progress");
+    setText(playButton, "Play");
+    setAttributes(playButton, {
+        "type": "button",
+    });
+    playback.appendChild(playButton);
+    playback.appendChild(playhead);
+    // playback.forEach(function (e) {
+    //     e.appendChild(playButton);
+    //     e.appendChild(playhead);
+    // });
+    audioTrack.removeAttribute("controls");
+    playButton.addEventListener("click", player, false);
+    // audioTrack.forEach(function (i) {
+    //     i.removeAttribute("controls");
+    //     i.addEventListener('timeupdate', updatePlayhead, false);
+    //     i.addEventListener('ended', finish, false);
+    //     i.addEventListener('playing', function () {
+    //         playhead.max = audioTrack.duration;
+    //     }, false);
+    // });
+    audioTrack.addEventListener('playing', function () {
+        playhead.max = audioTrack.duration;
+    }, false);
+    audioTrack.addEventListener('timeupdate', updatePlayhead, false);
+    audioTrack.addEventListener('ended', finish, false);
 });
