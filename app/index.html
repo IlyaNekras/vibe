@@ -1363,8 +1363,8 @@
                 <div class="title"><span>VIBE COWORKING</span> ГЛАЗАМИ ПОСТОЯННЫХ АРЕНДАТОРОВ И КЛИЕНТОВ</div>
                 <div class="reviews__tabs">
                     <div class="reviews__items">
-                        <a class="reviews__item reviews__item--active" href="#tenant" id="tab-1">ОТЗЫВЫ АРЕНДАТОРОВ</a>
-                        <a class="reviews__item" href="#customer" id="tab-2">ОТЗЫВЫ КЛИЕНТОВ</a>
+                        <a class="reviews__item tenant reviews__item--active" href="#tenant" id="tab-1">ОТЗЫВЫ АРЕНДАТОРОВ</a>
+                        <a class="reviews__item customer" href="#customer" id="tab-2">ОТЗЫВЫ КЛИЕНТОВ</a>
                     </div>
                     <div class="reviews__wrap active" id="tenant">
                         <div class="reviews__media">
@@ -1394,7 +1394,7 @@
                                     <div class="reviews__info">
                                         <div class="reviews__name">София</div>
                                         <div class="reviews__profession">лэшмейкер</div>
-                                        <audio class="reviews__audio-player" controls="">
+                                        <audio class="reviews__audio-player" controls="controls">
                                             <source src="audio/demo-audio.mp3" type="audio/mp3">
                                         </audio>
                                     </div>
@@ -1411,7 +1411,41 @@
                             </div>
                         </div>
                     </div>
-                    <div class="reviews__wrap" id="customer">
+                    <div class="reviews__wrap customer" id="customer">
+                        <div class="reviews__media reviews__media-2">
+                            <p class="reviews__text">Посмотрите видеоотзыв о нас</p>
+                            <div class="reviews__video">
+                                <div class="video-overlay" id="overlay-revcustomer">
+                                    <img class="video-bg" src="img/video-reviewimg.png" alt="">
+                                    <div class="video-btn" id="reviews-btncustomer"><img src="img/play-btn.png" alt=""></div>
+                                </div>
+                                <iframe class="reviews__video-customer" title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="reviews__audio">
+                                <div class="reviews__audio-item">
+                                    <img src="img/audio-review1.png" alt="">
+                                    <div class="reviews__info">
+                                        <div class="reviews__name">Екатерина</div>
+                                        <div class="reviews__profession">клиент</div>
+                                        <audio class="reviews__audio-player" controls="controls">
+                                            <source src="audio/demo-audio.mp3" type="audio/mp3">
+                                        </audio>
+                                    </div>
+                                </div>
+                                <div class="reviews__audio-item">
+                                    <img src="img/audio-review2.png" alt="">
+                                    <div class="reviews__info">
+                                        <div class="reviews__name">Надежда</div>
+                                        <div class="reviews__profession">клиент</div>
+                                        <audio class="reviews__audio-player" controls="controls">
+                                            <source src="audio/demo-audio.mp3" type="audio/mp3">
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

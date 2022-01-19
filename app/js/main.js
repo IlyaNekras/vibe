@@ -75,39 +75,43 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     //tabs
-    let tenant = document.getElementById('tenant'),
-        customer = document.getElementById('customer'),
-        reviewItem = document.querySelectorAll('.reviews__item'),
+    let tenantID = document.getElementById('tenant'),
+        customerID = document.getElementById('customer'),
+        tenant = document.querySelector('.tenant'),
+        customer = document.querySelector('.customer'),
         tab1 = document.getElementById('tab-1'),
         tab2 = document.getElementById('tab-2');
 
-    function activeTab(e) {
+    customer.addEventListener('click', function(e){
         e.preventDefault();
-        tab1.classList.toggle('reviews__item--active');
-        tab2.classList.toggle('reviews__item--active');
-        tenant.classList.toggle('active');
-        customer.classList.toggle('active');
-    }
-
-    if(customer){
-        
-    }
-    reviewItem.forEach(function (e) {
-        e.addEventListener('click', activeTab);
+        tab1.classList.remove('reviews__item--active');
+        tab2.classList.add('reviews__item--active');
+        tenantID.classList.remove('active');
+        customerID.classList.add('active');
     });
-
+    tenant.addEventListener('click', function(e){
+        e.preventDefault();
+        tab1.classList.add('reviews__item--active');
+        tab2.classList.remove('reviews__item--active');
+        tenantID.classList.add('active');
+        customerID.classList.remove('active');
+    });
+    
     //автовспроизведение видео 
     let btnTenant = document.getElementById('reviews-btntenant'),
+        btnCustomer = document.getElementById('reviews-btncustomer'),
         locBtn1 = document.getElementById('location-btn1'),
         locBtn2 = document.getElementById('location-btn2'),
         overlayLoc1 = document.getElementById('overlay-loc1'),
         overlayLoc2 = document.getElementById('overlay-loc2'),
-        overlayReviewsTenant = document.getElementById('overlay-revtenant');
+        overlayCustomer = document.getElementById('overlay-revcustomer'),
+        overlayTenant = document.getElementById('overlay-revtenant');
 
     locBtn1.addEventListener('click', function () {
         document.querySelector('.location__video-1').src = "https://www.youtube.com/embed/dl16e_mG6hg?autoplay=1&mute=1";
         overlayLoc1.classList.add('video-overlay--active');
     });
+
     locBtn2.addEventListener('click', function () {
         document.querySelector('.location__video-2').src = "https://www.youtube.com/embed/dl16e_mG6hg?autoplay=1&mute=1";
         overlayLoc2.classList.add('video-overlay--active');
@@ -115,8 +119,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     btnTenant.addEventListener('click', function () {
         document.querySelector('.reviews__video-tenant').src = "https://www.youtube.com/embed/dl16e_mG6hg?autoplay=1&mute=1";
-        overlayReviewsTenant.classList.add('video-overlay--active');
+        overlayTenant.classList.add('video-overlay--active');
     });
+
+    btnCustomer.addEventListener('click', function () {
+        document.querySelector('.reviews__video-customer').src = "https://www.youtube.com/embed/dl16e_mG6hg?autoplay=1&mute=1";
+        overlayCustomer.classList.add('video-overlay--active');
+    });
+
 
 
     //библиотека для анимации

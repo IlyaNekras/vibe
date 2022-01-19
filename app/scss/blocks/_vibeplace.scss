@@ -389,6 +389,16 @@
             justify-content: space-around;
             padding: 0;
         }
+        #customer{
+            .reviews__media{
+               display: flex;
+               align-items: center;
+            }
+            .reviews__audio{
+                margin-top: 0;
+                margin-left: 40px;
+            }
+        }
 
         &__item {
             font-size: 14px;
@@ -425,7 +435,6 @@
         &__video {
             width: 568px;
             height: 364px;
-            margin-bottom: 88px;
             position: relative;
 
             iframe {
@@ -433,8 +442,6 @@
                 height: inherit;
                 z-index: 1;
             }
-
-
         }
 
         .video-overlay {
@@ -446,15 +453,10 @@
             &--active {
                 opacity: 0;
                 visibility: hidden;
-            } // #overlay-revtenant {
-        //     .active {
-        //         opacity: 0;
-        //         visibility: hidden;
-        //     }
-        // }
+            }
         }
 
-       
+
 
         .video-btn {
             position: absolute;
@@ -465,6 +467,7 @@
         }
 
         &__audio {
+            margin-top: 88px;
 
             &-item {
                 display: flex;
