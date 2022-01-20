@@ -1,6 +1,7 @@
 .header {
     min-height: 1215px;
     position: relative;
+    padding-bottom: 80px;
 
     &__bg {
         position: absolute;
@@ -22,6 +23,13 @@
         align-items: center;
         color: #fff;
         height: 75px;
+        position: fixed;
+        background-color: rgba($bg-color, .9);
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 70px;
+        z-index: 10;
     }
 
     &__top-box {
@@ -48,11 +56,14 @@
     }
 
     &__burger {
-        // display: none;
+        display: none;
         width: 20px;
         z-index: 1;
         cursor: pointer;
         height: 14px;
+        position: absolute;
+        top: 30px;
+        right: 30px;
 
         span {
             display: block;
@@ -71,6 +82,7 @@
         }
 
         &--active {
+
             span {
                 &:first-child {
                     transform: rotate(45deg);
@@ -101,14 +113,16 @@
         font-size: 16px;
         font-weight: 500;
         z-index: 1;
+        margin-left: 15px;
 
         &__item {
             position: relative;
             cursor: pointer;
+            display: block;
+            color: #fff;
 
             &:hover {
                 &::before {
-
                     content: '';
                     position: absolute;
                     bottom: -10px;
@@ -121,8 +135,7 @@
             }
         }
 
-
-        &__item+.menu__item {
+        li+li {
             margin-left: 32px;
         }
     }
@@ -131,6 +144,7 @@
         display: flex;
         align-items: center;
         z-index: 1;
+        margin-left: 15px;
     }
 
     &__top-phone {
@@ -195,7 +209,6 @@
         position: absolute;
         top: -20px;
         right: -10px;
-        min-width: 320px;
         max-width: 100%;
         z-index: -1;
     }
@@ -269,7 +282,7 @@
             border-right: 2px solid #b98766;
             border-radius: 50%/100% 100% 0 0;
             transform: rotate3d(1, 0.4, 0, -180deg);
-            left: 139px;
+            left: 89px;
             top: 118px;
         }
 
@@ -344,5 +357,4 @@
         font-weight: 400;
         line-height: 23px;
     }
-
 }

@@ -2,6 +2,33 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+
+    //показать/скрыть menu
+    let menu = document.querySelector('.menu'),
+        menuItem = document.querySelectorAll('.menu__item'),
+        burger = document.querySelector('.header__burger');
+
+    document.addEventListener('click', hideMenu);
+
+    function hideMenu(e) {
+        if (!e.target.closest('.header__burger') && !e.target.closest('.menu')) {
+            menu.classList.remove('menu--active');
+            burger.classList.remove('header__burger--active');
+        }
+    }
+    burger.addEventListener('click', function () {
+        burger.classList.toggle('header__burger--active');
+        menu.classList.toggle('menu--active');
+    });
+    
+    menuItem.forEach(function (i) {
+        i.addEventListener('click', function () {
+            menu.classList.remove('menu--active');
+            burger.classList.remove('header__burger--active');
+        });
+    });
+
+
     //POPUP
     let playBtn = document.querySelector('.time__btn'),
         popup = document.querySelector('.popup'),
@@ -10,6 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
         map = document.querySelector('.popup__map'),
         mapBtn = document.querySelector('.plan__phone-map'),
         body = document.querySelector('body');
+
+
 
     document.addEventListener('click', hide);
 
@@ -82,21 +111,21 @@ document.addEventListener('DOMContentLoaded', function () {
         tab1 = document.getElementById('tab-1'),
         tab2 = document.getElementById('tab-2');
 
-    customer.addEventListener('click', function(e){
+    customer.addEventListener('click', function (e) {
         e.preventDefault();
         tab1.classList.remove('reviews__item--active');
         tab2.classList.add('reviews__item--active');
         tenantID.classList.remove('active');
         customerID.classList.add('active');
     });
-    tenant.addEventListener('click', function(e){
+    tenant.addEventListener('click', function (e) {
         e.preventDefault();
         tab1.classList.add('reviews__item--active');
         tab2.classList.remove('reviews__item--active');
         tenantID.classList.add('active');
         customerID.classList.remove('active');
     });
-    
+
     //автовспроизведение видео 
     let btnTenant = document.getElementById('reviews-btntenant'),
         btnCustomer = document.getElementById('reviews-btncustomer'),
