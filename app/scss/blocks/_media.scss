@@ -32,6 +32,13 @@
             font-size: 40px;
         }
     }
+
+    .location {
+        .title {
+            font-size: 40px;
+            line-height: normal;
+        }
+    }
 }
 
 @media(max-width: 1740px) {
@@ -169,6 +176,53 @@
             margin: 0 auto;
         }
     }
+
+    .location {
+        padding: 150px 0;
+
+        &__bg {
+            top: -14%;
+        }
+
+        &__wrap {
+            left: 60%;
+        }
+
+        &__slider {
+            &-text {
+                left: 71%;
+            }
+        }
+
+        .prev-arrow {
+            right: 333px;
+        }
+
+        .next-arrow {
+            right: 150px;
+        }
+
+        &__link {
+            font-size: 11px;
+            margin-left: 30px;
+        }
+    }
+}
+
+@media(max-width: 1441px) {
+    .location {
+        .title {
+            font-size: 37px;
+        }
+
+        &__slider {
+
+
+            &-text {
+                left: 70%;
+            }
+        }
+    }
 }
 
 @media(max-width: 1347px) {
@@ -195,6 +249,73 @@
                 padding: 42px;
             }
         }
+    }
+
+    .location {
+        padding: 100px 0;
+
+        &__bg {
+            top: -10%;
+        }
+
+        .title {
+            font-size: 33px;
+            max-width: 657px;
+        }
+
+        &__items {
+            margin-bottom: 30px;
+        }
+
+        &__wrap {
+            position: initial;
+            max-width: 564px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        &__box {
+            justify-content: center;
+        }
+
+        &__title {
+            font-size: 32px;
+        }
+
+        &__slider {
+            &-bottom {
+                margin-top: 9px;
+            }
+
+            &-text {
+                left: 45%;
+            }
+
+            &-img {
+                margin: 0 auto;
+            }
+        }
+
+        .slick-dots {
+            display: flex;
+            margin-top: -37px;
+            justify-content: center;
+            position: initial;
+
+            li {
+                margin: 0 15px;
+            }
+        }
+
+        .prev-arrow {
+            right: auto;
+            left: 35%;
+        }
+
+        .next-arrow {
+            right: 35%;
+        }
+
     }
 }
 
@@ -271,6 +392,12 @@
             top: 22%;
         }
     }
+
+    .location {
+        &__slider-text {
+            left: 43%;
+        }
+    }
 }
 
 @media(max-width: 1120px) {
@@ -291,6 +418,21 @@
             &::before {
                 padding: 31px;
             }
+        }
+    }
+
+    .location {
+        &__text {
+            font-size: 17px;
+            line-height: 24px;
+        }
+
+        .next {
+            right: -10%;
+        }
+
+        .prev {
+            left: -10%;
         }
     }
 }
@@ -337,6 +479,31 @@
             &::before {
                 padding: 31px;
             }
+        }
+    }
+
+    .location {
+        &__text {
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 30px;
+        }
+
+        &__video {
+            height: 370px;
+        }
+
+        &__slider-text {
+            left: 42%;
+        }
+
+        &__title {
+            font-size: 28px;
+        }
+
+        &__subtitle {
+            font-size: 13px;
+            line-height: 19px;
         }
     }
 }
@@ -406,6 +573,26 @@
             }
         }
     }
+
+    .location {
+        .title {
+            font-size: 30px;
+            margin: 100px auto 40px;
+        }
+
+        &__text {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        .prev-arrow {
+            left: 30%;
+        }
+
+        .next-arrow {
+            right: 30%;
+        }
+    }
 }
 
 @media(max-width: 940px) {
@@ -418,6 +605,19 @@
 
         &__btn {
             top: 25%;
+        }
+    }
+
+    .location {
+        .prev {
+            left: -20%;
+        }
+
+        .next {
+            right: -20%;
+        }
+        &__video{
+                height: 313px;
         }
     }
 }
@@ -730,7 +930,8 @@
                 left: 50px;
                 font-size: 60px;
             }
-            &-descr{
+
+            &-descr {
                 font-size: 12px;
             }
         }
