@@ -8,7 +8,7 @@
         width: 100%;
         position: absolute;
         top: -50%;
-        left: 0;
+        left: 0;z-index: -1;
 
         img {
             width: inherit;
@@ -18,31 +18,34 @@
     &__wrap {
         display: flex;
         padding-top: 85px;
+
+        &-img {
+            position: absolute;
+            top: -15%;
+            left: 0;
+            z-index: -1;
+            width: 77%;
+        }
     }
 
     &__box {
         width: 50%;
         position: relative;
 
-        &-img {
-            position: absolute;
-            top: -58%;
-            left: -26%;
-            z-index: -1;
-        }
+
     }
 
     &__btn {
         position: absolute;
-        top: 25%;
-        left: 72%;
+        top: 45%;
+        left: 38%;
         width: 125px;
         height: 125px;
         border-radius: 50%;
         background: linear-gradient(137.66deg, #F8E6E2 19%, #E4BEB5 76.3%);
         border-bottom: 4px solid #B47F74;
         cursor: pointer;
-        z-index: 1;
+        z-index: 5;
 
         &:hover {
             background: linear-gradient(137.66deg, #F8E6E2 19%, #fc9d8a 76.3%);
