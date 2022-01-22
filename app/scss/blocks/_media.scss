@@ -293,6 +293,7 @@
 
             &-img {
                 margin: 0 auto;
+                padding-left: 0;
             }
         }
 
@@ -616,8 +617,91 @@
         .next {
             right: -20%;
         }
-        &__video{
-                height: 313px;
+
+        &__video {
+            height: 313px;
+        }
+    }
+}
+
+
+@media(max-width: 880px) {
+    .location {
+        &__bg {
+            top: -8%;
+
+            img {
+                min-height: 1550px;
+            }
+        }
+
+        .title {
+            font-size: 25px;
+        }
+
+        &__num {
+            font-size: 200px;
+        }
+
+        .prev,
+        .next {
+            width: 60px;
+            height: 60px;
+            background-size: contain;
+        }
+
+        &__text {
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        &__video {
+            height: 274px;
+        }
+
+        &__descr {
+            font-size: 18px;
+        }
+
+        &__item {
+            position: relative;
+            padding-left: 34px;
+            max-width: 300px;
+            font-size: 11px;
+            line-height: 20px;
+        }
+
+        &__slider-img {
+            max-width: 340px;
+            height: 280px;
+        }
+
+        .slick-dots {
+            margin-top: -15px;
+        }
+
+        &__wrap {
+            margin-top: 20px;
+        }
+
+        .prev-arrow {
+            left: 25%;
+        }
+
+        .next-arrow {
+            right: 25%;
+        }
+
+        &__slider-text {
+            left: 40%;
+        }
+    }
+}
+
+@media(max-width: 816px) {
+    .location {
+        .container {
+            padding: 0 150px;
         }
     }
 }
@@ -722,7 +806,7 @@
         }
 
         &__item {
-            margin: 0 40px;
+            margin: 0 41px;
         }
 
         &__item:nth-child(2n)::before {
@@ -786,6 +870,26 @@
             top: -15%;
         }
     }
+
+    .location {
+        .container {
+            padding: 0 100px;
+        }
+
+        .title {
+            font-size: 25px;
+            margin: 100px auto 25px;
+            max-width: 500px;
+        }
+
+        .prev {
+            left: -9%;
+        }
+
+        .next {
+            right: -9%;
+        }
+    }
 }
 
 @media(max-width: 660px) {
@@ -800,6 +904,47 @@
             }
         }
     }
+
+    .location {
+        .container {
+            padding: 0 60px;
+        }
+
+        &__bg {
+            img {
+                min-height: 1480px;
+            }
+        }
+
+        .prev {
+            left: -6%;
+        }
+
+        .next {
+            right: -6%;
+        }
+
+        .title {
+            font-size: 23px;
+            max-width: 440px;
+        }
+
+        &__num {
+            font-size: 150px;
+            left: 17px;
+        }
+
+        &__text {
+            font-size: 10px;
+            line-height: 14px;
+        }
+
+        &__title {
+            font-size: 23px;
+            line-height: normal;
+            margin-bottom: 10px;
+        }
+    }
 }
 
 @media(max-width: 600px) {
@@ -812,6 +957,25 @@
 }
 
 @media(max-width: 579px) {
+    .header {
+        &__bottom {
+            margin: 0 90px;
+        }
+
+        &__item {
+            margin: 0;
+            height: 150px;
+
+            &:nth-child(2n) {
+                padding: 0;
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+
     .time {
         .title {
             font-size: 22px;
@@ -854,23 +1018,6 @@
         &__scroll {
             font-size: 9px;
         }
-
-        &__bottom {
-            margin: 0 86px;
-        }
-
-        &__item {
-            margin: 0;
-            height: 150px;
-
-            &:nth-child(2n) {
-                padding: 0;
-
-                &::before {
-                    display: none;
-                }
-            }
-        }
     }
 
     .time {
@@ -893,12 +1040,104 @@
             height: 60px;
         }
     }
+
+    .location {
+        &__slider {
+            margin-top: -110px;
+        }
+
+        &__bg {
+            img {
+                min-height: 1300px;
+            }
+        }
+
+        .prev,
+        .next {
+            width: 40px;
+            height: 40px;
+            background-size: contain;
+        }
+
+        .title {
+            font-size: 21px;
+            max-width: 348px;
+        }
+
+        &__video {
+            height: 222px;
+            max-width: 390px;
+            margin-bottom: 35px;
+        }
+
+        &__items {
+            display: block;
+            margin-bottom: 0px;
+        }
+
+        &__item {
+            margin: 0 auto;
+            max-width: 241px;
+            line-height: normal;
+
+            span {
+                top: -5px;
+
+                &::before {
+                    top: 3px;
+                }
+            }
+        }
+
+        &__slider-img {
+            max-width: 250px;
+            height: 220px;
+        }
+
+        &__title {
+            font-size: 19px;
+        }
+
+        &__subtitle {
+            line-height: normal;
+            font-size: 10px;
+        }
+
+        .button {
+            width: 210px;
+            height: 60px;
+            font-size: 11px;
+        }
+    }
 }
 
 @media(max-width: 530px) {
+
     .time {
         &__btn {
             top: 16%;
+        }
+    }
+
+    .location {
+
+        .prev,
+        .next {
+            top: 8px;
+        }
+
+        .prev {
+            left: 38%;
+        }
+
+        .next {
+            right: 38%;
+        }
+
+        &__slider {
+            &-text {
+                left: 37%;
+            }
         }
     }
 }
@@ -956,6 +1195,42 @@
                 line-height: 16px;
             }
         }
+    }
+
+    .location {
+        &__slider {
+            margin-top: -80px;
+        }
+
+        .prev {
+            left: 30%;
+        }
+
+        .next {
+            right: 30%;
+
+        }
+
+        .title {
+            font-size: 18px;
+        }
+
+        &__num {
+            font-size: 110px;
+        }
+
+        &__descr {
+            font-size: 14px;
+        }
+
+        .prev-arrow {
+            left: 20%;
+        }
+
+        .next-arrow {
+            right: 20%;
+        }
+
     }
 }
 
