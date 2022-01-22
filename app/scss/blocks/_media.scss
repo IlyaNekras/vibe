@@ -39,6 +39,12 @@
             line-height: normal;
         }
     }
+
+    .plan {
+        &__bg {
+            top: -25%;
+        }
+    }
 }
 
 @media(max-width: 1740px) {
@@ -49,6 +55,11 @@
         }
     }
 
+    .plan {
+        &__bg {
+            top: -23%;
+        }
+    }
 }
 
 @media(max-width: 1620px) {
@@ -56,6 +67,12 @@
 
         &__btn {
             top: 36%;
+        }
+    }
+
+    .plan {
+        &__bg {
+            top: -20%;
         }
     }
 }
@@ -78,6 +95,12 @@
         &__btn {
             top: 32%;
             left: 38%;
+        }
+    }
+
+    .plan {
+        &__bg {
+            top: -17%;
         }
     }
 }
@@ -207,6 +230,50 @@
             margin-left: 30px;
         }
     }
+
+    .plan {
+        &__bg {
+            top: -15%;
+        }
+
+        &__wrap {
+            display: block;
+            position: initial;
+        }
+
+        &__phone {
+            position: initial;
+            height: 500px;
+
+            &-img {
+                top: 267px;
+                left: 406px;
+            }
+
+            &-map {
+                top: 231px;
+                left: 482px;
+            }
+        }
+
+        &__box {
+            max-width: 100%;
+        }
+
+        &__text {
+            text-align: center;
+        }
+
+        .button {
+            margin: 0 auto;
+        }
+
+        .title {
+            &__bottom {
+                padding-top: 150px;
+            }
+        }
+    }
 }
 
 @media(max-width: 1441px) {
@@ -318,6 +385,30 @@
         }
 
     }
+
+    .plan {
+        padding: 100px 0;
+
+        .title {
+            font-size: 40px;
+        }
+
+        &__phone {
+            &-img {
+                left: 340px;
+            }
+
+            &-map {
+                top: 231px;
+                left: 415px;
+            }
+        }
+
+        &__text {
+            font-size: 17px;
+            line-height: 24px;
+        }
+    }
 }
 
 @media(max-width: 1203px) {
@@ -399,6 +490,23 @@
             left: 43%;
         }
     }
+
+    .plan {
+        &__bg {
+            top: -11%;
+        }
+
+        .dotmarker-2 {
+            &::after {
+                background-size: 300px;
+                width: 300px;
+                height: 300px;
+                top: -298px;
+                left: -236px;
+            }
+        }
+
+    }
 }
 
 @media(max-width: 1120px) {
@@ -434,6 +542,22 @@
 
         .prev {
             left: -10%;
+        }
+    }
+
+    .plan {
+        .container {
+            padding: 0 130px;
+        }
+
+        &__phone {
+            &-img {
+                left: 185px;
+            }
+
+            &-map {
+                left: 258px;
+            }
         }
     }
 }
@@ -506,6 +630,10 @@
             font-size: 13px;
             line-height: 19px;
         }
+    }
+
+    .plan {
+        padding: 70px 0;
     }
 }
 
@@ -622,6 +750,25 @@
             height: 313px;
         }
     }
+
+    .plan {
+        .title {
+            font-size: 30px;
+            line-height: normal;
+        }
+
+        &__phone {
+            &-img {
+                left: 109px;
+                top: 220px;
+            }
+
+            &-map {
+                left: 183px;
+                top: 183px;
+            }
+        }
+    }
 }
 
 
@@ -695,6 +842,51 @@
         &__slider-text {
             left: 40%;
         }
+    }
+
+    .plan {
+        padding-top: 0;
+        margin-top: -100px;
+
+        &__bg {
+            top: -9%;
+        }
+
+        &__phone {
+            &-img {
+                left: 198px;
+
+                img {
+                    max-width: 60%;
+                }
+            }
+
+            &-map {
+                left: 199px;
+                top: 124px;
+
+                img {
+                    width: 70%;
+                }
+
+                span {
+                    bottom: 64px;
+                    left: -40px;
+                }
+
+                &-maptext {
+                    position: absolute;
+                    top: -44px;
+                    right: 202px;
+                }
+            }
+
+            .dotmarker-2 {
+                left: 145px;
+                bottom: 145px;
+            }
+        }
+
     }
 }
 
@@ -1198,6 +1390,12 @@
     }
 
     .location {
+        &__bg {
+            img {
+                min-height: 1240px;
+            }
+        }
+
         &__slider {
             margin-top: -80px;
         }
@@ -1223,6 +1421,17 @@
             font-size: 14px;
         }
 
+        &__video {
+            height: 197px;
+        }
+
+        .video-btn {
+            img {
+                width: 80px;
+            }
+        }
+
+
         .prev-arrow {
             left: 20%;
         }
@@ -1231,6 +1440,16 @@
             right: 20%;
         }
 
+        &__link {
+            font-size: 8px;
+            margin-left: 10px;
+        }
+
+        .button {
+            width: 170px;
+            height: 40px;
+            font-size: 8px;
+        }
     }
 }
 
@@ -1309,6 +1528,45 @@
             }
         }
     }
+
+    .location {
+        &__bg {
+            img {
+                min-height: 1200px;
+            }
+        }
+
+        .title {
+            font-size: 16px;
+        }
+
+        &__text {
+            margin-bottom: 20px;
+        }
+
+        &__video {
+            margin-bottom: 25px;
+            height: 170px;
+        }
+
+        &__descr {
+            margin-bottom: 20px;
+            line-height: normal;
+        }
+
+        &__wrap {
+            margin-top: 10px;
+        }
+
+        &__slider-text {
+            left: 35%;
+            font-size: 40px;
+
+            span {
+                font-size: 17px;
+            }
+        }
+    }
 }
 
 @media(max-width: 376px) {
@@ -1348,9 +1606,99 @@
             }
         }
     }
+
+    .location {
+        &__bg {
+            img {
+                min-height: 970px;
+            }
+        }
+
+        &__slider {
+            margin-top: -130px;
+
+            &-text {
+                font-size: 34px;
+            }
+
+            &-img {
+                max-width: 200px;
+                height: 175px;
+            }
+        }
+
+        .slick-dots li {
+            margin: 0 10px;
+        }
+
+        .title {
+            font-size: 15px;
+            margin: 100px auto 15px;
+        }
+
+        &__text {
+            font-size: 7px;
+            line-height: normal;
+        }
+
+        &__num {
+            font-size: 100px;
+            left: -3px;
+        }
+
+        &__descr {
+            margin-bottom: 12px;
+            font-size: 11px;
+        }
+
+        &__video {
+            margin-bottom: 17px;
+            height: 140px;
+        }
+
+        &__item {
+            font-size: 9px;
+            min-height: 21px;
+            padding-left: 25px;
+
+            span {
+                width: 12px;
+                height: 12px;
+                top: -2px;
+
+                &::before {
+                    left: 0;
+                    top: 2px;
+                }
+            }
+        }
+
+        &__title {
+            font-size: 14px;
+        }
+
+        &__subtitle {
+            font-size: 9px;
+        }
+
+        .button {
+            width: 150px;
+            height: 40px;
+            font-size: 7px;
+
+            &::after {
+                right: 25px;
+
+            }
+        }
+
+        &__link {
+            font-size: 7px;
+        }
+    }
 }
 
-@media(max-width: 349px) {
+@media(max-width: 352px) {
     .time {
         &__wrap {
             &-img {
@@ -1361,6 +1709,47 @@
         &__btn {
             top: 15%;
             left: 48%;
+        }
+    }
+
+    .location {
+        .prev {
+            left: 20%;
+        }
+
+        .next {
+            right: 20%;
+        }
+
+        .title {
+            font-size: 13px;
+            margin: 80px auto 15px;
+        }
+
+        &__num {
+            margin-top: -20px;
+        }
+
+        &__subtitle {
+            margin-bottom: 15px;
+        }
+
+        .button {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 5px;
+        }
+
+        &__box {
+            display: block;
+        }
+
+        &__link {
+            margin-left: 0;
+        }
+
+        .next-arrow {
+            right: 12%;
         }
     }
 }

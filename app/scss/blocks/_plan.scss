@@ -1,6 +1,6 @@
 .plan {
     min-height: 1500px;
-    padding: 100px 0;
+    padding: 170px 0 100px;
     position: relative;
 
     &__overlay {
@@ -17,7 +17,7 @@
         position: absolute;
         top: -28%;
         left: 0;
-
+z-index: -1;
         img {
             width: inherit;
         }
@@ -64,11 +64,10 @@
 
     &__phone {
         position: relative;
-
         &-img {
             position: absolute;
-            top: 149px;
-            left: 93px;
+            top: 164px;
+            left: 469px;
 
             &::before,
             &::after {
@@ -198,14 +197,27 @@
             bottom: 227px;
             right: auto;
             background: transparent;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: -373px;
+                left: -307px;
+                background-image: url('../img/circles-map.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 443px;
+                height: 443px;
+                z-index: -1;
+            }
         }
 
         &-map {
             width: 163px;
             height: 163px;
             z-index: 1;
-            top: 140px;
-            left: 124px;
+            top: 126px;
+            left: 544px;
             position: absolute;
 
             span {
