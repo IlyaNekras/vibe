@@ -244,6 +244,7 @@ document.addEventListener('DOMContentLoaded', function () {
         nextArrow: '<button type="button" class="next-stories"></button>',
         speed: 300,
         fade: true,
+        // variableWidth: true,
         cssEase: 'linear',
     });
 
@@ -282,8 +283,6 @@ document.addEventListener('DOMContentLoaded', function () {
         nextArrow: '<button type="button" class="next-reviews"></button>',
         slidesToShow: 1,
         slideToScroll: 1,
-        variableWidth: true,
-        mobileFirst: true,
         variableWidth: true,
         infinite: false,
         speed: 900,

@@ -45,6 +45,18 @@
             top: -25%;
         }
     }
+
+    .vibeplace {
+        .stories {
+            .prev-stories {
+                left: -3%;
+            }
+
+            .next-stories {
+                right: 0;
+            }
+        }
+    }
 }
 
 @media(max-width: 1740px) {
@@ -60,6 +72,18 @@
             top: -23%;
         }
     }
+
+    .vibeplace {
+        .stories {
+            .prev-stories {
+                left: -7%;
+            }
+
+            .next-stories {
+                right: -4%;
+            }
+        }
+    }
 }
 
 @media(max-width: 1620px) {
@@ -73,6 +97,18 @@
     .plan {
         &__bg {
             top: -20%;
+        }
+    }
+
+    .vibeplace {
+        .stories {
+            .prev-stories {
+                left: -9%;
+            }
+
+            .next-stories {
+                right: -6%;
+            }
         }
     }
 }
@@ -101,6 +137,38 @@
     .plan {
         &__bg {
             top: -17%;
+        }
+    }
+
+    .vibeplace {
+        .stories {
+            .prev-stories {
+                left: -11%;
+            }
+
+            .next-stories {
+                right: -8%;
+            }
+
+            &__bottom-text {
+                left: 30%;
+            }
+
+            &__master-item {
+                &::before {
+                    top: -27%;
+                    left: -57%;
+                }
+            }
+
+            &__bottom-text {
+                left: 32%;
+                bottom: 96px;
+            }
+        }
+
+        .conditions {
+            padding: 60px 0;
         }
     }
 }
@@ -274,6 +342,7 @@
             }
         }
     }
+
 }
 
 @media(max-width: 1441px) {
@@ -287,6 +356,68 @@
 
             &-text {
                 left: 70%;
+            }
+        }
+    }
+
+    .vibeplace {
+        .stories {
+            &__slider {
+                margin-top: 0;
+            }
+
+            .slick-slide {
+                height: 1180px;
+            }
+
+            .prev-stories {
+                left: 2%;
+                top: 30%;
+            }
+
+            .next-stories {
+                right: 1%;
+                top: 30%;
+            }
+
+            &__item {
+                &-box {
+                    display: block;
+                }
+            }
+
+            &__before,
+            &__after {
+                display: flex;
+                justify-content: space-between;
+                max-width: 100%;
+                order: initial;
+            }
+
+            &__master {
+                margin-top: 10%;
+                min-height: 770px;
+                order: initial;
+
+                &-item {
+
+
+                    img {
+                        margin: 0 auto;
+                    }
+
+                    &::before {
+                        left: 0;
+                    }
+                }
+
+                &-info {
+                    right: 176px;
+                }
+
+                .button {
+                    left: 210px;
+                }
             }
         }
     }
@@ -409,6 +540,12 @@
             line-height: 24px;
         }
     }
+
+    .vibeplace {
+        .container {
+            padding: 0 100px;
+        }
+    }
 }
 
 @media(max-width: 1203px) {
@@ -506,6 +643,23 @@
             }
         }
 
+    }
+
+    .vibeplace {
+        padding-top: 100px;
+
+        &__bg {
+            top: -100px;
+        }
+
+        .title {
+            font-size: 40px;
+        }
+
+        &__text {
+            font-size: 17px;
+            line-height: 27px;
+        }
     }
 }
 
@@ -635,6 +789,25 @@
     .plan {
         padding: 70px 0;
     }
+
+    .vibeplace {
+        &__wrap {
+            display: block;
+        }
+
+        &__img {
+            margin-left: 0;
+        }
+
+        &__content {
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .button {
+            margin: 0 auto;
+        }
+    }
 }
 
 @media(max-width: 981px) {
@@ -722,6 +895,13 @@
             right: 30%;
         }
     }
+
+    .vibeplace {
+        .title {
+            font-size: 30px;
+            line-height: 45px;
+        }
+    }
 }
 
 @media(max-width: 940px) {
@@ -770,7 +950,6 @@
         }
     }
 }
-
 
 @media(max-width: 880px) {
     .location {
@@ -1312,6 +1491,29 @@
             }
         }
     }
+
+    .vibeplace {
+        .container {
+            padding: 0 60px;
+
+        }
+
+        .title {
+            font-size: 25px;
+            line-height: 36px;
+        }
+
+        &__text {
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            width: 301px;
+            height: 73px;
+            font-size: 12px;
+        }
+    }
 }
 
 @media(max-width: 680px) {
@@ -1455,6 +1657,19 @@
                 top: -302px;
                 left: -163px;
             }
+        }
+    }
+
+    .vibeplace {
+        padding-top: 50px;
+
+        &__bg {
+            top: -60px;
+        }
+
+        .title {
+            font-size: 20px;
+            line-height: 30px;
         }
     }
 }
@@ -1721,6 +1936,13 @@
             &__bottom {
                 padding-top: 70px;
             }
+        }
+    }
+
+    .vibeplace {
+        &__text {
+            font-size: 12px;
+            line-height: 20px;
         }
     }
 }
@@ -2007,6 +2229,28 @@
             }
         }
     }
+
+    .vibeplace {
+        .title {
+            font-size: 17px;
+            line-height: normal;
+        }
+
+        &__text {
+            font-size: 10px;
+            line-height: 17px;
+        }
+
+        .button {
+            width: 240px;
+            height: 55px;
+            font-size: 9px;
+
+            &::after {
+                right: 31px;
+            }
+        }
+    }
 }
 
 @media(max-width: 447px) {
@@ -2209,6 +2453,12 @@
             }
         }
     }
+
+    .vibeplace {
+        .title {
+            font-size: 15px;
+        }
+    }
 }
 
 @media(max-width: 376px) {
@@ -2355,6 +2605,14 @@
 
         .button {
             width: 213px;
+            font-size: 7px;
+        }
+    }
+
+    .vibeplace {
+        .button {
+            width: 195px;
+            height: 50px;
             font-size: 7px;
         }
     }
