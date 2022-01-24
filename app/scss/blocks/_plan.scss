@@ -1,5 +1,5 @@
 .plan {
-    min-height: 1500px;
+    min-height: 1650px;
     padding: 170px 0 100px;
     position: relative;
 
@@ -17,7 +17,8 @@
         position: absolute;
         top: -28%;
         left: 0;
-z-index: -1;
+        z-index: -1;
+
         img {
             width: inherit;
         }
@@ -64,26 +65,65 @@ z-index: -1;
 
     &__phone {
         position: relative;
+
+        &-dots {
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            max-width: 680px;
+            height: 260px;
+
+            &::before,
+            &::after {
+                content: '';
+                background-image: url('../icons/marker-map.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 120px;
+                height: 53%;
+                position: absolute;
+            }
+
+            &::before {
+                top: -97px;
+                right: 375px;
+                animation: marker1 1.7s infinite;
+            }
+
+            &::after {
+                top: -112px;
+                right: 108px;
+                animation: marker2 1.7s infinite;
+            }
+        }
+
         &-img {
             position: absolute;
             top: 164px;
             left: 469px;
 
-            &::before,
-            &::after {
-                content: url('../icons/marker-map.svg');
-                position: absolute;
-                top: 64px;
-                left: 182px;
-                animation: marker1 1.7s infinite;
-            }
+            // &::before,
+            // &::after {
+            //     content: '';
+            //     background-image: url('../icons/marker-map.svg');
+            //     background-position: center;
+            //     background-repeat: no-repeat;
+            //     width: 20%;
+            //     height: 53%;
+            //     position: absolute;
+            // }
 
-            &::after {
-                top: 43px;
-                right: 106px;
-                left: auto;
-                animation: marker2 1.7s infinite;
-            }
+            // &::before {
+            //     top: 20px;
+            //     left: 178px;
+            //     animation: marker1 1.7s infinite;
+            // }
+
+            // &::after {
+            //     top: 4px;
+            //     right: 100px;
+            //     animation: marker2 1.7s infinite;
+            // }
         }
 
 
@@ -116,8 +156,8 @@ z-index: -1;
         }
 
         .dot-1 {
-            top: 80px;
             right: 270px;
+            bottom: 329px;
 
             &::before {
                 content: '';
@@ -130,13 +170,13 @@ z-index: -1;
         }
 
         .dot-2 {
-            top: 123px;
+            bottom: 283px;
             right: 95px;
         }
 
         .dot-3 {
             bottom: 104px;
-            left: 181px;
+            right: 490px;
         }
 
         .dot-4 {
@@ -165,14 +205,13 @@ z-index: -1;
         }
 
         .dot-9 {
-            left: 150px;
+            right: 521px;
             bottom: 175px;
         }
 
         .dot-10 {
-            left: 187px;
-            top: 164px;
-            right: auto;
+            bottom: 245px;
+            right: 482px;
         }
 
         &-dotmarker {
@@ -193,9 +232,8 @@ z-index: -1;
         }
 
         .dotmarker-2 {
-            left: 241px;
-            bottom: 227px;
-            right: auto;
+            right: 429px;
+            bottom: 226px;
             background: transparent;
 
             &::after {
@@ -261,13 +299,13 @@ z-index: -1;
         align-items: center;
         flex-wrap: wrap;
         text-align: center;
-        margin-bottom: 36px;
 
         &-item {
             max-width: 180px;
             min-height: 161px;
             display: flex;
             flex-direction: column;
+            margin: 0 15px 36px;
             justify-content: flex-start;
         }
 

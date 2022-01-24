@@ -2,9 +2,11 @@
     from {
         left: -69px
     }
-    50%{
-        left:  -73px
+
+    50% {
+        left: -73px
     }
+
     to {
         left: -69px
     }
@@ -12,24 +14,112 @@
 
 @keyframes marker1 {
     from {
-        top: 64px
+        top: -86px
     }
-    50%{
-        top: 73px
+
+    50% {
+        top: -95px;
     }
+
     to {
-        top: 64px
+        top: -86px
+    }
+}
+
+@keyframes marker1-adaptive {
+    from {
+        top: -8px;
+    }
+
+    50% {
+        top: 0;
+    }
+
+    to {
+        top: -8px;
+    }
+}
+
+@keyframes marker1-adaptive2 {
+    from {
+        top: 17px;
+    }
+
+    50% {
+        top: 22px;
+    }
+
+    to {
+        top: 17px;
+    }
+}
+
+@keyframes marker1-adaptive3 {
+    from {
+        top: 55px;
+    }
+
+    50% {
+        top: 60px;
+    }
+
+    to {
+        top: 55px;
     }
 }
 
 @keyframes marker2 {
     from {
-        top: 43px
+        top: -106px
     }
-    50%{
-        top: 52px
+
+    50% {
+        top: -115px
     }
+
     to {
-        top: 43px
+        top: -106px
+    }
+}
+
+@keyframes marker2-adaptive {
+    from {
+        top: -11px
+    }
+
+    50% {
+        top: -3px
+    }
+
+    to {
+        top: -11px
+    }
+}
+
+@keyframes marker2-adaptive2 {
+    from {
+        top: 3px
+    }
+
+    50% {
+        top: 8px;
+    }
+
+    to {
+        top: 3px
+    }
+}
+
+@keyframes marker2-adaptive3 {
+    from {
+        top: 47px
+    }
+
+    50% {
+        top: 52px;
+    }
+
+    to {
+        top: 47px
     }
 }
