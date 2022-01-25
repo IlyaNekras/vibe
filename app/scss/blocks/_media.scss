@@ -56,6 +56,12 @@
                 right: 0;
             }
         }
+
+        .reviews {
+            &__right-content {
+                margin-left: 15px;
+            }
+        }
     }
 }
 
@@ -141,6 +147,9 @@
     }
 
     .vibeplace {
+        min-height: 5588px;
+        background-size: 2360px;
+
         .stories {
             .prev-stories {
                 left: -11%;
@@ -160,6 +169,28 @@
 
         .conditions {
             padding: 60px 0;
+        }
+
+        .reviews {
+
+            #tenant.active {
+                display: block;
+
+            }
+
+            &__video {
+                margin: 0 auto;
+            }
+
+            &__audio {
+                &-item {
+                    justify-content: center;
+                }
+            }
+
+            &__right-content {
+                margin: 60px 0 0 200px;
+            }
         }
     }
 }
@@ -220,7 +251,7 @@
     }
 
     .time {
-        padding: 140px 0 100px;
+        padding: 140px 0;
 
         &__bg {
             top: -20%;
@@ -260,7 +291,6 @@
     }
 
     .location {
-        padding: 150px 0;
 
         &__bg {
             top: -14%;
@@ -450,7 +480,6 @@
     }
 
     .location {
-        padding: 100px 0;
 
         &__bg {
             top: -10%;
@@ -1024,13 +1053,16 @@
 
 @media(max-width: 880px) {
     .location {
-        &__bg {
-            top: -8%;
+        background-size: 1617px;
+        min-height: 1788px;
+        padding: 215px 0;
+        // &__bg {
+        //     top: -8%;
 
-            img {
-                min-height: 1550px;
-            }
-        }
+        //     img {
+        //         min-height: 1550px;
+        //     }
+        // }
 
         .title {
             font-size: 25px;
@@ -1240,6 +1272,14 @@
             &-maptext {
                 font-size: 10px;
                 line-height: 11px;
+            }
+        }
+    }
+
+    .vibeplace {
+        .reviews {
+            &__right-content {
+                margin: 60px 0 0 0;
             }
         }
     }
@@ -1495,6 +1535,12 @@
                 height: 67px;
             }
         }
+
+        .reviews {
+            &__video {
+                height: 285px;
+            }
+        }
     }
 }
 
@@ -1667,6 +1713,9 @@
     }
 
     .vibeplace {
+        min-height: 4830px;
+        background-size: 1999px;
+
         .stories {
             .slick-slide {
                 min-height: 1388px;
@@ -1779,6 +1828,9 @@
     }
 
     .location {
+        background-size: 1506px;
+        padding: 150px 0;
+
         .container {
             padding: 0 60px;
         }
@@ -1910,11 +1962,13 @@
     }
 
     .vibeplace {
+        min-height: 4520px;
+        background-size: 1887px;
         padding-top: 50px;
 
-        &__bg {
-            top: -60px;
-        }
+        // &__bg {
+        //     top: -60px;
+        // }
 
         .title {
             font-size: 20px;
@@ -1990,6 +2044,21 @@
                 }
             }
         }
+
+        .reviews {
+            &__item {
+                font-size: 12px;
+                padding-bottom: 14px;
+            }
+
+            &__text {
+                left: 66px;
+            }
+
+            &__slider {
+                width: 289px;
+            }
+        }
     }
 }
 
@@ -2030,7 +2099,8 @@
     }
 
     .location {
-        min-height: 1440px;
+        min-height: 1497px;
+        background-size: 1248px;
 
         &__slider {
             margin-top: -110px;
@@ -2190,6 +2260,22 @@
                 line-height: normal;
             }
         }
+
+        .reviews {
+            &__text {
+                left: 28px;
+            }
+
+            &__video {
+                height: 200px;
+            }
+
+            &__info {
+                text-align: center;
+            }
+
+
+        }
     }
 }
 
@@ -2202,6 +2288,9 @@
     }
 
     .location {
+
+        background-size: 1274px;
+        padding: 222px 0;
 
         .prev,
         .next {
@@ -2278,6 +2367,42 @@
                     }
                 }
             }
+        }
+
+        .reviews {
+            &__item {
+                font-size: 10px;
+                padding-bottom: 11px;
+            }
+
+            &__right-content {
+                img {
+                    width: 400px;
+                }
+
+                .slick-list {
+                    top: 111px;
+                    right: 1px;
+                }
+            }
+
+            .slider {
+                &__img {
+                    width: 212px;
+                }
+
+                &__img.slick-current {
+                    width: 212px;
+                    margin-right: 80px;
+                }
+            }
+
+            .prev-reviews,
+            .next-reviews {
+                left: 190px;
+            }
+
+
         }
     }
 }
@@ -2448,6 +2573,30 @@
             }
         }
     }
+
+    .vibeplace {
+        .reviews {
+            &__items {
+                margin-bottom: 30px;
+            }
+
+            &__item {
+                font-size: 9px;
+                padding-bottom: 11px;
+            }
+
+            &__text {
+                left: 16px;
+                font-size: 10px;
+                line-height: 12px;
+
+                &::before {
+                    top: 20px;
+                    left: 37px;
+                }
+            }
+        }
+    }
 }
 
 @media(max-width: 470px) {
@@ -2566,6 +2715,9 @@
     }
 
     .vibeplace {
+        min-height: 4035px;
+        background-size: 1683px;
+
         .container {
             padding: 0 60px;
         }
@@ -2609,6 +2761,7 @@
                 }
             }
         }
+
     }
 }
 
@@ -2709,6 +2862,7 @@
     }
 
     .location {
+        background-size: 1161px;
         min-height: 1380px;
 
         &__bg {
@@ -2802,6 +2956,26 @@
                 height: 46px;
             }
         }
+
+        .reviews {
+            &__item {
+                margin: 0 15px;
+            }
+
+            .video-btn {
+                width: 76px;
+            }
+
+            &__audio-player {
+                max-width: 243px;
+                height: 20px;
+            }
+
+
+            &__audio {
+                margin-top: 40px;
+            }
+        }
     }
 }
 
@@ -2833,7 +3007,14 @@
         }
     }
 
+    .location {
+        padding: 173px 0;
+    }
+
     .vibeplace {
+        min-height: 3902px;
+        background-size: 1618px;
+
         .title {
             font-size: 15px;
         }
@@ -2886,6 +3067,12 @@
                 margin-top: 10px;
             }
         }
+
+        .reviews {
+            &__item {
+                font-size: 8px;
+            }
+        }
     }
 }
 
@@ -2929,12 +3116,14 @@
 
     .location {
         min-height: 1100px;
+        padding: 227px 0;
+        background-size: 955px;
 
-        &__bg {
-            img {
-                min-height: 970px;
-            }
-        }
+        // &__bg {
+        //     img {
+        //         min-height: 970px;
+        //     }
+        // }
 
         &__slider {
             margin-top: -130px;
@@ -3062,6 +3251,56 @@
                 left: 80px;
             }
         }
+
+        .reviews {
+            &__items{
+                justify-content: space-between;
+            }
+            &__item{
+                margin: 0;
+            }
+            
+            &__audio-player {
+                max-width: 207px;
+            }
+
+            &__right-content {
+                .slick-list {
+                    top: 229px;
+                    right: 5px;
+                }
+
+                img {
+                    width: 300px;
+                }
+            }
+
+            .slider {
+                &__img {
+                    width: 160px;
+                }
+
+                &__img.slick-current {
+                    width: 160px;
+                    margin-right: 86px;
+                }
+            }
+
+            .prev-reviews,
+            .next-reviews {
+                width: 35px;
+                height: 35px;
+                left: 140px;
+            }
+
+            .next-reviews {
+                bottom: 30px;
+            }
+
+            .prev-reviews {
+                bottom: 78px;
+            }
+        }
     }
 }
 
@@ -3080,6 +3319,10 @@
     }
 
     .location {
+        min-height: 1162px;
+        padding: 249px 0;
+        background-size: 1008px;
+
         .prev {
             left: 20%;
         }

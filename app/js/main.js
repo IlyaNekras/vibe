@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         burger.classList.toggle('header__burger--active');
         menu.classList.toggle('menu--active');
     });
-    
+
     menuItem.forEach(function (i) {
         i.addEventListener('click', function () {
             menu.classList.remove('menu--active');
@@ -37,8 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
         map = document.querySelector('.popup__map'),
         mapBtn = document.querySelector('.plan__phone-map'),
         body = document.querySelector('body');
-
-
 
     document.addEventListener('click', hide);
 
@@ -244,7 +242,6 @@ document.addEventListener('DOMContentLoaded', function () {
         nextArrow: '<button type="button" class="next-stories"></button>',
         speed: 300,
         fade: true,
-        // variableWidth: true,
         cssEase: 'linear',
     });
 
@@ -286,6 +283,24 @@ document.addEventListener('DOMContentLoaded', function () {
         variableWidth: true,
         infinite: false,
         speed: 900,
+
+        // responsive: [{
+        //         breakpoint: 592,
+        //         settings: {
+        //             fade: true,
+        //             // centerMode: true,
+        //         }
+        //     },
+        //     // {
+        //     //   breakpoint: 480,
+        //     //   settings: {
+        //     //     arrows: false,
+        //     //     
+        //     //     centerPadding: '40px',
+        //     //     slidesToShow: 1
+        //     //   }
+        //     // }
+        // ]
     });
 
     //изменение состояния стрелок слайдера в блоке "reviews"
