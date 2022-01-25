@@ -133,8 +133,8 @@
                     position: absolute;
                     top: 0;
                     left: 0;
-                    width: 30px;
-                    height: 30px;
+                    width: inherit;
+                    height: inherit;
                     background: inherit;
                 }
 
@@ -202,17 +202,6 @@
 
             &-box {
                 position: relative;
-
-                // &::before {
-                //     content: '';
-                //     position: absolute;
-                //     top: -9%;
-                //     left: -60%;
-                //     width: 856px;
-                //     height: 856px;
-                //     background-image: url('../img/story-girlbg.png');
-                //     z-index: -1;
-                // }
             }
 
             &-item {
@@ -352,7 +341,7 @@
 
             &-box {
                 position: relative;
-                cursor: pointer;
+                cursor: pointer;padding-right: 43px;
 
                 &:hover {
                     .conditions__btn {
@@ -412,7 +401,7 @@
         }
 
         &__answer {
-            margin-top: 20px;
+            margin: 15px 0 10px;
             display: none;
         }
 
