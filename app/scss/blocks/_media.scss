@@ -783,6 +783,12 @@
         }
     }
 
+    .portrait {
+        .title {
+            font-size: 40px;
+        }
+    }
+
     .vibeplace {
         padding-top: 100px;
 
@@ -1140,6 +1146,18 @@
         }
     }
 
+    .portrait {
+        .title {
+            font-size: 30px;
+            line-height: normal;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            line-height: 23px;
+        }
+    }
+
     .vibeplace {
         .title {
             font-size: 30px;
@@ -1476,6 +1494,12 @@
             &__box {
                 width: 293px;
             }
+        }
+    }
+
+    .portrait {
+        .container {
+            padding: 0 100px;
         }
     }
 
@@ -2234,6 +2258,12 @@
         }
     }
 
+    .portrait {
+        .container {
+            padding: 0 60px;
+        }
+    }
+
     .vibeplace {
         .stories {
             &__master {
@@ -2575,6 +2605,25 @@
 
         &__bottom {
             left: 117px;
+        }
+    }
+
+    .portrait {
+        .title {
+            font-size: 25px;
+        }
+
+        .subtitle {
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        &__name {
+            font-size: 22px;
+        }
+
+        &__descr {
+            font-size: 14px;
         }
     }
 
@@ -3186,6 +3235,17 @@
         }
     }
 
+    .portrait {
+        .title {
+            font-size: 20px;
+
+            .subtitle {
+                font-size: 11px;
+                line-height: normal;
+            }
+        }
+    }
+
     .vibeplace {
         min-height: 4035px;
         background-size: 1683px;
@@ -3567,6 +3627,30 @@
             &__box {
                 width: 170px;
             }
+        }
+    }
+
+    .portrait {
+        .title {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 8px;
+            line-height: normal;
+        }
+        &__item {
+            max-width: 281px;
+            margin-top: 30px;
+        }
+        &__name {
+            font-size: 17px;
+        }
+
+        &__descr {
+            font-size: 12px;
+            line-height: 17px;
         }
     }
 

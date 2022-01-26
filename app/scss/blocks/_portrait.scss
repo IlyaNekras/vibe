@@ -1,18 +1,22 @@
 .portrait {
-    padding-bottom: 100px;
-    min-height: 3372px;
+    padding: 100px 0;
+    min-height: 3530px;
+    margin-top: -2%;
+    background-size: 2254px;
+    background-image: url('../img/bg-portrait.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    // &__bg {
+    //     width: 100%;
+    //     position: absolute;
+    //     top: -150px;
+    //     left: 0;
+    //     z-index: -1;
 
-    &__bg {
-        width: 100%;
-        position: absolute;
-        top: -150px;
-        left: 0;
-        z-index: -1;
-
-        img {
-            width: inherit;
-        }
-    }
+    //     img {
+    //         width: inherit;
+    //     }
+    // }
 
     .title {
         color: #34343F;
@@ -98,7 +102,7 @@
             min-height: 620px;
             min-width: 320px;
             position: relative;
-            z-index: -1;
+            z-index: 0;
 
             img {
                 position: absolute;
