@@ -46,6 +46,35 @@
         }
     }
 
+    .atmosphere {
+        &__form {
+            &-bg {
+                width: 100%;
+                min-height: 680px;
+
+                img {
+                    width: inherit;
+                    top: 0;
+                    left: 100px;
+                }
+            }
+        }
+
+        &__bottom {
+            position: absolute;
+            top: 30px;
+            left: 120px;
+
+            &-img {
+                width: 80%;
+            }
+        }
+
+        &__form {
+            margin-left: -8%;
+        }
+    }
+
     .vibeplace {
         .stories {
             .prev-stories {
@@ -106,6 +135,17 @@
         }
     }
 
+    .atmosphere {
+        &__bottom-img {
+            width: 70%;
+        }
+
+        &__form {
+            margin-left: -12%;
+            margin-top: -20px;
+        }
+    }
+
     .vibeplace {
         .stories {
             .prev-stories {
@@ -143,6 +183,23 @@
     .plan {
         &__bg {
             top: -17%;
+        }
+    }
+
+    .atmosphere {
+        &__bottom {
+            &-img {
+                width: 70%;
+            }
+        }
+
+        &__form {
+            margin-left: -16%;
+            margin-top: -5%;
+
+            &-img {
+                min-height: 723px;
+            }
         }
     }
 
@@ -364,6 +421,19 @@
         }
     }
 
+    .atmosphere {
+        &__bottom {
+            &-img {
+                display: none;
+            }
+        }
+
+        &__form {
+            margin-left: 77%;
+            margin-top: 9%;
+        }
+    }
+
 }
 
 @media(max-width: 1441px) {
@@ -379,6 +449,29 @@
                 left: 70%;
             }
         }
+    }
+
+    .atmosphere {
+        .title {
+            font-size: 40px;
+            line-height: 45px;
+        }
+
+        .subtitle-bottom {
+            font-size: 86px;
+            line-height: 54px;
+        }
+
+        &__num {
+            font-size: 200px;
+            line-height: normal;
+        }
+
+        &__descr {
+            font-size: 20px;
+            line-height: normal;
+        }
+
     }
 
     .vibeplace {
@@ -570,6 +663,12 @@
         }
     }
 
+    .atmosphere {
+        &__form {
+            margin-left: 57%;
+        }
+    }
+
     .vibeplace {
         .container {
             padding: 0 100px;
@@ -671,7 +770,17 @@
                 left: -236px;
             }
         }
+    }
 
+    .atmosphere {
+        .subtitle {
+            font-size: 15px;
+            line-height: 18px;
+        }
+
+        &__form {
+            margin-left: 37%;
+        }
     }
 
     .vibeplace {
@@ -741,6 +850,12 @@
             &-map {
                 left: 258px;
             }
+        }
+    }
+
+    .atmosphere {
+        &__form {
+            margin-left: 26%;
         }
     }
 
@@ -847,6 +962,21 @@
 
     .plan {
         padding: 70px 0;
+    }
+
+    .atmosphere {
+        &__form {
+            margin-left: 0;
+
+            &-bg {
+                img {
+                    width: inherit;
+                    top: 0;
+                    left: 44px;
+                }
+            }
+        }
+
     }
 
     .vibeplace {
@@ -996,6 +1126,20 @@
         }
     }
 
+    .atmosphere {
+        .container {
+            padding: 0 100px;
+        }
+
+        &__item {
+            margin-left: -100px;
+
+            &:nth-child(2n) {
+                margin-right: -100px;
+            }
+        }
+    }
+
     .vibeplace {
         .title {
             font-size: 30px;
@@ -1047,6 +1191,25 @@
                 left: 183px;
                 top: 183px;
             }
+        }
+    }
+
+    .atmosphere {
+        .subtitle-bottom {
+            font-size: 65px;
+            line-height: 44px;
+        }
+
+        &__num {
+            font-size: 160px;
+        }
+
+        &__descr {
+            font-size: 16px;
+        }
+
+        &__form {
+            margin-left: -7%;
         }
     }
 }
@@ -1276,6 +1439,46 @@
         }
     }
 
+    .atmosphere {
+        .container {
+            padding: 0 100px;
+        }
+
+        .title {
+            font-size: 30px;
+            line-height: 46px;
+        }
+
+        &__form {
+            margin-left: 7%;
+
+            &-bg {
+                img {
+                    left: 29px;
+                }
+            }
+
+            &-img {
+                min-height: 700px;
+            }
+        }
+
+        .button {
+            width: 293px;
+            height: 75px;
+            font-size: 12px;
+            margin: 0 auto;
+        }
+
+        .form {
+
+            &__input,
+            &__box {
+                width: 293px;
+            }
+        }
+    }
+
     .vibeplace {
         .reviews {
             &__right-content {
@@ -1289,6 +1492,30 @@
     .location {
         .container {
             padding: 0 150px;
+        }
+    }
+
+    .atmosphere {
+
+        &__form {
+
+            &-bg {
+                img {
+                    left: 29px;
+                }
+            }
+
+            &-img {
+                min-height: 700px;
+            }
+        }
+
+        .form {
+
+            &__input,
+            &__box {
+                width: 293px;
+            }
         }
     }
 }
@@ -1307,6 +1534,12 @@
     .time {
         &__btn {
             top: 23%;
+        }
+    }
+
+    .atmosphere {
+        &__form {
+            margin-left: -3%;
         }
     }
 
@@ -1508,6 +1741,34 @@
         }
     }
 
+    .atmosphere {
+        &__num {
+            font-size: 120px;
+        }
+
+        &__descr {
+            font-size: 12px;
+        }
+
+        &__form {
+            margin-left: -7%;
+
+            &-img {
+                min-height: 620px;
+            }
+
+            &-title {
+                font-size: 28px;
+            }
+
+            &-subtitle {
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
     .vibeplace {
         .stories {
 
@@ -1671,6 +1932,19 @@
         }
     }
 
+    .atmosphere {
+        &__form {
+            margin-left: -11%;
+        }
+
+        .form {
+            &__text {
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+    }
+
     .vibeplace {
         .container {
             padding: 0 80px;
@@ -1708,6 +1982,34 @@
 
             &-map {
                 left: 166px;
+            }
+        }
+    }
+
+    .atmosphere {
+        .container {
+            padding: 0 60px;
+        }
+
+        .subtitle-bottom {
+            font-size: 63px;
+            line-height: 44px;
+            top: 68px;
+        }
+
+        &__item {
+            margin-left: -60px;
+
+            &:nth-child(2n) {
+                margin-right: -60px;
+            }
+        }
+
+        &__form {
+            margin-left: -4%;
+
+            &-bg {
+                min-height: 500px;
             }
         }
     }
@@ -1910,6 +2212,28 @@
         }
     }
 
+    .atmosphere {
+        .title {
+            font-size: 28px;
+            margin-bottom: 25px;
+            line-height: 35px;
+        }
+
+        .subtitle {
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        .subtitle-bottom {
+            font-size: 45px;
+            line-height: 35px;
+        }
+
+        &__form {
+            margin-left: -10%;
+        }
+    }
+
     .vibeplace {
         .stories {
             &__master {
@@ -2032,6 +2356,13 @@
                 left: 114px;
             }
         }
+    }
+
+    .atmosphere {
+        &__bottom {
+            left: 90px;
+        }
+
     }
 
     .vibeplace {
@@ -2209,6 +2540,44 @@
         }
     }
 
+    .atmosphere {
+        &__form {
+            width: 250px;
+
+            &-title {
+                font-size: 22px;
+            }
+
+            &-img {
+                min-height: 563px;
+            }
+        }
+
+        .button {
+            max-width: 240px;
+
+            &::after {
+                right: 24px;
+            }
+        }
+
+        .form {
+            &__text {
+                font-size: 11px;
+                line-height: 13px;
+                width: 206px;
+            }
+
+            &__input {
+                width: 240px;
+            }
+        }
+
+        &__bottom {
+            left: 117px;
+        }
+    }
+
     .vibeplace {
         .stories {
 
@@ -2273,8 +2642,6 @@
             &__info {
                 text-align: center;
             }
-
-
         }
     }
 }
@@ -2348,6 +2715,26 @@
             &__bottom {
                 padding-top: 70px;
             }
+        }
+    }
+
+    .atmosphere {
+        .title {
+            font-size: 25px;
+            line-height: 35px;
+        }
+
+        &__descr {
+            max-width: 200px;
+            font-size: 10px;
+        }
+
+        &__num {
+            font-size: 70px;
+        }
+
+        &__bottom {
+            left: 90px;
         }
     }
 
@@ -2574,6 +2961,79 @@
         }
     }
 
+    .atmosphere {
+        padding: 30px 0;
+
+        .title {
+            font-size: 20px;
+            line-height: normal;
+        }
+
+        &__form {
+            width: 200px;
+            margin-left: -3%;
+
+            &-bg {
+                min-height: 366px;
+            }
+
+            &-img {
+                min-height: 457px;
+            }
+
+            &-title {
+                font-size: 17px;
+                margin-bottom: 18px;
+            }
+
+            &-subtitle {
+                font-size: 11px;
+                line-height: 14px;
+            }
+        }
+
+        .form {
+            &__input {
+                height: 52px;
+                width: 200px;
+                padding: 10px 15px 10px 67px;
+            }
+
+            &__text {
+                font-size: 8px;
+                line-height: 10px;
+                width: 200px;
+            }
+
+            span {
+                width: 26px;
+                height: 26px;
+
+                &::before {
+                    top: 5px;
+                    left: 5px;
+                }
+
+                &::after {
+                    left: 35px;
+                }
+            }
+
+            &__checkbox {
+                &::before {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+
+        .button {
+            width: 200px;
+            height: 52px;
+            font-size: 8px;
+        }
+    }
+
     .vibeplace {
         .reviews {
             &__items {
@@ -2714,6 +3174,18 @@
         }
     }
 
+    .atmosphere {
+
+        .subtitle-bottom {
+            font-size: 35px;
+            line-height: 25px;
+        }
+
+        &__form {
+            margin-left: -11%;
+        }
+    }
+
     .vibeplace {
         min-height: 4035px;
         background-size: 1683px;
@@ -2808,6 +3280,25 @@
             &__bottom {
                 font-size: 17px;
             }
+        }
+    }
+
+    .atmosphere {
+        .title {
+            &__bottom {
+                font-size: 20px;
+                line-height: normal;
+                margin-bottom: 20px;
+            }
+        }
+
+        .subtitle {
+            font-size: 12px;
+            line-height: normal;
+        }
+
+        &__form {
+            margin-left: -14%;
         }
     }
 }
@@ -2938,6 +3429,12 @@
         }
     }
 
+    .atmosphere {
+        &__form {
+            margin-left: -19%;
+        }
+    }
+
     .vibeplace {
         .conditions {
 
@@ -3011,6 +3508,68 @@
         padding: 173px 0;
     }
 
+    .atmosphere {
+        min-height: 729px;
+
+        .container {
+            padding: 0 20px;
+        }
+
+        .title {
+            font-size: 19px;
+        }
+
+        .subtitle {
+            font-size: 10px;
+        }
+
+        .subtitle-bottom {
+            font-size: 29px;
+            line-height: 17px;
+            top: 50px;
+        }
+
+        &__item {
+            margin-left: -20px;
+
+            &:nth-child(2n) {
+                margin-right: -20px;
+            }
+        }
+
+        &__num {
+            font-size: 60px;
+        }
+
+        &__descr {
+            font-size: 8px;
+        }
+
+        .box-4 {
+            margin-right: -20%;
+        }
+
+        &__form {
+            margin-left: 3%;
+
+            &-bg {
+                img {
+                    left: 20px;
+                }
+            }
+        }
+
+        &__bottom {
+            left: 30px;
+        }
+
+        .form {
+            &__box {
+                width: 170px;
+            }
+        }
+    }
+
     .vibeplace {
         min-height: 3902px;
         background-size: 1618px;
@@ -3072,6 +3631,10 @@
             &__item {
                 font-size: 8px;
             }
+
+            &__video {
+                height: 144px;
+            }
         }
     }
 }
@@ -3088,7 +3651,7 @@
 
         .form {
             span {
-                left: 33px;
+                left: 48px;
             }
         }
     }
@@ -3253,13 +3816,14 @@
         }
 
         .reviews {
-            &__items{
+            &__items {
                 justify-content: space-between;
             }
-            &__item{
+
+            &__item {
                 margin: 0;
             }
-            
+
             &__audio-player {
                 max-width: 207px;
             }
