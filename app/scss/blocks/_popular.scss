@@ -2,6 +2,12 @@
     padding-top: 100px;
     position: relative;
     min-height: 1157px;
+    background-image: url('../img/bg-popular.png');
+    background-position: top center;
+    background-size: 1920px;
+    background-repeat: no-repeat;
+    margin-top: -40px;
+    z-index: 0;
 
     .title {
         max-width: 900px;

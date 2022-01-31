@@ -16,25 +16,25 @@
 
     &__wrap {
         margin-top: 73px;
-        position: relative;
         padding-left: 190px;
+        display: flex;
     }
 
-    &__left-img {
+    &__left-content {
         position: relative;
     }
 
-    &__right-img {
-        position: absolute;
-        top: -28%;
-        right: -12%;
+    &__right-content {
         z-index: 1;
+        img{
+            margin: -17% 0 0 -17%;
+        }
     }
 
     &__form {
         position: absolute;
         top: 19%;
-        left: 21%;
+        left: 23%;
 
         &-title {
             font-size: 30px;
