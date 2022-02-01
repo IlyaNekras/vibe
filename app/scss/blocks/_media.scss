@@ -1822,6 +1822,25 @@
             margin: 15px;
         }
     }
+
+    .popular {
+        .container {
+            padding: 0 100px;
+        }
+
+        &__img-form {
+            margin-left: -17%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &__form {
+            left: 27%;
+            top: 24%;
+        }
+    }
 }
 
 @media(max-width: 800px) {
@@ -2106,6 +2125,47 @@
                 max-width: 510px;
                 height: 285px;
             }
+        }
+    }
+
+    .popular {
+        &__form {
+            &-title {
+                font-size: 25px;
+                line-height: normal;
+            }
+
+            &-subtitle {
+                font-size: 14px;
+                line-height: normal;
+                margin-bottom: 30px;
+            }
+        }
+
+        .form {
+            &__text {
+                max-width: 250px;
+                font-size: 11px;
+                line-height: normal;
+            }
+
+            &__input {
+                width: 290px;
+                height: 60px;
+            }
+
+            span {
+                height: 32px;
+                top: 16px;
+                left: 42px;
+            }
+        }
+
+        .button {
+            margin: 0 auto;
+            width: 290px;
+            height: 71px;
+            font-size: 12px;
         }
     }
 }
@@ -2514,6 +2574,16 @@
             }
         }
     }
+
+    .popular {
+        min-height: 921px;
+        background-size: 1030px;
+        margin-top: -75px;
+
+        &__form {
+            left: 18%;
+        }
+    }
 }
 
 @media(max-width: 640px) {
@@ -2654,6 +2724,38 @@
 
             &__master {
                 min-height: 300px;
+            }
+        }
+    }
+
+    .popular {
+        min-height: 776px;
+
+        .container {
+            padding: 0 60px;
+        }
+
+        .title {
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        &__form {
+            top: 19%;
+
+            &-title,
+            &-subtitle {
+                max-width: 250px;
+                margin: 0 auto;
+                margin-bottom: 25px;
+            }
+        }
+
+        .form {
+            &__box {
+                width: 220px;
+                margin: 0 auto;
+                margin-top: 28px;
             }
         }
     }
@@ -3032,6 +3134,11 @@
 
             &__video {
                 height: 200px;
+                max-width: 313px;
+            }
+
+            .video-overlay {
+                height: inherit;
             }
 
             &__info {
@@ -3183,8 +3290,6 @@
             .next-reviews {
                 left: 190px;
             }
-
-
         }
     }
 }
@@ -3420,6 +3525,16 @@
                     height: 15px;
                 }
             }
+
+            &__box {
+                width: 164px;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+
+            &__text {
+                width: 140px;
+            }
         }
 
         .button {
@@ -3448,6 +3563,58 @@
                 &::before {
                     top: 20px;
                     left: 37px;
+                }
+            }
+        }
+    }
+
+    .popular {
+        &__form {
+            top: 21%;
+            left: 23%;
+
+            &-title {
+                font-size: 16px;
+                max-width: 200px;
+            }
+
+            &-subtitle {
+                font-size: 11px;
+                max-width: 180px;
+            }
+        }
+
+        .form {
+            &__input {
+                width: 230px;
+                height: 50px;
+                padding: 10px 15px 10px 70px;
+            }
+
+            span {
+                top: 9px;
+                left: 18px;
+            }
+
+            .button {
+                width: 230px;
+                height: 50px;
+                font-size: 10px;
+
+                &::after {
+                    right: 30px;
+                }
+            }
+
+            &__text {
+                max-width: 180px;
+                font-size: 9px;
+            }
+
+            &__checkbox {
+                &::before {
+                    width: 14px;
+                    height: 14px;
                 }
             }
         }
@@ -3922,6 +4089,65 @@
             }
         }
     }
+
+    .popular {
+        .title {
+            font-size: 17px;
+            line-height: normal;
+        }
+
+        &__form {
+            &-title {
+                font-size: 14px;
+                margin-bottom: 16px;
+            }
+
+            &-subtitle {
+                font-size: 9px;
+            }
+        }
+
+        .form {
+            &__input {
+                width: 180px;
+                height: 35px;
+                padding: 10px 15px 10px 50px;
+            }
+
+            span {
+                width: 25px;
+                height: 25px;
+                top: 6px;
+                left: 9px;
+
+                &::before {
+                    top: 5px;
+                    left: 5px;
+                }
+
+                &::after {
+                    left: 35px;
+                    height: 20px;
+                }
+            }
+
+            .button {
+                width: 180px;
+                height: 45px;
+                font-size: 7px;
+            }
+
+            &__box {
+                width: 150px;
+                margin-top: 15px;
+            }
+
+            &__text {
+                max-width: 120px;
+                font-size: 7px;
+            }
+        }
+    }
 }
 
 @media(max-width: 410px) {
@@ -4382,6 +4608,19 @@
             .prev-reviews {
                 bottom: 78px;
             }
+
+            &__video {
+                max-width: 231px;
+            }
+        }
+    }
+
+    .popular {
+        min-height: 573px;
+        background-size: 738px;
+
+        .container {
+            padding: 0 40px;
         }
     }
 
@@ -4513,6 +4752,19 @@
             &__num-check {
                 left: 65px;
             }
+        }
+
+        .reviews {
+            &__video {
+                max-width: 190px;
+                height: 110px;
+            }
+        }
+    }
+
+    .popular {
+        .container {
+            padding: 0 31px;
         }
     }
 }
