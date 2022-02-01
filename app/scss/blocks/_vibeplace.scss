@@ -1,11 +1,16 @@
 .vibeplace {
     position: relative;
     z-index: 1;
-    padding-top: 200px;
-    min-height: 4560px;
-    background-image: url('../img/bg-vibeplace.png');
-    background-repeat: no-repeat;
-    background-position: center center;
+    min-height: 4900px;
+
+    .container {
+        background-image: url(../img/bg-vibeplace.png);
+        background-repeat: no-repeat;
+        background-size: 2063px;
+        background-position: top center;
+        min-height: 4900px;
+        padding-top: 200px;
+    }
 
     // &__bg {
     //     width: 100%;

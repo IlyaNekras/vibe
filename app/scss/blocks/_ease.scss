@@ -24,17 +24,17 @@
         position: relative;
     }
 
-    &__right-content {
-        z-index: 1;
+    &__right-content {width: 50%;
+        z-index: 0;
         img{
-            margin: -17% 0 0 -17%;
+            margin: -17% 0 0 -40%;
         }
     }
 
     &__form {
         position: absolute;
         top: 19%;
-        left: 23%;
+        left: 23%;z-index: 1;
 
         &-title {
             font-size: 30px;
