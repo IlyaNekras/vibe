@@ -1,24 +1,36 @@
 .location {
     min-height: 1980px;
     padding: 250px 0;
-    margin-top: -12%;
+    margin: 0 auto;
+    margin-top: -8%;
     background-image: url('../img/bg-location.png');
     background-repeat: no-repeat;
     background-position: top center;
+    position: relative;
+    max-width: 1920px;
 
-    // &__bg {
-    //     width: 100%;
-    //     z-index: 1;
-    //     position: absolute;
-    //     top: -22%;
-    //     left: 0;
 
-    //     img {
-    //         width: inherit;
-    //         min-height: 1862px;
+    &__img {
+        position: absolute;
+    }
 
-    //     }
-    // }
+    .img-1 {
+        position: absolute;
+        top: -4%;
+        right: 0;
+    }
+
+    .img-2 {
+        position: absolute;
+        top: 8%;
+        left: 0;
+    }
+
+    .img-3 {
+        position: absolute;
+        top: 47%;
+        right: 0;
+    }
 
     &__slider {
         max-width: 1100px;

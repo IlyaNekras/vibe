@@ -1,4 +1,5 @@
 .portrait {
+    position: relative;
     padding: 100px 0;
     min-height: 3530px;
     margin-top: -2%;
@@ -6,17 +7,30 @@
     background-image: url('../img/bg-portrait.png');
     background-position: top center;
     background-repeat: no-repeat;
-    // &__bg {
-    //     width: 100%;
-    //     position: absolute;
-    //     top: -150px;
-    //     left: 0;
-    //     z-index: -1;
 
-    //     img {
-    //         width: inherit;
-    //     }
-    // }
+    .img-1 {
+        position: absolute;
+        top: 28%;
+        left: 0%;
+    }
+
+    .img-2 {
+        position: absolute;
+        top: 5%;
+        right: 0;
+    }
+
+    .img-3 {
+        position: absolute;
+        bottom: 14%;
+        left: 0;
+    }
+
+    .img-4 {
+        position: absolute;
+        bottom: 20%;
+        right: 0;
+    }
 
     .title {
         color: #34343F;
@@ -219,7 +233,7 @@
         &__items {
             display: flex;
             justify-content: space-evenly;
-            align-items: center;
+            align-items: flex-start;
             flex-wrap: wrap;
             margin-top: 70px;
         }

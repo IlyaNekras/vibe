@@ -25,7 +25,7 @@
     &__application {
         position: fixed;
         display: none;
-        top: 10%;
+        top: 17%;
         left: 50%;
         transform: translateX(-50%);
         max-width: 993px;
@@ -35,14 +35,6 @@
             display: block;
         }
 
-        &-bg {
-            margin-left: -20px;
-
-            img {
-                width: 118%;
-            }
-        }
-
         &-title {
             max-width: 993px;
             margin: 0 auto;
@@ -50,6 +42,16 @@
             font-size: 40px;
         }
 
+        &-img {
+            width: 100%;
+        }
+
+        &-phone {
+            width: 100%;
+            position: absolute;
+            top: 38%;
+            left: 15%;
+        }
     }
 
     &__form {
@@ -80,7 +82,7 @@
 
     &-close {
         position: absolute;
-        top: -7%;
+        top: -10%;
         left: 48%;
         padding: 23px;
         cursor: pointer;
@@ -104,10 +106,10 @@
     &__thanks {
         position: fixed;
         display: none;
-        top: 14%;
+        top: 20%;
         left: 50%;
         transform: translateX(-50%);
-        max-width: 993px;
+        width: 933px;
         height: auto;
 
         &--active {
@@ -115,12 +117,19 @@
         }
 
         &-bg {
-            width: 90%;
             margin: 0 auto;
+            margin-top: 40px;
+        }
 
-            img {
-                width: 100%;
-            }
+        &-img {
+            width: 100%;
+            z-index: -1;
+        }
+        &-flover {
+            width: 57%;
+            position: absolute;
+            top: 10%;
+            left: 37%;
         }
 
         &-title {
@@ -193,7 +202,6 @@
         }
 
         &-whatsapp {
-            position: relative;
             width: 90px;
             height: 90px;
             background: linear-gradient(138deg, #F8E6E2 19%, #E9C9C2 82%);
@@ -217,6 +225,7 @@
         iframe {
             width: 100%;
             height: 100%;
+
         }
 
         &--active {
@@ -233,7 +242,7 @@
         width: 1000px;
         height: 500px;
 
-        iframe {
+        &-box {
             width: 100%;
             height: 100%;
         }

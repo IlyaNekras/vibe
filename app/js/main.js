@@ -53,7 +53,8 @@ document.addEventListener('DOMContentLoaded', function () {
         video.classList.remove('popup__video--active');
         popupApplication.classList.remove('popup__application--active');
         popupThanks.classList.remove('popup__thanks--active');
-        document.querySelector('iframe').src = '';
+        // document.getElementsByTagName('iframe')[0].remove();
+        document.getElementsByTagName('iframe').src = '';
         popup.style.backgroundColor = 'rgba(0,0,0, .8)';
     }
 
@@ -135,6 +136,10 @@ document.addEventListener('DOMContentLoaded', function () {
         overlayTenant = document.getElementById('overlay-revtenant');
 
     locBtn1.addEventListener('click', function () {
+        document.querySelector('.location__video-1').src = "https://www.youtube.com/embed/dl16e_mG6hg?autoplay=1&mute=1";
+        overlayLoc1.classList.add('video-overlay--active');
+    });
+    locBtn1.addEventListener('touchenter', function () {
         document.querySelector('.location__video-1').src = "https://www.youtube.com/embed/dl16e_mG6hg?autoplay=1&mute=1";
         overlayLoc1.classList.add('video-overlay--active');
     });
