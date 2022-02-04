@@ -25,7 +25,7 @@
     &__application {
         position: fixed;
         display: none;
-        top: 17%;
+        top: 10%;
         left: 50%;
         transform: translateX(-50%);
         max-width: 993px;
@@ -105,26 +105,29 @@
 
     &__thanks {
         position: fixed;
-        display: none;
-        top: 20%;
+        visibility: hidden;
+        opacity: 0;
+        top: 10%;
         left: 50%;
         transform: translateX(-50%);
-        width: 933px;
+        width: 750px;
         height: auto;
+        transition: all, 1s;
 
         &--active {
-            display: block;
+            visibility: visible;
+            opacity: 1;
         }
 
         &-bg {
             margin: 0 auto;
-            margin-top: 40px;
         }
 
         &-img {
             width: 100%;
             z-index: -1;
         }
+
         &-flover {
             width: 57%;
             position: absolute;
@@ -171,7 +174,7 @@
             text-align: center;
             position: absolute;
             top: 182px;
-            left: 203px;
+            left: 190px;
 
             &::after {
                 content: '';
@@ -216,16 +219,15 @@
     &__video {
         position: fixed;
         display: none;
-        top: 20%;
+        top: 10%;
         left: 50%;
         transform: translate(-50%);
         width: 1000px;
         height: 500px;
 
-        iframe {
+        video {
             width: 100%;
-            height: 100%;
-
+            height: auto;
         }
 
         &--active {
@@ -236,7 +238,7 @@
     &__map {
         position: fixed;
         display: none;
-        top: 20%;
+        top: 10%;
         left: 50%;
         transform: translate(-50%);
         width: 1000px;

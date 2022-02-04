@@ -63,6 +63,10 @@
         display: flex;
         align-items: center;
 
+        &:nth-child(2) {
+            margin-top: -50%;
+        }
+
         &:nth-child(2n) {
             margin-right: -195px;
             flex-direction: row-reverse;
@@ -123,6 +127,7 @@
         margin: 0 auto;
         margin-top: 35px;
         position: relative;
+        z-index: 1;
 
         img {
             position: absolute;

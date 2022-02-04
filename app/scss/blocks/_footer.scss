@@ -1,6 +1,8 @@
 .footer {
     padding: 120px 0 30px 0;
     background-color: #fff;
+    max-width: 1920px;
+    margin: 0 auto;
     margin-top: -1px;
 
     &__wrap {
@@ -29,17 +31,24 @@
     }
 
     &__social-item {
+        position: relative;
         border-radius: 50%;
         width: 65px;
         height: 65px;
         background: linear-gradient(138deg, #F8E6E2 19%, #E9C9C2 81.84%);
         box-shadow: 0px 2px 4px #F0D8D3;
-        padding: 20px;
         margin-top: 32px;
 
         img {
             width: 26px;
             height: 26px;
+        }
+        a{
+            padding: 20px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        
         }
     }
 
@@ -75,7 +84,7 @@
         }
     }
 
-    &__links{
+    &__links {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;

@@ -19,16 +19,11 @@
 
     &__top {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
         color: #fff;
         height: 75px;
-        position: fixed;
-        background-color: rgba($bg-color, .9);
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 0 70px;
+        padding: 0 20px;
         z-index: 10;
     }
 
@@ -164,7 +159,9 @@
         cursor: pointer;
         margin-left: 72px;
         padding-bottom: 2px;
+        border:none;
         border-bottom: 1px dashed #b98766;
+        background: transparent;
 
         &::before {
             content: url('../icons/phone.svg');

@@ -2,11 +2,13 @@
     position: relative;
     padding: 100px 0;
     min-height: 3530px;
-    margin-top: -2%;
+    margin: 0 auto;
+    margin-top: -1%;
     background-size: 1920px;
     background-image: url('../img/bg-portrait.png');
     background-position: top center;
     background-repeat: no-repeat;
+    max-width: 1920px;
 
     .img-1 {
         position: absolute;

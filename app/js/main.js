@@ -2,7 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-
     //показать/скрыть menu
     let menu = document.querySelector('.menu'),
         menuItem = document.querySelectorAll('.menu__item'),
@@ -36,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         video = document.querySelector('.popup__video'),
         map = document.querySelector('.popup__map'),
         mapBtn = document.querySelector('.plan__phone-map'),
+        thanks = document.querySelector('.popup__thanks'),
         body = document.querySelector('body');
 
     document.addEventListener('click', hide);
@@ -51,45 +51,58 @@ document.addEventListener('DOMContentLoaded', function () {
         body.classList.remove('active');
         map.classList.remove('popup__map--active');
         video.classList.remove('popup__video--active');
-        popupApplication.classList.remove('popup__application--active');
-        popupThanks.classList.remove('popup__thanks--active');
-        // document.getElementsByTagName('iframe')[0].remove();
-        document.getElementsByTagName('iframe').src = '';
-        popup.style.backgroundColor = 'rgba(0,0,0, .8)';
+        application.classList.remove('popup__application--active');
+        thanks.classList.remove('popup__thanks--active');
+        stopVideo();
     }
 
     closePopup.forEach(function (i) {
         i.addEventListener('click', hidePopup);
     });
 
+    function openPopup() {
+        popup.classList.add('popup--active');
+        body.classList.add('active');
+    }
+
     //воспроизведение видео в POPUP
     playBtn.addEventListener('click', function () {
-        popup.classList.add('popup--active');
         video.classList.add('popup__video--active');
-        body.classList.add('active');
-        document.querySelector('iframe').src = 'https://www.youtube.com/embed/dl16e_mG6hg';
+        openPopup();
     });
 
     //открытие карты в POPUP
     mapBtn.addEventListener('click', function () {
-        popup.classList.add('popup--active');
         map.classList.add('popup__map--active');
-        body.classList.add('active');
+        openPopup();
     });
 
     //открытие формы при нажатии на кнопку
     let btn = document.querySelectorAll('.btn-form'),
-        popupApplication = document.querySelector('.popup__application');
+        application = document.querySelector('.popup__application'),
+        sendBtn = document.querySelectorAll('.send-btn');
 
     function showForm() {
-        popupApplication.classList.add('popup__application--active');
-        popup.classList.add('popup--active');
-        body.classList.add('active');
+        application.classList.add('popup__application--active');
+        openPopup();
     }
 
     btn.forEach(function (e) {
         e.addEventListener('click', showForm);
     });
+
+    //открытие окна thanks
+
+    function send(e) {
+        e.preventDefault();
+        application.classList.remove('popup__application--active');
+        thanks.classList.add('popup__thanks--active');
+        openPopup();
+    }
+    sendBtn.forEach(function (i) {
+        i.addEventListener('click', send);
+    });
+
 
     //блок ответ-вопрос
     let itemBox = document.querySelectorAll('.conditions__item');
@@ -103,12 +116,33 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     //tabs
-    let tenantID = document.getElementById('tenant'),
+    let overlayCustomer = document.getElementById('overlay-revcustomer'),
+        overlayTenant = document.getElementById('overlay-revtenant'),
+        tenantID = document.getElementById('tenant'),
         customerID = document.getElementById('customer'),
         tenant = document.querySelector('.tenant'),
         customer = document.querySelector('.customer'),
         tab1 = document.getElementById('tab-1'),
         tab2 = document.getElementById('tab-2');
+
+
+    function stopAudio() {
+        let audio = document.querySelectorAll('audio');
+
+        audio.forEach(function (e) {
+            e.pause();
+        });
+
+    }
+
+    function stopVideo() {
+        let video = document.querySelectorAll('video');
+
+        video.forEach(function (e) {
+            e.pause();
+        });
+
+    }
 
     customer.addEventListener('click', function (e) {
         e.preventDefault();
@@ -116,6 +150,9 @@ document.addEventListener('DOMContentLoaded', function () {
         tab2.classList.add('reviews__item--active');
         tenantID.classList.remove('active');
         customerID.classList.add('active');
+        stopAudio();
+        stopVideo();
+        overlayTenant.classList.remove('video-overlay--active');
     });
     tenant.addEventListener('click', function (e) {
         e.preventDefault();
@@ -123,40 +160,20 @@ document.addEventListener('DOMContentLoaded', function () {
         tab2.classList.remove('reviews__item--active');
         tenantID.classList.add('active');
         customerID.classList.remove('active');
+        stopVideo();
+        stopAudio();
+        overlayCustomer.classList.remove('video-overlay--active');
     });
 
-    //автовспроизведение видео 
-    let btnTenant = document.getElementById('reviews-btntenant'),
-        btnCustomer = document.getElementById('reviews-btncustomer'),
-        locBtn1 = document.getElementById('location-btn1'),
-        locBtn2 = document.getElementById('location-btn2'),
-        overlayLoc1 = document.getElementById('overlay-loc1'),
-        overlayLoc2 = document.getElementById('overlay-loc2'),
-        overlayCustomer = document.getElementById('overlay-revcustomer'),
-        overlayTenant = document.getElementById('overlay-revtenant');
+    //вoспроизведение видео 
+    let overlay = document.querySelectorAll('.video-overlay');
 
-    locBtn1.addEventListener('click', function () {
-        document.querySelector('.location__video-1').src = "https://www.youtube.com/embed/dl16e_mG6hg?autoplay=1&mute=1";
-        overlayLoc1.classList.add('video-overlay--active');
-    });
-    locBtn1.addEventListener('touchenter', function () {
-        document.querySelector('.location__video-1').src = "https://www.youtube.com/embed/dl16e_mG6hg?autoplay=1&mute=1";
-        overlayLoc1.classList.add('video-overlay--active');
-    });
+    function playContent() {
+        this.classList.add('video-overlay--active');
+    }
 
-    locBtn2.addEventListener('click', function () {
-        document.querySelector('.location__video-2').src = "https://www.youtube.com/embed/dl16e_mG6hg?autoplay=1&mute=1";
-        overlayLoc2.classList.add('video-overlay--active');
-    });
-
-    btnTenant.addEventListener('click', function () {
-        document.querySelector('.reviews__video-tenant').src = "https://www.youtube.com/embed/dl16e_mG6hg?autoplay=1&mute=1";
-        overlayTenant.classList.add('video-overlay--active');
-    });
-
-    btnCustomer.addEventListener('click', function () {
-        document.querySelector('.reviews__video-customer').src = "https://www.youtube.com/embed/dl16e_mG6hg?autoplay=1&mute=1";
-        overlayCustomer.classList.add('video-overlay--active');
+    overlay.forEach(function (e) {
+        e.addEventListener('click', playContent);
     });
 
 
@@ -186,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 'transform': 'rotate(0deg)'
             });
             $('.next').css('backgroundImage', 'url("../icons/arrow-right.svg")');
-            $('.location__video-2, #overlay-loc2').removeClass('video-overlay--active').removeAttr('src');
+            $('.location__video-2, #overlay-loc2').removeClass('video-overlay--active').trigger('pause');
 
         } else if (currentSlide == 1) {
             $('.next').css('backgroundImage', 'url("../icons/arrow-rightgray.svg")');
@@ -195,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 'backgroundImage': 'url("../icons/arrow-right.svg")',
                 'transform': 'rotate(180deg)'
             });
-            $('.location__video-1, #overlay-loc1').removeClass('video-overlay--active').removeAttr('src');
+            $('.location__video-1, #overlay-loc1').removeClass('video-overlay--active').trigger('pause');
         }
     });
     $(document).ready(function () {
@@ -288,24 +305,6 @@ document.addEventListener('DOMContentLoaded', function () {
         variableWidth: true,
         infinite: false,
         speed: 900,
-
-        // responsive: [{
-        //         breakpoint: 592,
-        //         settings: {
-        //             fade: true,
-        //             // centerMode: true,
-        //         }
-        //     },
-        //     // {
-        //     //   breakpoint: 480,
-        //     //   settings: {
-        //     //     arrows: false,
-        //     //     
-        //     //     centerPadding: '40px',
-        //     //     slidesToShow: 1
-        //     //   }
-        //     // }
-        // ]
     });
 
     //изменение состояния стрелок слайдера в блоке "reviews"
@@ -328,70 +327,4 @@ document.addEventListener('DOMContentLoaded', function () {
             $('.next-reviews').css('backgroundImage', 'url("../icons/next-arrow.svg")');
         }
     });
-
-
-
-
-
-
-
-
-
-
-
-    //     //player
-    //     function player() {
-    //         if (audioTrack.paused) {
-    //             audioTrack.play();
-    //         } else {
-    //             audioTrack.pause();
-    //         }
-    //     }
-
-    //     function setText(el, text) {
-    //         el.innerHTML = text;
-    //     }
-
-    //     function finish() {
-    //         audioTrack.currentTime = 0;
-    //     }
-
-    //     function updatePlayhead() {
-    //         playhead.value = audioTrack.currentTime;
-    //     }
-
-    //     function setAttributes(el, attrs) {
-    //         for (let key in attrs) {
-    //             el.setAttribute(key, attrs[key]);
-    //         }
-    //     }
-
-    //     let
-    //         playback = document.querySelector("#playback"),
-    //         audioTrack = document.querySelector("#audiotrack"),
-    //         playButton = document.createElement("button"),
-    //         playhead = document.createElement("progress");
-
-    //     setAttributes(playButton, {
-    //         "type": "button",
-    //         "class": "button-audio",
-
-    //     });
-    //     setAttributes(playhead, {
-    //         "class": "progress",
-
-    //     });
-
-    //     playback.appendChild(playButton);
-    //     playback.appendChild(playhead);
-
-    //     audioTrack.removeAttribute("controls");
-    //     playButton.addEventListener("click", player, false);
-
-    //     audioTrack.addEventListener('playing', function () {
-    //         playhead.max = audioTrack.duration;
-    //     }, false);
-    //     audioTrack.addEventListener('timeupdate', updatePlayhead, false);
-    //     audioTrack.addEventListener('ended', finish, false);
-
 });

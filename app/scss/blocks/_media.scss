@@ -631,6 +631,18 @@
         }
     }
 
+    .header {
+        .menu {
+            font-size: 12px;
+        }
+
+        &__top {
+            &-phone {
+                font-size: 18px;
+            }
+        }
+    }
+
     .location {
         .title {
             font-size: 37px;
@@ -1279,6 +1291,17 @@
 }
 
 @media(max-width: 1051px) {
+    .header {
+        .container {
+            padding: 0 60px;
+        }
+
+        &__scroll {
+            left: -50px;
+            top: 40%;
+        }
+    }
+
     .portrait {
         background-size: 2406px;
 
@@ -2856,16 +2879,19 @@
         background-size: 1999px;
 
         .img-1 {
-            top: 32%;width: 30%;
+            top: 32%;
+            width: 30%;
         }
 
         .img-2 {
-            top: 40%;width: 30%;
+            top: 40%;
+            width: 30%;
 
         }
 
         .img-3 {
-            bottom: 19%;width: 30%;
+            bottom: 19%;
+            width: 30%;
         }
 
         .container {
@@ -3775,6 +3801,13 @@
 }
 
 @media(max-width: 530px) {
+    .header {
+        &__top {padding: 0;
+            &-call {
+                display: none;
+            }
+        }
+    }
 
     .time {
         &__btn {

@@ -1,6 +1,9 @@
 .vibeplace {
     position: relative;
     min-height: 4900px;
+    max-width: 1920px;
+    margin: 0 auto;
+    margin-top: -15px;
 
     .img-1 {
         position: absolute;
@@ -75,7 +78,8 @@
         }
 
         &__slider {
-            margin-top: 0;z-index: 1;
+            margin-top: 0;
+            z-index: 1;
         }
 
         .slick-slide {
@@ -516,31 +520,19 @@
         }
 
         &__video {
-            width: 568px;
+            width: 565px;
             height: 364px;
             position: relative;
-z-index: 1;
+            z-index: 1;
+
             img {
                 width: 100%;
                 height: 100%;
             }
 
-            iframe {
+            video {
                 width: 100%;
                 height: 100%;
-                z-index: 1;
-            }
-        }
-
-        .video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            transition: all .2s;
-
-            &--active {
-                opacity: 0;
-                visibility: hidden;
             }
         }
 
@@ -559,7 +551,8 @@ z-index: 1;
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
-                img{
+
+                img {
                     z-index: 1;
                 }
             }
@@ -594,7 +587,8 @@ z-index: 1;
 
         &__right-content {
             margin: 20px 50px 0 -235px;
-            position: relative;z-index: 1;
+            position: relative;
+            z-index: 1;
         }
 
         &__slider {

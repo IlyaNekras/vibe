@@ -11,6 +11,8 @@ body {
     background-color: $bg-color;
 }
 
+
+
 * {
     font-family: 'TTNorms', sans-serif;
     box-sizing: border-box;
@@ -38,6 +40,19 @@ a {
 .active {
     overflow: hidden;
     padding-right: 22px;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .2s;
+    z-index: 1;
+
+    &--active {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 @import'blocks/header';
