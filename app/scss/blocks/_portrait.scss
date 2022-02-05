@@ -119,10 +119,10 @@
             position: relative;
             z-index: 0;
 
-            img {
-                margin-top: -4%;
-                width: inherit;
-            }
+            // img {
+            //     margin-top: -4%;
+            //     width: inherit;
+            // }
         }
 
         &__wrap {
@@ -132,101 +132,183 @@
         }
 
         .subtitle {
-            max-width: 1050px;
+            max-width: 1150px;
+            z-index: 1;
         }
 
-        // &__left,
-        // &__right {
-        //     position: relative;
-        //     min-height: 620px;
-        //     font-size: 16px;
-        //     line-height: 21px;
-        //     color: #34343F;
-        //     font-style: italic;
-        // }
+        &__before,
+        &__after {
+            position: relative;
+            min-height: 620px;
+            font-size: 16px;
+            line-height: 21px;
+            color: #34343F;
+            font-style: italic;
+            width: 50%;
+        }
 
-        // &__left::after {
-        //     content: '';
-        //     position: absolute;
-        //     top: 42px;
-        //     left: 315px;
-        //     width: 100%;
-        //     height: 100%;
-        //     background-image: url('../icons/vs-icon.svg');
-        //     background-repeat: no-repeat;
-        // }
+        &__before::after {
+            content: '';
+            position: absolute;
+            top: 42px;
+            left: 92%;
+            width: 90px;
+            height: 90px;
+            background-image: url('../icons/vs-icon.svg');
+            background-repeat: no-repeat;
+        }
 
-        // .img-1 {
-        //     position: absolute;
-        //     top: -290px;
-        //     right: -440px;
-        //     z-index: -1;
-        // }
+        &__img-1 {
+            position: absolute;
+            top: -268px;
+            right: 60px;
+            height: auto;
+            width: 900px;
 
-        // .img-2 {
-        //     position: absolute;
-        //     top: -200px;
-        //     left: -538px;
-        //     z-index: -1;
-        // }
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 23%;
+                left: 50%;
+                width: 343px;
+                height: 122px;
+                background-image: url('../icons/price-before.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
 
-        // &__right-text,
-        // &__left-text {
-        //     max-width: 143px;
-        //     position: absolute;
-        // }
+        &__img-2 {
+            position: absolute;
+            top: -200px;
+            left: -350px;
 
-        // &__left-text {
-        //     left: -244px;
-        //     top: 191px;
-        // }
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 30%;
+                right: -6%;
+                width: 343px;
+                height: 122px;
+                background-image: url('../icons/price-after.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
 
-        // &__right-text {
-        //     right: -232px;
-        //     top: 57px;
-        // }
+        &__after-text,
+        &__before-text {
+            max-width: 143px;
+            position: absolute;
+            z-index: 1;
 
-        // &__box {
-        //     text-align: center;
-        //     position: relative;
-        //     font-style: normal;
-        // }
+            &::before {
+                content: "";
+                position: absolute;
+                width: 117px;
+                height: 117px;
+                border-radius: 50%;
+                border-top: 1px solid transparent;
+                border-right: 1px solid transparent;
+                border-bottom: 1px solid transparent;
+                border-left: 1px solid #aeaeae;
+            }
+        }
 
-        // .box-left {
-        //     position: absolute;
-        //     transform: rotate(-10deg);
-        //     top: 83px;
-        //     left: 184px;
-        // }
+        &__before-text {
+            left: 120px;
+            top: 191px;
 
-        // .box-right {
-        //     position: absolute;
-        //     transform: rotate(10deg);
-        //     top: 89px;
-        //     right: 200px;
-        // }
+            &::before {
+                top: 57px;
+                transform: rotate(-45deg);
+                left: 108px;
+            }
+        }
 
-        // &__name {
-        //     font-size: 40px;
-        //     line-height: 30px;
-        //     color: #34343F;
-        //     text-shadow: 0px 2px 14px #FFFFFF;
-        // }
+        &__after-text {
+            right: 170px;
+            top: 57px; &::before {
+                top: 56px;
+                transform: rotate(225deg);
+                left: 10px;
+            }
+        }
 
-        // &__subname {
-        //     font-size: 12px;
-        //     line-height: 23px;
-        //     color: #CE946B;
-        // }
+        &__box {
+            z-index: 1;
+            text-align: center;
+            position: relative;
+            font-style: normal;
+        }
+
+        .box-before {
+            position: absolute;
+            transform: rotate(-10deg);
+            top: 83px;
+            left: 75%;
+        }
+
+        .box-after {
+            position: absolute;
+            transform: rotate(10deg);
+            top: 89px;
+            right: 80%;
+        }
+
+        &__name {
+            font-size: 40px;
+            line-height: 30px;
+            color: #34343F;
+            text-shadow: 0px 2px 14px #FFFFFF;
+        }
+
+        &__subname {
+            font-size: 12px;
+            line-height: 23px;
+            color: #CE946B;
+        }
+
+        &__price {
+            position: absolute;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        &__price-descr {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .price-before {
+            bottom: -37px;
+            left: 36%;
+        }
+
+        .price-after {
+            bottom: -25px;
+            left: 18%;
+        }
+
+        &__price-num {
+            font-family: 'Tenor Sans', sans-serif;
+            text-align: right;
+            max-width: 257px;
+
+            span {
+                font-family: 'Tenor Sans', sans-serif;
+                font-size: 65px;
+            }
+        }
 
         &__bottom-text {
-            max-width: 997px;
+            max-width: 1243px;
             margin: 0 auto;
             font-size: 16px;
             line-height: 26px;
             text-align: center;
             color: #34343F;
-            margin-top: -40px;
+            margin-top: 100px;
         }
     }
 

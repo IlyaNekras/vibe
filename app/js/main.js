@@ -61,8 +61,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function openPopup() {
+
         popup.classList.add('popup--active');
         body.classList.add('active');
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+            body.style.paddingRight = '0';
+        }
     }
 
     //воспроизведение видео в POPUP
@@ -80,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //открытие формы при нажатии на кнопку
     let btn = document.querySelectorAll('.btn-form'),
         application = document.querySelector('.popup__application'),
-        sendBtn = document.querySelectorAll('.send-btn');
+        form = document.querySelectorAll('form');
 
     function showForm() {
         application.classList.add('popup__application--active');
@@ -95,12 +99,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function send(e) {
         e.preventDefault();
+        e.target.reset();
         application.classList.remove('popup__application--active');
         thanks.classList.add('popup__thanks--active');
         openPopup();
     }
-    sendBtn.forEach(function (i) {
-        i.addEventListener('click', send);
+    form.forEach(function (i) {
+        i.addEventListener('submit', send);
     });
 
 
@@ -175,8 +180,6 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.forEach(function (e) {
         e.addEventListener('click', playContent);
     });
-
-
 
     //библиотека для анимации
     new WOW().init();
