@@ -105,13 +105,23 @@
             }
 
             .price-before {
-                left: 31%;
+                left: 37%;
+            }
+
+            &__img-1 {
+                &::after {
+                    bottom: 0%;
+                }
             }
 
             &__img-2 {
                 &::after {
-                    right: -12%;
+                    right: 37%;
                 }
+            }
+
+            .price-before {
+                bottom: 12px;
             }
         }
     }
@@ -216,9 +226,30 @@
 
     .portrait {
         .mathematik {
-            &__img-2 {
+
+
+            &__img-1 {
+                img {
+                    top: 110px;
+
+                }
+
                 &::after {
-                    right: -20%;
+                    bottom: -2%;
+                    left: 33%;
+                }
+            }
+
+            &__img-2 {
+
+                img {
+                    top: 20px;
+                    left: -15px;
+                }
+
+                &::after {
+                    right: 35%;
+                    bottom: 0%;
                 }
             }
 
@@ -233,7 +264,12 @@
             }
 
             .price-before {
-                left: 27%;
+                left: 36%;
+                bottom: 8px;
+            }
+
+            .price-after {
+                bottom: 8px;
             }
         }
     }
@@ -287,32 +323,13 @@
     }
 
     .portrait {
-        background-size: 2026px;
+        background-size: 2000px;
 
         .mathematik {
             padding: 100px 0;
 
-            .price-before {
-                left: 22%;
-            }
-
             .price-after {
-                left: 17%;
-            }
-
-            &__before-text {
-                left: 0px;
-            }
-
-            &__after-text {
-                right: 0px;
-            }
-
-            &__img-2 {
-
-                &::after {
-                    right: -29%;
-                }
+                left: 15%;
             }
         }
 
@@ -399,7 +416,7 @@
     }
 
     .portrait {
-        background-size: 2570px;
+        background-size: 2700px;
 
         .mathematik {
             &__wrap {
@@ -411,6 +428,7 @@
                 margin: 0 auto;
                 margin-top: 50px;
                 width: 100%;
+                min-height: 738px;
             }
 
             &__before::after {
@@ -424,32 +442,45 @@
 
             .box-after {
                 transform: rotate(-20deg);
-                right: 70%;
+                right: 60%;
             }
 
             &__img {
-                width: inherit;
-                max-width: 100%;
+                img {
+                    width: 60%;
+                }
             }
 
             &__img-1 {
                 right: 10%;
 
+                img {
+                    top: 34px;
+                    left: 31%;
+                }
+
                 &::after {
-                    left: 40%;
+                    bottom: -13%;
+                    left: 43%;
                 }
             }
 
             &__img-2 {
                 left: -10%;
 
+                img {
+                    top: 20px;
+                    left: 30%;
+                }
+
                 &::after {
-                    right: 28%;
+                    right: 24%;
+                    bottom: -25%;
                 }
             }
 
             &__before-text {
-                left: 10%;
+                left: 20%;
             }
 
             &__after-text {
@@ -457,11 +488,13 @@
             }
 
             .price-before {
-                left: 31%;
+                left: 37%;
+                bottom: 7%;
             }
 
             .price-after {
-                left: 33%;
+                left: 39%;
+                bottom: -32px;
             }
         }
 
@@ -763,6 +796,7 @@
             .price-before {
                 left: 36%;
             }
+
             &__before-text {
                 left: 15%;
             }
@@ -835,7 +869,36 @@
     }
 
     .portrait {
-        background-size: 1942px;
+        background-size: 2560px;
+
+        .mathematik {
+
+            &__before,
+            &__after {
+                min-height: 650px;
+            }
+
+            &__img-1 {
+                &::after {
+                    bottom: -5%;
+                }
+            }
+
+            &__img-2 {
+                &::after {
+                    bottom: -15%;
+                }
+            }
+
+            .price-before {
+                bottom: 2%;
+            }
+
+            .price-after {
+                bottom: -8%;
+                left: 36%;
+            }
+        }
 
         .advantages {
             &__item {
@@ -1099,6 +1162,33 @@
         }
     }
 
+    .portrait {
+        .mathematik {
+
+            &__img-1 {
+                &::after {
+                    bottom: 5%;
+                    left: 42%;
+                }
+            }
+
+            &__img-2 {
+                &::after {
+                    right: 20%;
+                    bottom: -5%;
+                }
+            }
+
+            .price-before {
+                bottom: 12%;
+            }
+
+            .price-after {
+                bottom: 1%;
+            }
+        }
+    }
+
     .vibeplace {
         .container {
             padding: 100px 100px 0;
@@ -1289,8 +1379,6 @@
     }
 
     .portrait {
-        background-size: 1960px;
-
         .container {
             padding: 0 135px;
         }
@@ -1429,6 +1517,47 @@
         }
     }
 
+    .portrait {
+        .mathematik {
+
+            &__before,
+            &__after {
+                min-height: 510px;
+            }
+
+            &__before-text {
+                top: 80px;
+            }
+
+            &__img {
+                min-height: 510px;
+            }
+
+            &__img-1 {
+                &::after {
+                    bottom: -3%;
+                    left: 38%;
+                }
+            }
+
+            &__img-2 {
+                &::after {
+                    right: 20%;
+                    bottom: -14%;
+                }
+            }
+
+            .price-before {
+                bottom: 0%;
+                left: 31%;
+            }
+
+            .price-after {
+                bottom: -12%;
+                left: 33%;
+            }
+        }
+    }
 
 
     .vibeplace {
@@ -1457,10 +1586,42 @@
     }
 
     .portrait {
-        background-size: 2406px;
+        background-size: 3000px;
 
         .img-4 {
             bottom: 18%;
+        }
+
+        .mathematik {
+            &__img {
+                min-height: 620PX;
+
+                img {
+                    width: 80%;
+                }
+            }
+
+            &__img-1 {
+                img {
+                    left: 25%;
+                }
+            }
+
+            &__img-2 {
+
+                &::after {
+                    right: 16%;
+                    bottom: -14%;
+                }
+
+                img {
+                    left: 20%;
+                }
+            }
+
+            &__before-text {
+                left: 10%;
+            }
         }
 
         .advantages {
@@ -1775,7 +1936,7 @@
     }
 
     .portrait {
-        background-size: 2215px;
+        background-size: 2900px;
 
         .title {
             font-size: 30px;
@@ -1919,6 +2080,57 @@
 
         &__form {
             margin-left: -7%;
+        }
+    }
+
+    .portrait {
+        .mathematik {
+            &__img-1 {
+                &::after {
+                    bottom: 8%;
+                }
+            }
+
+            .price-before {
+                bottom: 10%;
+            }
+
+            &__after-text,
+            &__before-text {
+                font-size: 10px;
+                line-height: normal;
+            }
+
+            &__before-text {
+                top: 150px;
+
+                &::before {
+                    top: -15px;
+                    left: 78px;
+                }
+            }
+
+            &__after-text {
+                right: 5%;
+                top: 163px;
+
+                &::before {
+                    top: -16px;
+                    left: -41px;
+                }
+            }
+
+            &__img-2 {
+                &::after {
+                    right: 12%;
+                    bottom: 5%;
+                }
+            }
+
+            .price-after {
+                bottom: 6%;
+                left: 30%;
+            }
         }
     }
 
@@ -2271,10 +2483,21 @@
     }
 
     .portrait {
-        background-size: 2260px;
-
         .container {
             padding: 0 100px;
+        }
+
+        .mathematik {
+            &__img-2 {
+                &::after {
+                    bottom: -1%;
+                }
+            }
+
+            .price-after {
+                bottom: 0%;
+                left: 32%;
+            }
         }
     }
 
@@ -2335,10 +2558,46 @@
     }
 
     .portrait {
-        background-size: 2750px;
+        background-size: 3300px;
 
         &__item {
             margin: 15px;
+        }
+
+        .img-3 {
+            bottom: 4%;
+        }
+
+        .img-4 {
+            bottom: 10%;
+        }
+
+        .mathematik {
+            &__img {
+                min-height: 493PX;
+            }
+
+            &__img-1 {
+                &::after {
+                    bottom: -6%;
+                    left: 35%;
+                }
+            }
+
+            &__img-2 {
+                &::after {
+                    bottom: -14%;
+                }
+            }
+
+            .price-before {
+                bottom: 0%;
+            }
+
+            .price-after {
+                bottom: -9%;
+                left: 29%;
+            }
         }
     }
 
@@ -2523,8 +2782,6 @@
     }
 
     .portrait {
-        background-size: 2769px;
-
         .img-1 {
             width: 30%;
         }
@@ -2546,6 +2803,23 @@
         .advantages {
             &__item {
                 margin: 0 20px 53px;
+            }
+        }
+
+        .mathematik {
+            &__img-2 {
+                &::after {
+                    right: 9%;
+                }
+            }
+
+            &__after-text {
+                top: 100px;
+            }
+
+            .box-before {
+                top: 50px;
+                left: 65%;
             }
         }
     }
@@ -2892,6 +3166,34 @@
         }
     }
 
+    .portrait {
+        .mathematik {
+            &__img-1 {
+                &::after {
+                    bottom: 1%;
+                    left: 30%;
+                }
+            }
+
+            &__img-2 {
+                &::after {
+                    right: 3%;
+                    bottom: -7%;
+                }
+            }
+
+            .price-before {
+                bottom: 7%;
+                left: 28%;
+            }
+
+            .price-after {
+                bottom: 0%;
+                left: 28%;
+            }
+        }
+    }
+
     .ease {
         &__left-content {
             img {
@@ -2982,6 +3284,19 @@
                 min-height: 500px;
             }
         }
+    }
+
+    .portrait {
+        background-size: 3340px;
+
+        .mathematik {
+            .price-after {
+                bottom: -2%;
+                left: 24%;
+            }
+        }
+
+
     }
 
     .ease {
@@ -3286,6 +3601,44 @@
         }
     }
 
+    .portrait {
+        .mathematik {
+            &__before-text {
+                left: 6%;
+            }
+
+            &__img {
+                img {
+                    width: 100%;
+                }
+            }
+
+            &__img-1 {
+                img {
+                    left: 15%;
+                }
+
+                &::after {
+                    left: 24%;
+                }
+            }
+
+            &__img-2 {
+                img {
+                    left: 10%;
+                }
+            }
+
+            .price-before {
+                left: 20%;
+            }
+
+            .price-after {
+                bottom: -2%;
+            }
+        }
+    }
+
     .popular {
         min-height: 921px;
         background-size: 1030px;
@@ -3348,6 +3701,31 @@
     .portrait {
         .container {
             padding: 0 60px;
+        }
+
+        .mathematik {
+            &__img-1 {
+                &::after {
+                    bottom: -10%;
+                    left: 30%;
+                }
+            }
+
+            &__img-2 {
+                &::after {
+                    right: 5%;
+                    bottom: -21%;
+                }
+            }
+
+            .price-before {
+                bottom: -3%;
+                left: 28%;
+            }
+
+            .price-after {
+                bottom: -16%;
+            }
         }
     }
 
@@ -3417,20 +3795,15 @@
     }
 
     .portrait {
-        background-size: 2626px;
-
         .mathematik {
             padding: 70px 0;
 
-            .subtitle {
-                font-size: 10px;
+            .subtitle,
+            &__bottom-text {
+                font-size: 11px;
                 line-height: 16px;
             }
 
-            &__bottom-text {
-                font-size: 10px;
-                line-height: 17px;
-            }
         }
     }
 
@@ -3455,10 +3828,6 @@
         min-height: 4520px;
         background-size: 1887px;
         padding-top: 50px;
-
-        // &__bg {
-        //     top: -60px;
-        // }
 
         .title {
             font-size: 20px;
@@ -3620,7 +3989,66 @@
         &__bottom {
             left: 90px;
         }
+    }
 
+    .portrait {
+        background-size: 3200px;
+
+        .mathematik {
+
+            &__before,
+            &__after {
+                line-height: 17px;
+                margin-top: 0;
+            }
+
+            &__before-text {
+                left: 2%;
+            }
+
+            &__after-text {
+                right: -3%;
+            }
+
+            &__img-1 {
+                &::after {
+                    background-size: 270px;
+                    width: 280px;
+                    height: 100px;
+                    bottom: 2%;
+                }
+            }
+
+            &__img-2 {
+                &::after {
+                    background-size: 270px;
+                    width: 280px;
+                    height: 100px;
+                    right: 10%;
+                    bottom: -8%;
+                }
+            }
+
+            &__price-num {
+                span {
+                    font-size: 58px;
+                }
+            }
+
+            &__price-descr {
+                margin-bottom: 15px;
+            }
+
+            .price-before {
+                bottom: 7%;
+                left: 20%;
+            }
+
+            .price-after {
+                bottom: -3%;
+                left: 19%;
+            }
+        }
     }
 
     .vibeplace {
@@ -3863,7 +4291,7 @@
     }
 
     .portrait {
-        background-size: 2562px;
+        background-size: 3100px;
 
         .title {
             font-size: 25px;
@@ -3880,6 +4308,13 @@
 
         &__descr {
             font-size: 14px;
+        }
+
+        .mathematik {
+            .price-after {
+                bottom: -3%;
+                left: 15%;
+            }
         }
     }
 
@@ -4048,6 +4483,25 @@
 
         &__bottom {
             left: 90px;
+        }
+    }
+
+    .portrait {
+        .mathematik {
+            &__img-2 {
+                &::after {
+                    right: 5%;
+                    bottom: 3%;
+                }
+            }
+
+            .price-after {
+                bottom: 8%;
+            }
+
+            &__bottom-text {
+                margin-top: 50px;
+            }
         }
     }
 
@@ -4406,6 +4860,51 @@
         }
     }
 
+    .portrait {
+        background-size: 2960px;
+
+        .mathematik {
+
+            &__before,
+            &__after {
+                min-height: 405px;
+            }
+
+            &__after-text,
+            &__before-text {
+                font-size: 9px;
+            }
+
+            &__img {
+                min-height: 390PX;
+            }
+
+            &__img-1 {
+                &::after {
+                    bottom: -4%;
+                    left: 25%;
+                }
+            }
+
+            &__img-2 {
+                &::after {
+                    right: 3%;
+                    bottom: -14%;
+                }
+            }
+
+            .price-before {
+                bottom: 3%;
+                left: 14%;
+            }
+
+            .price-after {
+                bottom: -8%;
+                left: 9%;
+            }
+        }
+    }
+
     .vibeplace {
         .reviews {
             &__items {
@@ -4620,6 +5119,29 @@
                 line-height: normal;
             }
         }
+
+        .mathematik {
+            &__img-2 {
+                &::after {
+                    right: -3%;
+                    bottom: -14%;
+                }
+            }
+
+            .box-after {
+                right: 70%;
+            }
+
+            &__before-text {
+                left: 0%;
+                max-width: 90px;
+            }
+
+            &__after-text {
+                right: 0%;
+                max-width: 90px;
+            }
+        }
     }
 
     .ease {
@@ -4763,13 +5285,45 @@
     }
 
     .portrait {
-        background-size: 2238px;
+        background-size: 2630px;
 
         .mathematik {
             padding: 30px 0;
 
-            &__bottom-text {
-                margin-top: 0;
+            &__name {
+                font-size: 30px;
+            }
+
+            &__subname {
+                font-size: 10px;
+            }
+
+            &__after-text {
+                right: -5%;
+            }
+
+            &__img-1 {
+                &::after {
+                    bottom: 7%;
+                    left: 19%;
+                }
+            }
+
+            &__img-2 {
+                &::after {
+                    right: -5%;
+                    bottom: 0%;
+                }
+            }
+
+            .price-before {
+                bottom: 13%;
+                left: 9%;
+            }
+
+            .price-after {
+                bottom: 5%;
+                left: 5%;
             }
         }
 
@@ -5021,12 +5575,73 @@
     }
 
     .portrait {
+        background-size: 2560px;
+
         .img-1 {
             top: 23%;
         }
 
         .img-2 {
             top: 9%;
+        }
+
+        .mathematik {
+            &__before-text {
+                top: 101px;
+            }
+
+            &__before,
+            &__after {
+                min-height: 315px;
+            }
+
+            &__img {
+                min-height: 322PX;
+            }
+
+            &__img-1 {
+                &::after {
+                    background-size: 190px;
+                    width: 200px;
+                    height: 73px;
+                    bottom: -3%;
+                    left: 30%;
+                }
+            }
+
+            &__img-2 {
+                &::after {
+                    background-size: 190px;
+                    width: 200px;
+                    height: 73px;
+                    right: 7%;
+                    bottom: -13%;
+                }
+            }
+
+            &__price {
+                font-size: 11px;
+            }
+
+            &__price-num {
+                max-width: 140px;
+
+                span {
+                    font-size: 33px;
+                }
+            }
+
+            .price-before {
+                bottom: 1%;
+                left: 27%;
+                line-height: 10px;
+            }
+
+            .price-after {
+                bottom: -10%;
+                left: 24%;
+                line-height: 10px;
+            }
         }
     }
 
@@ -5273,6 +5888,40 @@
         &__descr {
             font-size: 12px;
             line-height: 17px;
+        }
+
+        .mathematik {
+            &__before-text {
+                left: -8%;
+                max-width: 90px;
+            }
+
+            &__after-text {
+                right: -12%;
+            }
+
+            &__img-1 {
+                &::after {
+                    bottom: 2%;
+                    left: 28%;
+                }
+            }
+
+            &__img-2 {
+                &::after {
+                    right: 3%;
+                    bottom: -6%;
+                }
+            }
+
+            .price-before {
+                bottom: 5%;
+            }
+
+            .price-after {
+                bottom: -4%;
+                left: 21%;
+            }
         }
     }
 
@@ -5566,6 +6215,60 @@
             top: 7%;
         }
 
+        .mathematik {
+            &__name {
+                font-size: 22px;
+                line-height: normal;
+            }
+
+            &__subname {
+                line-height: normal;
+                font-size: 8px;
+            }
+
+            &__after-text,
+            &__before-text {
+                font-size: 7px;
+            }
+
+            &__after-text {
+                top: 41px;
+            }
+
+            .box-before {
+                top: 26px;
+            }
+
+            .box-after {
+                top: 33px;
+            }
+
+            &__img-1 {
+                &::after {
+                    bottom: 12%;
+                    left: 23%;
+                }
+            }
+
+            &__img-2 {
+                &::after {
+                    right: -1%;
+                    bottom: 6%;
+                }
+            }
+
+            .price-before {
+                bottom: 16%;
+                left: 23%;
+                line-height: 9px;
+            }
+
+            .price-after {
+                bottom: 9%;
+                line-height: 9px;
+            }
+        }
+
         .advantages {
             &__text {
                 margin-bottom: 10px;
@@ -5791,6 +6494,43 @@
     .atmosphere {
         &__form {
             margin-left: 5%;
+        }
+    }
+
+    .portrait {
+        .mathematik {
+            &__img-1 {
+                &::after {
+                    bottom: 17%;
+                    left: 19%;
+                }
+            }
+
+            &__img-2 {
+                &::after {
+                    right: -6%;
+                    bottom: 13%;
+                }
+            }
+
+            &__before-text {
+                top: 64px;
+                left: -15%;
+            }
+
+            .price-before {
+                bottom: 21%;
+                left: 19%;
+            }
+
+            .price-after {
+                bottom: 16%;
+                left: 16%;
+            }
+
+            &__bottom-text {
+                margin-top: 10px;
+            }
         }
     }
 

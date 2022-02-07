@@ -118,11 +118,14 @@
             min-width: 200px;
             position: relative;
             z-index: 0;
+            min-height: 620px;
 
-            // img {
-            //     margin-top: -4%;
-            //     width: inherit;
-            // }
+            img {
+                position: absolute;
+                width: 80%;
+                top: 0;
+                left: 0;
+            }
         }
 
         &__wrap {
@@ -159,38 +162,39 @@
         }
 
         &__img-1 {
-            position: absolute;
-            top: -268px;
-            right: 60px;
-            height: auto;
-            width: 900px;
+            img {
+                top: 34px;
+                left: 141px;
+
+            }
 
             &::after {
-                content: '';
+                content: "";
                 position: absolute;
-                bottom: 23%;
-                left: 50%;
+                bottom: -8%;
+                left: 33%;
                 width: 343px;
                 height: 122px;
-                background-image: url('../icons/price-before.svg');
+                background-image: url(../icons/price-before.svg);
                 background-repeat: no-repeat;
                 background-position: center;
             }
         }
 
         &__img-2 {
-            position: absolute;
-            top: -200px;
-            left: -350px;
+            img {
+                top: -40px;
+                left: -15px;
+            }
 
             &::after {
-                content: '';
+                content: "";
                 position: absolute;
-                bottom: 30%;
-                right: -6%;
+                bottom: -5%;
+                right: 40%;
                 width: 343px;
                 height: 122px;
-                background-image: url('../icons/price-after.svg');
+                background-image: url(../icons/price-after.svg);
                 background-repeat: no-repeat;
                 background-position: center;
             }
@@ -201,6 +205,7 @@
             max-width: 143px;
             position: absolute;
             z-index: 1;
+            font-size: 14px;
 
             &::before {
                 content: "";
@@ -228,7 +233,9 @@
 
         &__after-text {
             right: 170px;
-            top: 57px; &::before {
+            top: 57px;
+
+            &::before {
                 top: 56px;
                 transform: rotate(225deg);
                 left: 10px;
@@ -380,6 +387,4 @@
             margin: 0 auto;
         }
     }
-
-
 }
