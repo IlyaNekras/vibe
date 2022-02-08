@@ -14,7 +14,6 @@
             &-phone {
                 top: 30%;
             }
-
         }
     }
 
@@ -227,11 +226,9 @@
     .portrait {
         .mathematik {
 
-
             &__img-1 {
                 img {
                     top: 110px;
-
                 }
 
                 &::after {
@@ -635,7 +632,6 @@
         &__item:nth-child(2)::after {
             left: 90px;
         }
-
     }
 
     .time {
@@ -802,13 +798,13 @@
             }
         }
     }
-
 }
 
 @media(max-width: 1442px) {
     .popup {
         &-close {
-            top: -16%;
+            top: -10%;
+            left: 47%;
         }
 
         &__application {
@@ -838,7 +834,6 @@
 
         &__slider {
 
-
             &-text {
                 left: 70%;
             }
@@ -865,7 +860,6 @@
             font-size: 20px;
             line-height: normal;
         }
-
     }
 
     .portrait {
@@ -1129,7 +1123,6 @@
         .next-arrow {
             right: 35%;
         }
-
     }
 
     .plan {
@@ -1261,13 +1254,13 @@
 
             &-content {
                 &::before {
-                    top: 32%;
+                    top: 31%;
                     right: 28%;
                 }
             }
 
             &-whatsapp {
-                margin-left: 40px;
+                margin-left: 40px;margin-top: -40px;
             }
         }
     }
@@ -1559,7 +1552,6 @@
         }
     }
 
-
     .vibeplace {
         .stories {
             &__master {
@@ -1643,11 +1635,10 @@
 
     .vibeplace {
         min-height: 5514px;
-        background-size: 2332px;
 
         .container {
-            background-size: 2496px;
-            min-height: 5914px;
+            background-size: 2550px;
+            min-height:6050px;
         }
 
         .stories {
@@ -1765,12 +1756,11 @@
                 }
             }
         }
-
     }
 
     .vibeplace {
         min-height: 5703px;
-        background-size: 2395px;
+        background-size: 5703px;
 
         &__wrap {
             display: block;
@@ -1862,7 +1852,6 @@
             display: none;
         }
 
-
         &__item {
             max-width: 150px;
             margin: 0 30px;
@@ -1897,7 +1886,6 @@
             }
         }
     }
-
 
     .location {
         margin-top: 0%;
@@ -1972,7 +1960,7 @@
             }
 
             &-content {
-                top: 35%;
+                top: 29%;
 
                 &::before {
                     top: 30%;
@@ -2000,7 +1988,7 @@
             }
 
             &-whatsapp {
-                margin: -43px 0 0 0;
+                margin: -43px 0 0 3px;
             }
         }
     }
@@ -2509,7 +2497,7 @@
 
     .vibeplace {
         .img-3 {
-            bottom: 10%;
+            bottom: 8%;
         }
 
         .reviews {
@@ -2668,7 +2656,6 @@
 
 @media(max-width: 780px) {
     .popup {
-
         &__video,
         &__map {
             top: 30%;
@@ -2870,14 +2857,11 @@
                 margin-top: 40px;
             }
         }
-
-
     }
 
     .plan {
         .container {
             padding: 0 90px;
-
         }
 
         &__phone {
@@ -3080,7 +3064,6 @@
                     top: 8px;
                     left: 236px;
                     animation: marker2-adaptive2 1.7s infinite;
-
                 }
             }
 
@@ -3295,8 +3278,6 @@
                 left: 24%;
             }
         }
-
-
     }
 
     .ease {
@@ -3357,7 +3338,7 @@
         }
 
         .img-3 {
-            bottom: 19%;
+            bottom: 15%;
             width: 30%;
         }
 
@@ -3803,7 +3784,6 @@
                 font-size: 11px;
                 line-height: 16px;
             }
-
         }
     }
 
@@ -4102,7 +4082,6 @@
             font-size: 11px;
         }
     }
-
 }
 
 @media(max-width: 570px) {
@@ -4592,9 +4571,13 @@
                 }
 
                 .slick-list {
-                    top: 111px;
+                    top: 4px;
                     right: 1px;
                 }
+            }
+
+            &__slider {
+                height: 460px;
             }
 
             .slider {
@@ -4977,10 +4960,9 @@
 
 @media(max-width: 470px) {
     .popup {
-
         &__map,
         &__video {
-            top: 18%;
+            top: 30%;
         }
     }
 
@@ -5099,7 +5081,6 @@
     }
 
     .atmosphere {
-
         .subtitle-bottom {
             font-size: 35px;
             line-height: 25px;
@@ -5205,7 +5186,6 @@
                 }
             }
         }
-
     }
 }
 
@@ -6009,7 +5989,6 @@
     .popular {
         min-height: 582px;
         background-size: 824px;
-
     }
 
     .footer {

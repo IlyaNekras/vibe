@@ -25,7 +25,7 @@
     &__application {
         position: fixed;
         display: none;
-        top: 10%;
+        top: 13%;
         left: 50%;
         transform: translateX(-50%);
         max-width: 993px;
@@ -38,7 +38,7 @@
         &-title {
             max-width: 993px;
             margin: 0 auto;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             font-size: 40px;
         }
 
@@ -86,7 +86,8 @@
         left: 48%;
         padding: 23px;
         cursor: pointer;
-
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        -webkit-tap-highlight-color: transparent;
         &::before,
         &::after {
             content: '';

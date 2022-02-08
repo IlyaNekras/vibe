@@ -30,8 +30,6 @@
     &__box {
         width: 50%;
         position: relative;
-
-
     }
 
     &__btn {
@@ -45,7 +43,8 @@
         border-bottom: 4px solid #B47F74;
         cursor: pointer;
         z-index: 5;
-
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        -webkit-tap-highlight-color: transparent;
         &:hover {
             background: linear-gradient(137.66deg, #F8E6E2 19%, #fc9d8a 76.3%);
         }

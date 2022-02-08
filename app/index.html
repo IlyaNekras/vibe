@@ -46,7 +46,7 @@
             </div>
             <div class="popup__thanks-content">
                 <p class="popup__thanks-text">Долго ждать? Наберите нас прямо сейчас:</p>
-                <a class="popup__thanks-phone" href="tel:+76548760909">+7 (654) 876 09 09</a>
+                <a class="popup__thanks-phone" href="tel:79511979062">+7 (900) 000 00 00</a>
                 <a class="popup__thanks-whatsapp" href="https://wa.me/79511979062"><img src="icons/whatsapp-icon.svg"
                         alt=""></a>
                 <p class="popup__thanks-subtext">Или кликните, чтобы перейти в ватсап чат с нами</p>
@@ -54,8 +54,13 @@
         </div>
         <div class="popup__video">
             <div class="popup__close close"></div>
-            <video controls="controls">
-                <source src="video/video-file.mp4">
+            <video controls="controls" preload="auto" loop>
+                <source src="video/video-file.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'> 
+                <source src="video/video-file.webm" type='video/webm'>
+                <source src="video/video-file.ogg" type='video/ogg; codecs="theora, vorbis"'>
+                <object data="video/video-file.swf" type="application/x-shockwave-flash">
+                    <param name="movie" value="video/video-file.swf">
+                  </object>
             </video>
         </div>
         <div class="popup__map">
@@ -780,7 +785,6 @@
                     заработаете самостоятельно и сколько потеряете в найме при условной <span>выручке 200 тыс./мес. на
                         примере Маши и Даши:</span>
                 </p>
-                <!-- <div class="mathematik__img"><img src="img/mathematik-img1.png" alt=""></div> -->
                 <div class="mathematik__wrap">
                     <div class="mathematik__before">
                         <div class="mathematik__img mathematik__img-1">
@@ -1387,7 +1391,7 @@
                         </div>
 
                         <div class="footer__phone">
-                            <a class="footer__num" href="tel:+79000000000">+7 (980) 687-98-98</a>
+                            <a class="footer__num" href="tel:79511979062">+7 (900) 000-00-00</a>
                             <p class="footer__text">Звонок бесплатный</p>
                         </div>
                     </div>
